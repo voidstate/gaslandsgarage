@@ -52,9 +52,6 @@
 			},
 			getNextFacing( currentFacing, turretAllowed = false )
 			{
-
-				console.log( 'getNextFacing', currentFacing, turretAllowed)
-
 				let facings = [ 'front', 'side', 'rear' ]
 
 				if( turretAllowed )

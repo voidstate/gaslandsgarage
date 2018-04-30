@@ -72,8 +72,6 @@ const showAlert = ( context, message ) =>
 
 const showConfirm = ( message, actions = { ok: 'OK' } ) =>
 {
-	console.log( 'showConfirm', message )
-
 	const modal       = $( '#confirmModal' ),
 	      modalBody   = modal.find( '.modal-body' ),
 	      modalFooter = modal.find( '.modal-footer' )
@@ -96,7 +94,6 @@ const showConfirm = ( message, actions = { ok: 'OK' } ) =>
 		// remove buttons
 		_.forIn( actionButtons, ( actionButton ) =>
 		{
-			console.log( 'removing', actionButton )
 			actionButton.remove()
 		} )
 
@@ -108,8 +105,6 @@ const showConfirm = ( message, actions = { ok: 'OK' } ) =>
 
 	return new Promise( ( resolve, reject ) =>
 	{
-		console.log( 'wiring up buttons' )
-
 		// wire up actions (OK by default)
 		_.forIn( actionButtons, ( actionButton, key ) =>
 		{

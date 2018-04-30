@@ -88,8 +88,6 @@ const logout = () =>
 		return
 	}
 
-	console.log( 'logging out', provider )
-
 	hello( provider ).logout()
 }
 

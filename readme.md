@@ -15,7 +15,7 @@ Learn more on the <a href="https://gaslands.com/">Gaslands website</a> or
 
 ## What is this Gaslands Garage?
 
-A Vue JS based web app for building teams of vehicles to use in the Gaslands game.
+A Vue JS/Laravel based web app for building teams of vehicles to use in the Gaslands game.
 
 ## Who Are You?
 

@@ -68,7 +68,6 @@
 			eventBus.$on( 'team.save', this.onSave )
 			eventBus.$on( 'team.load', this.onLoad )
 
-			console.log( 'mounted' )
 			setTimeout( () => this.emitSummary(), 100 )
 		},
 		updated()
@@ -111,7 +110,6 @@
 		methods: {
 			emitSummary()
 			{
-				console.log( 'emitSummary' )
 				eventBus.$emit( 'team.summary-changed', {
 					name: this.name,
 					cost: this.cost

@@ -191,8 +191,6 @@
 			},
 			onTeamSummaryChanged( summary )
 			{
-				console.log( 'onTeamSummaryChanged', summary )
-
 				this.summary.name = summary.name
 				this.summary.cost = summary.cost
 			}

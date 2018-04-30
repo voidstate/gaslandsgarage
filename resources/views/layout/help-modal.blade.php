@@ -14,14 +14,15 @@
 					It's up to you who makes it through that final gate. You gonna live long enough to ride to fame, fortune and a ticket to Mars? Or you gonna burn up and die trying? Either way, if you get your ride from the Gaslands Garage, the audience is gonna love you. So let's get building.</p>
 				<h5>What is Gaslands?</h5>
 				<p>Gaslands is a miniatures game set on post-apocalyptic Earth, where players compete to earn a ticket off world by racing and fighting in vehicles. Think Mad Max.</p>
-				<p>Learn more on the <a href="https://gaslands.com/">Gaslands website</a> or
-					<a href="https://www.facebook.com/groups/gaslands/">Facebook group</a>.</p>
+				<p>Learn more and buy the rules and accessories on the <a href="https://gaslands.com/">Gaslands website</a> or join the
+					<a href="https://www.facebook.com/groups/gaslands/">Facebook group</a> to see what other players are doing.</p>
 				<h5>What is this Site?</h5>
 				<p>This app helps you make your Gaslands team, choosing vehicles and souping them up with upgrades, ready to enter combat. You can also share your teams online.</p>
 				<h5>Who Are You?</h5>
 				<p>I'm a web developer from Leeds, Uk, who's geeky enough to come home from work and carry on programming for fun.</p>
 				<h5>Credits</h5>
-				<p>Gaslands is built using awesome open source technologies. The stack is built on...</p>
+				<p>Gaslands and all related properties, images and text are owned by Mike Hutchinson. Mike has created something awesome in Gaslands.</p>
+				<p>Gaslands Garage is built using awesome open source technologies. The stack is built on...</p>
 				<p>PHP</p>
 				<ul>
 					<li>

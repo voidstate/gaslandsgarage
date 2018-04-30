@@ -127,8 +127,6 @@
 			},
 			sponsor()
 			{
-				console.log( 'sponsor changed', this.$refs.container, $( '[data-toggle="tooltip"]', this.$refs.container ) )
-
 				$( '[data-toggle="tooltip"]', this.$refs.container ).tooltip( 'dispose' )
 
 				window.setTimeout( () => $( '[data-toggle="tooltip"]', this.$refs.container ).tooltip(), 50 )

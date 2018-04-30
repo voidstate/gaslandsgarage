@@ -98,8 +98,6 @@
 			},
 			onDelete( id )
 			{
-				console.log( 'onDelete' )
-
 				axios.get( '/garage/delete/' + auth.getUserId() + '/' + id )
 					.then( response =>
 					{

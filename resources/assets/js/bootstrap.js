@@ -12,8 +12,6 @@ try {
     window.$ = window.jQuery = require('jquery');
 
     require('bootstrap');
-
-    console.log( window )
 } catch (e) {
     console.error( 'Failed to load jQuery')
 }

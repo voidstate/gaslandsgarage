@@ -62,8 +62,6 @@
 			},
 			selectSponsor( sponsor )
 			{
-				console.log( 'sponsor selected', sponsor )
-
 				this.$emit( 'selected', sponsor )
 
 				$( '[data-toggle="tooltip"]', this.$refs.container ).tooltip( 'hide' )
