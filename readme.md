@@ -7,17 +7,17 @@ You looking for a new ride? Well you came to the right place. We'll build you th
     
 Either way, if you get your ride from the Gaslands Garage, the audience is gonna love you. So let's get building.
 
-##What is Gaslands?
+## What is Gaslands?
 
 Gaslands is a miniatures game set on post-apocalyptic Earth, where players compete to earn a ticket off world by racing and fighting in vehicles. Think Mad Max.
 Learn more on the <a href="https://gaslands.com/">Gaslands website</a> or
     <a href="https://www.facebook.com/groups/gaslands/">Facebook group</a>.
 
-##What is this Gaslands Garage?
+## What is this Gaslands Garage?
 
 A Vue JS based web app for building teams of vehicles to use in the Gaslands game.
 
-##Who Are You?
+## Who Are You?
 
 I'm a web developer from Leeds, Uk, who's geeky enough to come home from work and carry on programming for fun.
 
