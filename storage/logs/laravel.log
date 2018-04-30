@@ -1965,3 +1965,19 @@
 #51 /home/vagrant/code/public/index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #52 {main}
 "} 
+[2018-04-29 05:37:48] local.ERROR: Use of undefined constant t - assumed 't' (this will throw an Error in a future version of PHP) {"exception":"[object] (ErrorException(code: 0): Use of undefined constant t - assumed 't' (this will throw an Error in a future version of PHP) at /home/vagrant/code/vendor/barryvdh/laravel-debugbar/config/debugbar.php:124)
+[stacktrace]
+#0 /home/vagrant/code/vendor/barryvdh/laravel-debugbar/config/debugbar.php(124): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'Use of undefine...', '/home/vagrant/c...', 124, Array)
+#1 /home/vagrant/code/vendor/laravel/framework/src/Illuminate/Support/ServiceProvider.php(59): require('/home/vagrant/c...')
+#2 /home/vagrant/code/vendor/barryvdh/laravel-debugbar/src/ServiceProvider.php(28): Illuminate\\Support\\ServiceProvider->mergeConfigFrom('/home/vagrant/c...', 'debugbar')
+#3 /home/vagrant/code/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(586): Barryvdh\\Debugbar\\ServiceProvider->register()
+#4 /home/vagrant/code/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(75): Illuminate\\Foundation\\Application->register(Object(Barryvdh\\Debugbar\\ServiceProvider))
+#5 /home/vagrant/code/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(561): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#6 /home/vagrant/code/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#7 /home/vagrant/code/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(213): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#8 /home/vagrant/code/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(162): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#9 /home/vagrant/code/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(146): Illuminate\\Foundation\\Http\\Kernel->bootstrap()
+#10 /home/vagrant/code/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#11 /home/vagrant/code/public/index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#12 {main}
+"} 

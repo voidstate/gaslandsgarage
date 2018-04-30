@@ -12,8 +12,8 @@ const init = () =>
 	hello.on( 'auth.logout', onLogout )
 
 	hello.init( {
-			facebook: '217460255476142',
-			google: 'mzE72Ziw5078-BgNp9eHuKo3'
+			facebook: window.authTokens.facebook,
+			google: window.authTokens.google
 		},
 		{
 			scope: 'email'

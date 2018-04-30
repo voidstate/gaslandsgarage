@@ -29,7 +29,7 @@
 
 	<main class="main-row">
 
-	<!-- message -->
+		<!-- message -->
 	@include( 'layout.message-bar' )
 	<!-- /message -->
 
@@ -70,6 +70,12 @@
 <!-- /modals -->
 
 <!-- javascript -->
+<script>
+	var authTokens = {
+		facebook: '{{ config( 'app.token_facebook' ) }}',
+		google: '{{ config( 'app.token_google' ) }}'
+	};
+</script>
 <script src="/js/app.js"></script>
 
 </body>
