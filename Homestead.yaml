@@ -1,0 +1,20 @@
+ip: 192.168.10.10
+memory: 2048
+cpus: 1
+provider: virtualbox
+authorize: ~/.ssh/id_rsa.pub
+keys:
+    - ~/.ssh/id_rsa
+folders:
+    -
+        map: /Users/fergushadley/Dropbox/webdev/gaslands/application
+        to: /home/vagrant/code
+sites:
+    -
+        map: gaslands.test
+        to: /home/vagrant/code/public
+databases:
+    - homestead
+name: Gaslands Garage
+hostname: gaslands.test
+ssl: true

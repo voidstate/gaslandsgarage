@@ -1,0 +1,560 @@
+@import 'colours';
+@import 'mixins';
+
+body > .container-fluid {
+  padding: 60px 15px 0;
+}
+
+/*
+ * Typography
+ */
+
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+}
+
+/*
+ * Buttons
+ */
+
+.btn {
+  text-transform: none;
+  font-family: "Khand", sans-serif;
+  font-weight: normal;
+
+  &.btn-facebook {
+    background-color: #3B5998;
+    color: $white;
+  }
+
+  &.btn-google {
+    background-color: #EA4335;
+    color: $white;
+  }
+}
+
+/*
+ * Navbar
+ */
+
+.navbar {
+  background-color: $mid-blue;
+  color: $lighter-blue;
+  .navbar-brand {
+
+  }
+
+  .nav-link {
+    text-transform: uppercase;
+
+    // hide carets
+    &.dropdown-toggle:after {
+      content: none;
+    }
+  }
+
+  .navbar-right {
+    flex-grow: unset;
+    .dropdown-menu {
+      right: 0;
+      left: auto;
+    }
+  }
+
+  .team-summary {
+    .badge {
+      padding: .25rem .75rem;
+    }
+    h5 {
+      margin: 0;
+    }
+    .summary-costs {
+      position: relative;
+      top: -1px;
+      vertical-align: bottom;
+      font-size: .9rem;
+      font-weight: normal;
+      img {
+        filter: invert(1);
+        height: 18px;
+        width: 18px;
+        position: relative;
+        top: -1px;
+      }
+    }
+
+  }
+
+  .team-count-badge {
+    color: $mid-blue; // fake tranparency
+    top: -2px;
+    position: relative;
+  }
+
+  .profile-image {
+    max-width: 4rem;
+  }
+
+}
+
+/*
+ * Footer
+ */
+
+footer.footer-row {
+  background-color: $dark-brown;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+
+  & > .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+}
+
+/*
+ * Sticky footer styles
+ */
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+
+/*
+ * Backgrounds
+ */
+
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 2000px;
+  }
+}
+
+body.bright-bg {
+  background-color: #BF7733;
+  > .container-fluid {
+    @include scrimGradient($richer-brown)
+  }
+}
+
+body.light-bg {
+  background-color: $lighter-brown;
+  > .container-fluid {
+    @include scrimGradient($light-brown)
+  }
+}
+
+body.animated-bg {
+  background-position: 0 0;
+  background-repeat: repeat;
+  animation: animatedBackground 30s linear infinite;
+  .team-details > .card {
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.33);
+  }
+  .vehicle {
+    & > .card {
+      border-color: $darkest-brown;
+      box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.33);
+    }
+    .vehicle-card-header, .card-body {
+      background-image: url(/images/textures/texture1.jpg);
+    }
+    .vehicle-card-header .badge {
+      background-color: $gray-900 !important;
+    }
+    .vehicle-stats .btn {
+      background-color: $gray-900 !important;
+      border-color: $gray-900 !important;
+    }
+    .vehicle-extras {
+      .card {
+        border-color: $darkest-brown;
+      }
+      .card-header {
+        background-image: url(/images/textures/texture5.png);
+      }
+      thead th {
+        background-image: url(/images/textures/texture2.jpg);
+      }
+      th, td {
+        background-color: $gray-700;
+      }
+    }
+  }
+
+  .team-details .card-body {
+    background-image: url(/images/textures/texture3.jpg);
+  }
+}
+
+body.landscape-bg {
+  background-image: url(/images/backgrounds/landscapes/barren-desert-filtered.jpg);
+  background-size: cover;
+  background-position: 25% center;
+  background-attachment: fixed;
+  .team-details > .card {
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.33);
+  }
+  .card {
+    background-color: rgba($darkest-brown, .95);
+  }
+  .vehicle > .card {
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.33);
+  }
+}
+
+/*
+ * Card Bg
+ */
+
+/*
+ * Cards
+ */
+
+.card {
+  margin-bottom: 1rem;
+}
+
+/*
+ * Modals
+ */
+
+.modal-header {
+  background-color: $darker-brown;
+}
+
+.modal-body {
+  color: $darkest-brown;
+  .list-group-item {
+    background-color: $lightest-brown;
+    padding: 0.5rem 1rem;
+    border: none;
+  }
+}
+
+/*
+ * Popup Alert (custom modal)
+ */
+
+.modal-dialog.popup-alert {
+  &.popup-alert-primary, &.confirm-modal {
+    .modal-content {
+      border-color: $primary;
+    }
+    .modal-header {
+      background-color: $dark-brown;
+      border-color: $dark-brown;
+    }
+    .modal-body, .modal-footer {
+      background-color: $lighter-brown;
+    }
+  }
+  &.popup-alert-danger {
+    .modal-header {
+      background-color: $red;
+    }
+    .modal-body, .modal-footer {
+      background-color: $white;
+    }
+  }
+  &.popup-alert-warning {
+    .modal-header {
+      background-color: $yellow;
+    }
+    .modal-body, .modal-footer {
+      background-color: $white;
+    }
+  }
+  &.popup-alert-info {
+    .modal-header {
+      background-color: $cyan;
+    }
+    .modal-body, .modal-footer {
+      background-color: $white;
+    }
+  }
+  &.popup-alert-success {
+    .modal-header {
+      background-color: $green;
+    }
+    .modal-body, .modal-footer {
+      background-color: $white;
+    }
+  }
+  &.alert-modal {
+    .modal-content {
+      border: none;
+    }
+    .modal-header {
+      border-radius: 0.3rem;
+    }
+  }
+  &.confirm-modal {
+    .modal-body {
+      border-radius: 0.2rem 0.2rem 0 0;
+    }
+    .modal-footer {
+      border: none;
+      border-radius: 0 0 0.2rem 0.2rem;
+    }
+  }
+}
+
+/*
+ * Components
+ */
+
+.team-details {
+  h1 {
+    line-height: 1;
+  }
+  .cost-container {
+    font-size: 1.25rem;
+    white-space: nowrap;
+  }
+  .cost-too-high {
+    color: $danger;
+  }
+  img.svg-icon {
+    filter: invert(1);
+    height: 1.5rem;
+    margin-top: -2px;
+  }
+}
+
+.new-vehicle-button {
+  margin-bottom: 1rem;
+
+  .dropdown-menu {
+    z-index: 1040;
+  }
+}
+
+.vehicle {
+  > .card {
+    border-color: $dark-blue;
+  }
+  .card-body {
+    padding: .75rem 1.25rem;
+  }
+  .card-body + .card-body {
+    padding-top: 0;
+  }
+
+  h4 {
+    margin-bottom: 0;
+  }
+  .close-button:hover {
+    color: $secondary;
+    cursor: pointer;
+  }
+  .cost-badge, .slots-badge {
+    position: absolute;
+    right: 40px;
+    .badge {
+      padding: 4px 7px;
+      min-width: 70px;
+      text-align: left;
+      height: 23px;
+      font-weight: normal;
+    }
+    .cost-icon, .slots-icon {
+      margin-right: 3px;
+    }
+    img {
+      filter: invert(1);
+      height: 15px;
+      width: 15px;
+      position: relative;
+      margin-left: -2px;
+    }
+  }
+  .cost-badge {
+    top: 10px;
+  }
+  .slots-badge {
+    top: 38px;
+    .badge {
+      padding-top: 6px;
+    }
+  }
+  .vehicle-label, .edit-name-container {
+    margin-right: 6rem;
+  }
+  .edit-name-input {
+    background-color: $lighter-blue;
+    color: $white;
+    border: none;
+    @include placeholder-color($white);
+  }
+  .dropdown-menu {
+    z-index: 1040;
+  }
+  .btn {
+    .btn-icon, img.btn-svg {
+      margin-right: .135rem;
+    }
+  }
+  .vehicle-card-header {
+    min-height: 70px;
+    background-color: $dark-blue;
+    border-bottom: 0;
+    .slots-overspent .badge {
+      background-color: $danger;
+    }
+  }
+  .vehicle-stats {
+    .row {
+      margin-right: -6px;
+      margin-left: -6px;
+    }
+    .col {
+      padding-right: 6px;
+      padding-left: 6px;
+    }
+    .btn {
+      font-size: .9rem;
+      background-color: $mid-brown;
+      border-color: $mid-brown;
+      color: $white;
+      border-radius: 1px;
+      overflow: hidden;
+      height: 32px;
+      .btn-icon {
+        font-size: 1.2rem;
+        vertical-align: -15%
+      }
+      img.btn-svg {
+        filter: invert(1);
+        &.shield-svg {
+          height: 1.3rem;
+        }
+        &.dice-svg {
+          height: 1.5rem;
+          margin-top: -1px;
+          margin-right: .15rem;
+        }
+        &.gears-svg {
+          height: 1.125rem;
+        }
+      }
+    }
+
+  }
+  .vehicle-hull-boxes {
+    .vehicle-hull-box {
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+  }
+  .vehicle-buttons {
+    .btn-group {
+      margin-bottom: 0;
+    }
+  }
+
+  .vehicle-extras {
+    padding-bottom: 1rem;
+    .card {
+      margin-bottom: 0;
+    }
+    .card + .card {
+      border-top-width: 0;
+    }
+    .card-header {
+      padding: 0;
+      cursor: pointer;
+      border-bottom: 0;
+      .btn {
+        color: $white;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+    .card-body {
+      padding: 0;
+    }
+    .badge.item-count-badge {
+      right: .5rem;
+      top: .6rem;
+      padding: 4px 7px;
+      position: absolute;
+      font-weight: normal;
+      background-color: $dark-brown;
+
+    }
+    table {
+      margin-bottom: 0;
+    }
+    thead {
+      th {
+        font-size: 80%;
+        font-weight: normal;
+        border-bottom: 0;
+        background-color: $dark-brown;
+        .svg-icon {
+          position: relative;
+          margin-left: -2px;
+        }
+      }
+    }
+    tbody {
+      th {
+        font-weight: normal;
+      }
+      th, td {
+        background-color: $darker-brown;
+        border-top: 0;
+      }
+    }
+    .specials-row td {
+      padding-top: 0;
+    }
+    .close-button {
+      margin-right: 0.25rem;
+    }
+    img.svg-icon {
+      filter: invert(1);
+      height: 15px;
+      width: 15px;
+
+      &.svg-icon-wide {
+        width: 24px;
+      }
+    }
+    .facing-button {
+      padding: .1rem .2rem;
+      line-height: 1.1;
+      margin-left: 2px;
+      img {
+        height: 13px;
+        &.svg-icon-wide {
+          width: 17px;
+        }
+      }
+    }
+  }
+}
+
+/*
+ * Main page divs
+ */
+
+.main-row {
+  padding-top: .7rem;
+}

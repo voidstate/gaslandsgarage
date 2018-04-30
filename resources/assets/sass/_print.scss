@@ -1,0 +1,47 @@
+@import 'colours';
+
+@media print {
+  %mono {
+    color: #000 !important;;
+    border-color: #000 !important;
+    background-color: #fff !important;;
+  }
+
+  @page {
+    margin: 10mm 5mm;
+  }
+
+  body, body > .container-fluid, .main-row {
+    padding: 0;
+    margin: 0;
+    @extend %mono;
+  }
+  .team-details, .vehicle {
+    .card, .card-header, .card-body, .badge {
+      @extend %mono;
+    }
+  }
+  .team-details .perk-container .btn {
+    @extend %mono;
+  }
+  .vehicle {
+    table, th, td, .accordion-header, .vehicle-stats .btn, .vehicle-hull-box {
+      @extend %mono;
+    }
+  }
+  .vehicle-stats {
+    padding-top: 0 !important;
+  }
+  .cost-badge, .slots-badge {
+    right: 1.25rem !important;
+  }
+  i.fas {
+    color: #000;
+  }
+  .btn-svg, .svg-icon, .cost-badge img, .vehicle-extras img.cans-icon {
+    filter: invert(0) !important;
+  }
+  .vehicle-extras .btn-link, .vehicle-stats .btn {
+    color: #000 !important;
+  }
+}

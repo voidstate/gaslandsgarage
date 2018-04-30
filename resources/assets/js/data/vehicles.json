@@ -1,0 +1,352 @@
+[
+  {
+    "name": "Bike",
+    "slug": "bike",
+    "weight": "lightweight",
+    "hull": 4,
+    "handling": 5,
+    "maxGear": 6,
+    "slots": 1,
+    "crew": 1,
+    "perks": [
+      {
+        "name": "Full Throttle",
+        "slug": "fullthrottle",
+        "description": ""
+      },
+      {
+        "name": "Pivot",
+        "slug": "pivot",
+        "description": ""
+      }
+    ],
+    "cost": 5,
+    "sponsors": [
+      "miyazaki",
+      "mishkin",
+      "idris",
+      "slime",
+      "warden"
+    ]
+  },
+  {
+    "name": "Buggy",
+    "slug": "buggy",
+    "weight": "lightweight",
+    "hull": 6,
+    "handling": 4,
+    "maxGear": 6,
+    "slots": 2,
+    "crew": 2,
+    "perks": [
+      {
+        "name": "Roll Cage",
+        "slug": "roll-cage",
+        "description": ""
+      }
+    ],
+    "cost": 5,
+    "sponsors": [
+      "miyazaki",
+      "mishkin",
+      "idris",
+      "slime",
+      "warden"
+    ]
+  },
+  {
+    "name": "Trike",
+    "slug": "trike",
+    "weight": "lightweight",
+    "hull": 6,
+    "handling": 4,
+    "maxGear": 6,
+    "slots": 2,
+    "crew": 2,
+    "perks": [],
+    "cost": 5,
+    "sponsors": [
+      "miyazaki",
+      "mishkin",
+      "idris",
+      "slime",
+      "warden"
+    ]
+  },
+  {
+    "name": "Bike & Sidecar",
+    "slug": "bikesidecar",
+    "weight": "lightweight",
+    "hull": 6,
+    "handling": 4,
+    "maxGear": 6,
+    "slots": 2,
+    "crew": 2,
+    "perks": [],
+    "cost": 5,
+    "sponsors": [
+      "miyazaki",
+      "mishkin",
+      "idris",
+      "slime",
+      "warden"
+    ]
+  },
+  {
+    "name": "Car",
+    "slug": "car",
+    "weight": "middleweight",
+    "hull": 10,
+    "handling": 3,
+    "maxGear": 5,
+    "slots": 2,
+    "crew": 2,
+    "perks": [],
+    "cost": 12,
+    "sponsors": [
+    ]
+  },
+  {
+    "name": "Jeep",
+    "slug": "jeep",
+    "weight": "middleweight",
+    "hull": 10,
+    "handling": 3,
+    "maxGear": 5,
+    "slots": 2,
+    "crew": 2,
+    "perks": [],
+    "cost": 12,
+    "sponsors": [
+    ]
+  },
+  {
+    "name": "Performance Car",
+    "slug": "performancecar",
+    "weight": "middleweight",
+    "hull": 8,
+    "handling": 4,
+    "maxGear": 6,
+    "slots": 2,
+    "crew": 1,
+    "perks": [
+      {
+        "name": "Slip Away",
+        "slug": "slipaway",
+        "description": ""
+      }
+    ],
+    "cost": 15,
+    "sponsors": [
+    ]
+  },
+  {
+    "name": "Pickup Truck",
+    "slug": "pickuptruck",
+    "weight": "middleweight",
+    "hull": 12,
+    "handling": 2,
+    "maxGear": 4,
+    "slots": 3,
+    "crew": 3,
+    "perks": [],
+    "cost": 15,
+    "sponsors": [
+      "rutherford",
+      "mishkin",
+      "idris",
+      "slime",
+      "warden"
+    ]
+  },
+  {
+    "name": "Van",
+    "slug": "van",
+    "weight": "middleweight",
+    "hull": 12,
+    "handling": 2,
+    "maxGear": 4,
+    "slots": 3,
+    "crew": 3,
+    "perks": [],
+    "cost": 15,
+    "sponsors": [
+      "rutherford",
+      "mishkin",
+      "idris",
+      "slime",
+      "warden"
+    ]
+  },
+  {
+    "name": "Tractor",
+    "slug": "tractor",
+    "weight": "middleweight",
+    "hull": 12,
+    "handling": 2,
+    "maxGear": 4,
+    "slots": 3,
+    "crew": 3,
+    "perks": [],
+    "cost": 15,
+    "sponsors": [
+      "rutherford",
+      "mishkin",
+      "idris",
+      "slime",
+      "warden"
+    ]
+  },
+  {
+    "name": "Monster Truck",
+    "slug": "monstertruck",
+    "weight": "heavyweight",
+    "hull": 10,
+    "handling": 3,
+    "maxGear": 4,
+    "slots": 2,
+    "crew": 2,
+    "perks": [
+      {
+        "name": "Big Tyres",
+        "slug": "bigtyres",
+        "description": ""
+      },
+      {
+        "name": "Crush Attack",
+        "slug": "crush",
+        "description": ""
+      }
+    ],
+    "cost": 25,
+    "sponsors": [
+    ]
+  },
+  {
+    "name": "Bus",
+    "slug": "bus",
+    "weight": "heavyweight",
+    "hull": 16,
+    "handling": 2,
+    "maxGear": 3,
+    "slots": 3,
+    "crew": 8,
+    "perks": [],
+    "cost": 30,
+    "sponsors": [
+      "rutherford",
+      "mishkin",
+      "idris",
+      "slime",
+      "warden"
+    ]
+  },
+  {
+    "name": "Coach",
+    "slug": "coach",
+    "weight": "heavyweight",
+    "hull": 16,
+    "handling": 2,
+    "maxGear": 3,
+    "slots": 3,
+    "crew": 8,
+    "perks": [],
+    "cost": 30,
+    "sponsors": [
+      "rutherford",
+      "mishkin",
+      "idris",
+      "slime",
+      "warden"
+    ]
+  },
+  {
+    "name": "War Rig",
+    "slug": "warrig",
+    "weight": "heavyweight",
+    "hull": 20,
+    "handling": 2,
+    "maxGear": 4,
+    "slots": 5,
+    "crew": 5,
+    "perks": [
+      {
+        "name": "Special War Rig Rules",
+        "slug": "warrig",
+        "description": "See p.52"
+      }
+    ],
+    "cost": 40,
+    "sponsors": [
+      "rutherford",
+      "mishkin",
+      "idris",
+      "slime",
+      "warden"
+    ]
+  },
+  {
+    "name": "Gyrocopter",
+    "slug": "gyrocopter",
+    "weight": "middleweight",
+    "hull": 4,
+    "handling": 4,
+    "maxGear": 6,
+    "slots": 0,
+    "crew": 1,
+    "perks": [
+      {
+        "name": "Airwolf",
+        "slug": "airwolf",
+        "description": ""
+      },
+      {
+        "name": "Airborne",
+        "slug": "airborne",
+        "description": ""
+      },
+      {
+        "name": "Bomb Away",
+        "slug": "bombaway",
+        "description": ""
+      }
+    ],
+    "cost": 10,
+    "sponsors": [
+      "rutherford",
+      "miyazaki",
+      "mishkin",
+      "slime",
+      "warden"
+    ]
+  },
+  {
+    "name": "Helicopter",
+    "slug": "helicopter",
+    "weight": "heavyweight",
+    "hull": 8,
+    "handling": 3,
+    "maxGear": 4,
+    "slots": 4,
+    "crew": 2,
+    "cost": 30,
+    "sponsors": [
+      "rutherford"
+    ]
+  },
+  {
+    "name": "Tank",
+    "slug": "tank",
+    "weight": "heavyweight",
+    "hull": 20,
+    "handling": 4,
+    "maxGear": 3,
+    "slots": 4,
+    "crew": 3,
+    "perks": [],
+    "cost": 40,
+    "sponsors": [
+      "rutherford"
+    ]
+  }
+]

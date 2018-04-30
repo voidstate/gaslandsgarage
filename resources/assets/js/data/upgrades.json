@@ -1,0 +1,63 @@
+[
+  {
+    "name": "Armour Plating",
+    "slug": "armour",
+    "slots": 1,
+    "max": null,
+    "special": [
+      "+2 Hull"
+    ],
+    "cost": 4,
+    "sponsors": [
+    ]
+  },
+  {
+    "name": "Extra Crewmember",
+    "slug": "crew",
+    "slots": 0,
+    "max": null,
+    "special": [
+      "+1 crew up to a maximum of twice the vehicle's starting crew value."
+    ],
+    "cost": 4,
+    "sponsors": [
+    ]
+  },
+  {
+    "name": "Nitro Booster",
+    "slug": "nitro",
+    "slots": 0,
+    "max": null,
+    "special": [
+      "Activate twice. First activation must be a long straight. Then gains Hazard Tokens until has 5."
+    ],
+    "cost": 6,
+    "sponsors": [
+    ]
+  },
+  {
+    "name": "Tank Tracks",
+    "slug": "tracks",
+    "slots": 1,
+    "max": 1,
+    "special": [
+      "-1 Max Gear. +1 Handling. Ignore rough and treacherous surfaces."
+    ],
+    "cost": 4,
+    "sponsors": [
+    ]
+  },
+  {
+    "name": "Prison Car",
+    "slug": "prisoncar",
+    "slots": 0,
+    "max": 1,
+    "special": [
+      "-2 hull, -4 cans. Middleweight vehicles only."
+    ],
+    "cost": 6,
+    "sponsors": [
+      "warden"
+    ]
+  }
+]

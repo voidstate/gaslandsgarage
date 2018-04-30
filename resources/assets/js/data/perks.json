@@ -1,0 +1,473 @@
+[
+  {
+    "name": "Double-barrelled Aggression",
+    "slug":"aggression",
+    "description": "Up to 3 crew gain +1 hit with handguns",
+    "cost": 2,
+    "sponsors": [
+      "slime",
+      "warden"
+    ],
+    "weights": [
+    ]
+  },
+  {
+    "name": "Boarding Party",
+    "slug":"boardingparty",
+    "description": "Ignore being distracted",
+    "cost": 2,
+    "sponsors": [
+      "slime",
+      "warden"
+    ],
+    "weights": [
+    ]
+  },
+  {
+    "name": "Battlehammer",
+    "slug":"battlehammer",
+    "description": "When making a smash attack, gain +1 dice for each Hazard Token.",
+    "cost": 2,
+    "sponsors": [
+      "slime",
+      "warden"
+    ],
+    "weights": [
+    ]
+  },
+  {
+    "name": "Terrifying Lunatic",
+    "slug":"lunatic",
+    "description": "When an opposing vehicle ends within short range, it gains a Hazard Token.",
+    "cost": 5,
+    "sponsors": [
+      "slime",
+      "warden"
+    ],
+    "weights": [
+    ]
+  },
+  {
+    "name": "Grinderman",
+    "slug":"grinderman",
+    "description": "Can add Hazard Tokens to smash targets instead of hull points.",
+    "cost": 5,
+    "sponsors": [
+      "slime",
+      "warden"
+    ],
+    "weights": [
+    ]
+  },
+  {
+    "name": "Murder Tractor",
+    "slug":"murdertractor",
+    "description": "Can make piledriver attacks, like a War Rig.",
+    "cost": 2,
+    "sponsors": [
+      "slime",
+      "warden"
+    ],
+    "weights": [
+    ]
+  },
+  {
+    "name": "Powder Keg",
+    "slug":"powderkeg",
+    "description": "Add +1 to explosion checks. Treat as one weights-class heavier when it explodes.",
+    "cost": 1,
+    "sponsors": [
+      "rutherford",
+      "warden"
+    ],
+    "weights": [
+    ]
+  },
+  {
+    "name": "Road Warrior",
+    "slug":"roadwarrior",
+    "description": "Remove a Hazard Token when causing 1+ hits",
+    "cost": 1,
+    "sponsors": [
+      "rutherford",
+      "warden"
+    ],
+    "weights": [
+    ]
+  },
+  {
+    "name": "Cover Me",
+    "slug":"coverme",
+    "description": "Once per activation, may remove a Hazard Token and place it on a friendly vehicle within double range.",
+    "cost": 2,
+    "sponsors": [
+      "rutherford",
+      "warden"
+    ],
+    "weights": [
+    ]
+  },
+  {
+    "name": "Fist of Steel",
+    "slug":"fistofsteel",
+    "description": "Take a Hazard Token to reroll all dice during a smash.",
+    "cost": 4,
+    "sponsors": [
+      "rutherford",
+      "warden"
+    ],
+    "weights": [
+    ]
+  },
+  {
+    "name": "Madman",
+    "slug":"madman",
+    "description": "At the end of activation, if has 4+ Hazard Tokens, may move a Hazard Token to a vehicle within medium range.",
+    "cost": 3,
+    "sponsors": [
+      "rutherford",
+      "warden"
+    ],
+    "weights": [
+    ]
+  },
+  {
+    "name": "Crowd Pleaser",
+    "slug":"crowdpleaser",
+    "description": "If this vehicle wipes out, gain +1 Audience Vote.",
+    "cost": 1,
+    "sponsors": [
+      "rutherford",
+      "warden"
+    ],
+    "weights": [
+    ]
+  },
+  {
+    "name": "Evasive",
+    "slug":"evasive",
+    "description": "Counts a 5+ as a success when evading.",
+    "cost": 1,
+    "sponsors": [
+      "miyazaki"
+    ],
+    "weights": [
+    ]
+  },
+  {
+    "name": "Powerslide",
+    "slug":"powerslide",
+    "description": "May use any template except a long straight when sliding.",
+    "cost": 5,
+    "sponsors": [
+      "miyazaki"
+    ],
+    "weights": [
+    ]
+  },
+  {
+    "name": "Slippery",
+    "slug":"slippery",
+    "description": "Smash attacks against this vehicle suffer -2 attack dice.",
+    "cost": 3,
+    "sponsors": [
+      "miyazaki"
+    ],
+    "weights": [
+    ]
+  },
+  {
+    "name": "Trick Driving",
+    "slug":"trickdriving",
+    "description": "May count current gear as one higher or lower when selecting a template. Unpermitted manoeuvres counts as hazardous.",
+    "cost": 5,
+    "sponsors": [
+      "miyazaki"
+    ],
+    "weights": [
+    ]
+  },
+  {
+    "name": "Stunt Driver",
+    "slug":"stuntdriver",
+    "description": "Gain 3 hazard tokens to ignore any obstructions.",
+    "cost": 7,
+    "sponsors": [
+      "miyazaki"
+    ],
+    "weights": [
+    ]
+  },
+  {
+    "name": "Chrome-Whisperer",
+    "slug":"chromewhisperer",
+    "description": "My push it any number ot times.",
+    "cost": 2,
+    "sponsors": [
+      "miyazaki"
+    ],
+    "weights": [
+    ]
+  },
+  {
+    "name": "Return Fire",
+    "slug":"returnfire",
+    "description": "Once per gear step, when attacked, gain +1 Hazard Token to to also attack.",
+    "cost": 3,
+    "sponsors": [
+      "rutherford",
+      "mishkin"
+    ],
+    "weights": [
+    ]
+  },
+  {
+    "name": "Dead-Eye",
+    "slug":"deadeye",
+    "description": "Up to 3 crew gain +1 hit against targets within double range but not medium range.",
+    "cost": 3,
+    "sponsors": [
+      "rutherford",
+      "mishkin"
+    ],
+    "weights": [
+    ]
+  },
+  {
+    "name": "Rapid Fire",
+    "slug":"rapidfire",
+    "description": "Once per attack step, one crew may fire twice.",
+    "cost": 2,
+    "sponsors": [
+      "rutherford",
+      "mishkin"
+    ],
+    "weights": [
+    ]
+  },
+  {
+    "name": "Headshot",
+    "slug":"headshot",
+    "description": "With shooting attacks, critical hit do 3 hits (not 2).",
+    "cost": 4,
+    "sponsors": [
+      "rutherford",
+      "mishkin"
+    ],
+    "weights": [
+    ]
+  },
+  {
+    "name": "Loader",
+    "slug":"loader",
+    "description": "May assign 2 crew to a weapon to gain +1 hit.",
+    "cost": 2,
+    "sponsors": [
+      "rutherford",
+      "mishkin"
+    ],
+    "weights": [
+    ]
+  },
+  {
+    "name": "Fully Loaded",
+    "slug":"fullyloaded",
+    "description": "When attacking with a shooting weapon with 2+ ammo, gain +1 hit.",
+    "cost": 2,
+    "sponsors": [
+      "rutherford",
+      "mishkin"
+    ],
+    "weights": [
+    ]
+  },
+  {
+    "name": "Big Tyres",
+    "slug":"bigtyres",
+    "description": "Ignore rough and treacherous surfaces.",
+    "cost": 2,
+    "sponsors": [
+      "miyazaki",
+      "idris"
+    ],
+    "weights": [
+    ]
+  },
+  {
+    "name": "Moment of Glory",
+    "slug":"momentofglory",
+    "description": "Once per game, after rolling skid dice, change the results.",
+    "cost": 2,
+    "sponsors": [
+      "miyazaki",
+      "idris"
+    ],
+    "weights": [
+    ]
+  },
+  {
+    "name": "Easy Rider",
+    "slug":"easyrider",
+    "description": "Once per turn, may discard one rolled skid dice.",
+    "cost": 5,
+    "sponsors": [
+      "miyazaki",
+      "idris"
+    ],
+    "weights": [
+    ]
+  },
+  {
+    "name": "Restraint",
+    "slug":"restraint",
+    "description": "No Hazard Token for shifting down a gear.",
+    "cost": 2,
+    "sponsors": [
+      "miyazaki",
+      "idris"
+    ],
+    "weights": [
+    ]
+  },
+  {
+    "name": "Expertise",
+    "slug":"expertise",
+    "description": "+1 handling.",
+    "cost": 2,
+    "sponsors": [
+      "miyazaki",
+      "idris"
+    ],
+    "weights": [
+    ]
+  },
+  {
+    "name": "Handbrake Artist",
+    "slug":"handbrakeartist",
+    "description": "When applying a spin result, may face any direction.",
+    "cost": 2,
+    "sponsors": [
+      "miyazaki",
+      "idris"
+    ],
+    "weights": [
+    ]
+  },
+  {
+    "name": "Hot Start",
+    "slug":"hotstart",
+    "description": "Roll a D6 at the start of the game. Start in that gear.",
+    "cost": 1,
+    "sponsors": [
+      "idris",
+      "slime"
+    ],
+    "weights": [
+    ]
+  },
+  {
+    "name": "Slipstream",
+    "slug":"slipstream",
+    "description": "During a skid check, gain 1 shift result if there is a vehicle within short range in front.",
+    "cost": 2,
+    "sponsors": [
+      "idris",
+      "slime"
+    ],
+    "weights": [
+    ]
+  },
+  {
+    "name": "Force Transferal",
+    "slug":"transferal",
+    "description": "On losing 1+ hull from a blast attack, may stick shift up.",
+    "cost": 2,
+    "sponsors": [
+      "idris",
+      "slime"
+    ],
+    "weights": [
+    ]
+  },
+  {
+    "name": "Time Extended",
+    "slug":"timeextended",
+    "description": "After passing a gate, may remove any number of Hazard Tokens.",
+    "cost": 3,
+    "sponsors": [
+      "idris",
+      "slime"
+    ],
+    "weights": [
+    ]
+  },
+  {
+    "name": "Hell for Leather",
+    "slug":"hellforleather",
+    "description": "Can choose a long straight in any gear. It is never hazardous or trivial.",
+    "cost": 2,
+    "sponsors": [
+      "idris",
+      "slime"
+    ],
+    "weights": [
+    ]
+  },
+  {
+    "name": "Rocket Thrusters",
+    "slug":"rocketthrusters",
+    "description": "When flipped, may choose the long straight, veer, or gentle templates.",
+    "cost": 1,
+    "sponsors": [
+      "mishkin"
+    ],
+    "weights": [
+    ]
+  },
+  {
+    "name": "Whizbang",
+    "slug":"whizbang",
+    "description": "At the start of each game, gain a random speed perk.",
+    "cost": 1,
+    "sponsors": [
+      "mishkin"
+    ],
+    "weights": [
+    ]
+  },
+  {
+    "name": "Gyroscope",
+    "slug":"gyroscope",
+    "description": "At the start of each game, gain a random precision perk.",
+    "cost": 1,
+    "sponsors": [
+      "mishkin"
+    ],
+    "weights": [
+    ]
+  },
+  {
+    "name": "Mobile Mechanic",
+    "slug":"mechanic",
+    "description": "Once per turn, instead of attacking, a crewmember may repair 1 hull.",
+    "cost": 5,
+    "sponsors": [
+      "mishkin"
+    ],
+    "weights": [
+    ]
+  },
+  {
+    "name": "Experimental Nuclear Engine",
+    "slug":"nuclearengine",
+    "description": "+2 max gear (up to 6). If fails a flip check, explodes. When explodes, counts as heavyweights.",
+    "cost": 1,
+    "sponsors": [
+      "mishkin"
+    ],
+    "weights": [
+      "middleweights",
+      "heavyweights"
+    ]
+  }
+]

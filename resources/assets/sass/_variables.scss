@@ -1,0 +1,82 @@
+/**
+ * See: ~/node_modules/bootstrap/scss/_variables.scss
+ */
+// colours
+@import 'colours';
+
+// grid breakpoints
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1400px
+);
+
+// body
+$body-bg: $body-bg-color;
+$body-color: $white;
+
+// typography
+$font-family-sans-serif: "Khand", sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+$headings-font-family: 'Passion One', Impact, sans-serif;
+
+// links
+$link-hover-color: $richer-brown;
+
+// alerts
+$alert-bg-level: 1;
+$alert-border-level: 0;
+$alert-color-level: -10;
+
+// borders
+$border-color: $secondary;
+
+// cards
+$card-cap-bg: $mid-brown;
+$card-bg: $darkest-brown;
+$card-border-color: $dark-brown;
+$card-border-radius: 0;
+
+// modals
+$modal-content-bg: $lightest-brown;
+$modal-content-border-color: $secondary;
+$modal-backdrop-bg: $mid-brown;
+$modal-backdrop-opacity: .5;
+$modal-header-border-color: $dark-brown;
+
+// tooltips
+$tooltip-color: $white;
+$tooltip-bg: $dark-blue;
+
+// popovers
+$popover-bg: $dark-blue;
+//$popover-max-width:                 276px !default;
+$popover-header-bg: $dark-blue;
+$popover-header-color: $white;
+$popover-body-color: $white;
+
+// dropdowns
+$dropdown-bg: $mid-blue;
+$dropdown-border-color: rgba($dark-blue, .15);
+$dropdown-divider-bg: $lighter-blue;
+$dropdown-link-color: $gray-100;
+$dropdown-link-hover-color: $dark-blue;
+$dropdown-link-hover-bg: $white;
+$dropdown-link-active-color: $richer-brown;
+$dropdown-link-active-bg: $white;
+$dropdown-link-disabled-color: $gray-600;
+$dropdown-item-padding-x: 1rem;
+//$dropdown-header-color:             $gray-600 !default;
+
+// tables
+$table-bg: transparent !default;
+$table-accent-bg: rgba($darkest-brown, .05);
+$table-border-color: $mid-brown;
+$table-dark-bg: $darkest-brown;
+$table-dark-accent-bg: rgba($white, .05);
+$table-dark-hover-bg: rgba($white, .075);
+$table-dark-border-color: $mid-brown;
+$table-dark-color: $white;

@@ -1,0 +1,313 @@
+[
+  {
+    "name": "Handgun",
+    "slug": "handgun",
+    "type": "shooting",
+    "attack": "1D6",
+    "range": "medium",
+    "ammo": null,
+    "slots": 0,
+    "special": [
+      "Crew Fired"
+    ],
+    "cost": 0,
+    "sponsors": []
+  },
+  {
+    "name": "Machine Gun",
+    "slug": "mg",
+    "type": "shooting",
+    "attack": "2D6",
+    "range": "double",
+    "ammo": null,
+    "slots": 1,
+    "special": [],
+    "cost": 2,
+    "sponsors": []
+  },
+  {
+    "name": "Heavy Machine Gun",
+    "slug": "hmg",
+    "type": "shooting",
+    "attack": "3D6",
+    "range": "double",
+    "ammo": null,
+    "slots": 1,
+    "special": [],
+    "cost": 4,
+    "sponsors": []
+  },
+  {
+    "name": "Mini-Gun",
+    "slug": "mini",
+    "type": "shooting",
+    "attack": "4D6",
+    "range": "double",
+    "ammo": null,
+    "slots": 3,
+    "special": [],
+    "cost": 6,
+    "sponsors": []
+  },
+  {
+    "name": "125mm Cannon",
+    "slug": "cannon",
+    "type": "shooting",
+    "attack": "8D6",
+    "range": "double",
+    "ammo": 3,
+    "slots": 2,
+    "special": [
+      "+2 Hazard Tokens when fired if not a tank"
+    ],
+    "cost": 6,
+    "sponsors": []
+  },
+  {
+    "name": "Rockets",
+    "slug": "rockets",
+    "type": "shooting",
+    "attack": "6D6",
+    "range": "double",
+    "ammo": 3,
+    "slots": 2,
+    "special": [
+      "Blast",
+      "Highly Explosive"
+    ],
+    "cost": 4,
+    "sponsors": []
+  },
+  {
+    "name": "Flamethrower",
+    "slug": "flamethrower",
+    "type": "shooting",
+    "attack": "6D6",
+    "range": "large",
+    "ammo": 3,
+    "slots": 2,
+    "special": [
+      "Large Burst Template",
+      "Burst",
+      "Explosive"
+    ],
+    "cost": 6,
+    "sponsors": []
+  },
+  {
+    "name": "Mortar",
+    "slug": "mortar",
+    "type": "shooting",
+    "attack": "4D6",
+    "range": "double",
+    "ammo": 3,
+    "slots": 1,
+    "special": [
+      "Ignore terrain and cover when attacking"
+    ],
+    "cost": 4,
+    "sponsors": []
+  },
+  {
+    "name": "Grenades",
+    "slug": "grenades",
+    "type": "shooting",
+    "attack": "1D6",
+    "range": "double",
+    "ammo": 5,
+    "slots": 0,
+    "special": [
+      "Crew Fired",
+      "Blast",
+      "Explosive",
+      "Blitz"
+    ],
+    "cost": 1,
+    "sponsors": []
+  },
+  {
+    "name": "Molotov Cocktails",
+    "slug": "molotovs",
+    "type": "shooting",
+    "attack": "1D6",
+    "range": "double",
+    "ammo": 3,
+    "slots": 0,
+    "special": [
+      "Crew Fired",
+      "Fire",
+      "Blitz"
+    ],
+    "cost": 1,
+    "sponsors": []
+  },
+  {
+    "name": "Oil Slick Dropper",
+    "slug": "oil",
+    "type": "dropped",
+    "attack": "-",
+    "range": "large",
+    "ammo": 3,
+    "slots": 0,
+    "special": [
+      "Template counts as a treacherous surface"
+    ],
+    "cost": 2,
+    "sponsors": []
+  },
+  {
+    "name": "Caltrop Dropper",
+    "slug": "caltrops",
+    "type": "dropped",
+    "attack": "-",
+    "range": "small",
+    "ammo": 3,
+    "slots": 1,
+    "special": [
+      "Template counts as a treacherous surface. When overlapped, causes 2 damage and is removed."
+    ],
+    "cost": 1,
+    "sponsors": []
+  },
+  {
+    "name": "Glue Dropper",
+    "slug": "glue",
+    "type": "dropped",
+    "attack": "1D6",
+    "range": "large",
+    "ammo": 3,
+    "slots": 1,
+    "special": [
+      "Template counts as a treacherous surface. When overlapped, lose 2 gears."
+    ],
+    "cost": 1,
+    "sponsors": []
+  },
+  {
+    "name": "Mines",
+    "slug": "mines",
+    "type": "dropped",
+    "attack": "3D6",
+    "range": "large",
+    "ammo": 1,
+    "slots": 1,
+    "special": [
+      "When template is overlapped, make 3D6 attack with blast then template is removed.",
+      "Blast"
+    ],
+    "cost": 1,
+    "sponsors": []
+  },
+  {
+    "name": "Smoke",
+    "slug": "smoke",
+    "type": "dropped",
+    "attack": "-",
+    "range": "large",
+    "ammo": 3,
+    "slots": 1,
+    "special": [
+      "Template counts as a treacherous surface and counts as an obstruction for determining cover."
+    ],
+    "cost": 1,
+    "sponsors": []
+  },
+  {
+    "name": "Ram",
+    "slug": "ram",
+    "type": "smash",
+    "attack": "+2D6",
+    "range": "smash",
+    "ammo": 0,
+    "slots": 1,
+    "special": [
+      "In a collision, add 2 dice. Do not gain Hazard Tokens from collisions on own activation."
+    ],
+    "cost": 3,
+    "sponsors": []
+  },
+  {
+    "name": "Exploding Ram",
+    "slug": "boomram",
+    "type": "smash",
+    "attack": "+6D6",
+    "range": "smash",
+    "ammo": 1,
+    "slots": 1,
+    "special": [
+      "On first collision, add 6 dice. See special rules.",
+      "Highly Explosive"
+    ],
+    "cost": 3,
+    "sponsors": [
+    ]
+  },
+  {
+    "name": "Thumper",
+    "slug": "thumper",
+    "type": "shooting",
+    "attack": "-",
+    "range": "medium",
+    "ammo": 1,
+    "slots": 2,
+    "special": [
+      "Electrical",
+      "Attacks every vehicle within medium range (friend or foe). See special rules."
+    ],
+    "cost": 4,
+    "sponsors": [
+      "mishkin"
+    ]
+  },
+  {
+    "name": "Arc Lightning Projector",
+    "slug": "arc",
+    "type": "shooting",
+    "attack": "6D6",
+    "range": "double",
+    "ammo": 1,
+    "slots": 2,
+    "special": [
+      "Electrical",
+      "Attacks multiple vehicles. See special rules."
+    ],
+    "cost": 6,
+    "sponsors": [
+      "mishkin"
+    ]
+  },
+  {
+    "name": "Kinetic Super Booster",
+    "slug": "booster",
+    "type": "shooting",
+    "attack": "(6D6)",
+    "range": "double",
+    "ammo": 1,
+    "slots": 2,
+    "special": [
+      "Electrical",
+      "Does not cause damage. Each hit increases the target's current gear. See special rules."
+    ],
+    "cost": 6,
+    "sponsors": [
+      "mishkin"
+    ]
+  },
+  {
+    "name": "Magnetic Jammer",
+    "slug": "jammer",
+    "type": "shooting",
+    "attack": "-",
+    "range": "double",
+    "ammo": 1,
+    "slots": 0,
+    "special": [
+      "Electrical",
+      "Target may not discard ammo toens during its next activation."
+    ],
+    "cost": 2,
+    "sponsors": [
+      "mishkin"
+    ]
+  }
+]
