@@ -28,3 +28,5 @@ Route::prefix( 'user' )->group( function()
 {
 	Route::get( '/get-id', 'UserController@getId' );
 } );
+
+Route::view( 'privacy', 'legal.privacy' );
