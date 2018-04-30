@@ -43,8 +43,9 @@
 			{
 				return vehicleTypes.filter( vehicle =>
 				{
-					return vehicle.sponsors.length === 0 ||
-						( this.sponsor && vehicle.sponsors.includes( this.sponsor.slug ) )
+					return !this.sponsor || // no sponsor
+						vehicle.sponsors.length === 0 || // vehicle allows any sponsor
+						vehicle.sponsors.includes( this.sponsor.slug ) // vehicle allows this sponsor
 				} )
 			}
 		},
@@ -61,7 +62,7 @@
 			},
 			useCurrentVehicle()
 			{
-				if ( this.currentVehicle )
+				if( this.currentVehicle )
 				{
 					this.$emit( 'selected', this.currentVehicle )
 				}
