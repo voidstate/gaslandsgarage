@@ -27,6 +27,7 @@ mix.webpackConfig( {
  */
 
 mix.js( 'resources/assets/js/app.js', 'public/js' )
+	.js( 'resources/assets/js/redirect.js', 'public/js' )
 	.sass( 'resources/assets/sass/app.scss', 'public/css' )
 	.sourceMaps();
 

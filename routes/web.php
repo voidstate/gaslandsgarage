@@ -30,3 +30,4 @@ Route::prefix( 'user' )->group( function()
 } );
 
 Route::view( 'privacy', 'legal.privacy' );
+Route::view( 'redirect', 'holding.redirect' );

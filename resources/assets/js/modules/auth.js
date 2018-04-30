@@ -16,7 +16,8 @@ const init = () =>
 			google: window.authTokens.google
 		},
 		{
-			scope: 'email'
+			scope: 'email',
+			redirect_uri: '/redirect'
 		} )
 }
 
