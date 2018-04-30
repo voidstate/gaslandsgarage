@@ -25,7 +25,7 @@
     @extend %mono;
   }
   .vehicle {
-    table, th, td, .accordion-header, .vehicle-stats .btn, .vehicle-hull-box {
+    table, th, td, .accordion-header, .vehicle-stats .btn, .vehicle-hull-box, .facing-button {
       @extend %mono;
     }
   }
