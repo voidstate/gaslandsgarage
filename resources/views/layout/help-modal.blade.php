@@ -20,6 +20,17 @@
 				<p>This app helps you make your Gaslands team, choosing vehicles and souping them up with upgrades, ready to enter combat. You can also share your teams online.</p>
 				<h5>Who Are You?</h5>
 				<p>I'm a web developer from Leeds, Uk, who's geeky enough to come home from work and carry on programming for fun.</p>
+				<p>Suggestions, bug reports, and kind words are all welcome, at
+					<script>document.write('<'+'a'+' '+'h'+'r'+'e'+'f'+'='+"'"+'m'+'a'+'i'+'&'+'#'+'1'+'0'+'8'+';'+'&'+'#'+'1'+'1'+'6'+';'+'&'+
+							'#'+'1'+'1'+'1'+';'+'&'+'#'+'5'+'8'+';'+'w'+'&'+'#'+'1'+'0'+'5'+';'+'t'+'&'+'#'+'3'+'7'+';'+'&'+'#'+
+							'5'+'4'+';'+'E'+'&'+'#'+'3'+'7'+';'+'&'+'#'+'5'+'4'+';'+'&'+'#'+'5'+'3'+';'+'%'+'&'+'#'+'5'+'5'+';'+
+							'3'+'%'+'7'+'3'+'e'+'d'+'&'+'#'+'6'+'4'+';'+'g'+'a'+'%'+'7'+'3'+'&'+'#'+'1'+'0'+'8'+';'+'&'+'#'+'9'+
+							'7'+';'+'n'+'d'+'s'+'&'+'#'+'1'+'0'+'3'+';'+'a'+'&'+'#'+'3'+'7'+';'+'7'+'2'+'a'+'g'+'e'+'&'+'#'+'3'+
+							'7'+';'+'2'+'E'+'&'+'#'+'9'+'9'+';'+'o'+'&'+'#'+'4'+'6'+';'+'&'+'#'+'1'+'1'+'7'+';'+'k'+"'"+'>'+'w'+
+							'i'+'t'+'n'+'&'+'#'+'1'+'0'+'1'+';'+'s'+'s'+'&'+'#'+'1'+'0'+'1'+';'+'d'+'&'+'#'+'6'+'4'+';'+'&'+'#'+
+							'1'+'0'+'3'+';'+'a'+'s'+'&'+'#'+'1'+'0'+'8'+';'+'&'+'#'+'9'+'7'+';'+'n'+'d'+'&'+'#'+'1'+'1'+'5'+';'+
+							'&'+'#'+'1'+'0'+'3'+';'+'a'+'&'+'#'+'1'+'1'+'4'+';'+'&'+'#'+'9'+'7'+';'+'g'+'e'+'&'+'#'+'4'+'6'+';'+
+							'c'+'o'+'&'+'#'+'4'+'6'+';'+'u'+'k'+'<'+'/'+'a'+'>');</script>.</p>
 				<h5>Credits</h5>
 				<p>Gaslands and all related properties, images and text are owned by Mike Hutchinson. Mike has created something awesome in Gaslands.</p>
 				<p>Gaslands Garage is built using awesome open source technologies. The stack is built on...</p>
