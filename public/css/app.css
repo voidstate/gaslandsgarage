@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Passion+One);@import url(https://fonts.googleapis.com/css?family=Khand:300,400,700);@charset "UTF-8";
+@import url(//fonts.googleapis.com/css?family=Passion+One);@import url(//fonts.googleapis.com/css?family=Khand:300,400,700);@charset "UTF-8";
 
 /*!
  * animate.css -http://daneden.me/animate
@@ -14191,7 +14191,7 @@ body.landscape-bg .vehicle > .card {
 .modal-dialog.popup-alert.popup-alert-primary .modal-footer,
 .modal-dialog.popup-alert.confirm-modal .modal-body,
 .modal-dialog.popup-alert.confirm-modal .modal-footer {
-  background-color: #CFC27B;
+  background-color: #efead8;
 }
 
 .modal-dialog.popup-alert.popup-alert-danger .modal-header {

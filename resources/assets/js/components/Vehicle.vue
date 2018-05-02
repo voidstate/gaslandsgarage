@@ -84,7 +84,12 @@
 						<button type="button"
 						        class="btn btn-secondary dropdown-toggle w-100"
 						        data-toggle="dropdown">
-							<i class="fas fa-plus-square btn-icon"></i> Weapon
+
+							<span class="d-sm-none d-md-inline">
+								<i class="fas fa-plus-square btn-icon"></i>
+							</span>
+
+							Weapon
 						</button>
 						<div class="dropdown-menu">
 							<a v-for="(weapon, index) in weaponOptions"
@@ -104,7 +109,12 @@
 								type="button"
 								class="btn btn-secondary dropdown-toggle w-100"
 								data-toggle="dropdown">
-							<i class="fas fa-plus-square btn-icon"></i> Upgrade
+
+							<span class="d-sm-none d-md-inline">
+								<i class="fas fa-plus-square btn-icon"></i>
+							</span>
+
+							Upgrade
 						</button>
 						<div class="dropdown-menu">
 							<a v-for="(upgrade, index) in upgradeOptions"
@@ -124,7 +134,12 @@
 						        type="button"
 						        class="btn btn-secondary dropdown-toggle w-100"
 						        data-toggle="dropdown">
-							<i class="fas fa-plus-square btn-icon"></i> Perk
+
+							<span class="d-sm-none d-md-inline">
+								<i class="fas fa-plus-square btn-icon"></i>
+							</span>
+
+							Perk
 						</button>
 						<div class="dropdown-menu">
 							<a v-for="(perk, index) in perkOptions"
@@ -167,50 +182,52 @@
 						     v-bind:data-parent="'#vehicleAccordion_' + this.uid"
 						     class="collapse d-print-block">
 							<div class="card-body">
-								<table class="table table-sm table-dark">
-									<thead class="thead-dark">
-									<tr>
-										<th scope="col"></th>
-										<th scope="col">Attack</th>
-										<th scope="col">Range</th>
-										<th scope="col">Ammo</th>
-										<th scope="col">
-											<i class="fas fa-cog cost-icon"></i>
-										</th>
-										<th scope="col">
-											<img src="/images/icons/drum.svg" alt="Cans" class="svg-icon">
-										</th>
-										<th scope="col"></th>
-									</tr>
-									</thead>
-									<tbody>
-
-									<template v-for="(weapon, index) in vehicleData.weapons">
+								<div class="table-responsive">
+									<table class="table table-sm table-dark">
+										<thead class="thead-dark">
 										<tr>
-											<th scope="row">
-												{{ weapon.name}}
-												<facing-button v-if="upgradeHasFacing( 'weapons', weapon )"
-												               v-bind:extra="weapon"
-												               v-on:changed="onFacingChanged( 'weapons', index, $event )"></facing-button>
+											<th scope="col"></th>
+											<th scope="col">Attack</th>
+											<th scope="col">Range</th>
+											<th scope="col">Ammo</th>
+											<th scope="col">
+												<i class="fas fa-cog cost-icon"></i>
 											</th>
-											<td>{{ weapon.attack || '–'}}</td>
-											<td>{{ weapon.range}}</td>
-											<td>{{ weapon.ammo || '&#8734;' }}</td>
-											<td>{{ weapon.slots}}</td>
-											<td>{{ getWeaponCost( weapon ) || 'free' }}</td>
-											<td class="text-right">
+											<th scope="col">
+												<img src="/images/icons/drum.svg" alt="Cans" class="svg-icon">
+											</th>
+											<th scope="col"></th>
+										</tr>
+										</thead>
+										<tbody>
+
+										<template v-for="(weapon, index) in vehicleData.weapons">
+											<tr>
+												<th scope="row">
+													{{ weapon.name}}
+													<facing-button v-if="upgradeHasFacing( 'weapons', weapon )"
+													               v-bind:extra="weapon"
+													               v-on:changed="onFacingChanged( 'weapons', index, $event )"></facing-button>
+												</th>
+												<td>{{ weapon.attack || '–'}}</td>
+												<td>{{ weapon.range}}</td>
+												<td>{{ weapon.ammo || '&#8734;' }}</td>
+												<td>{{ weapon.slots}}</td>
+												<td>{{ getWeaponCost( weapon ) || 'free' }}</td>
+												<td class="text-right">
 												<span class="close-button" v-if="weapon.removable" v-on:click="removeWeapon( index )">
 													<i class="fas fa-times"></i>
 												</span>
-											</td>
-										</tr>
-										<tr v-if="weapon.special.length !== 0" class="specials-row">
-											<td class="small" colspan="7" v-html="weapon.special.join( ', ' )"></td>
-										</tr>
-									</template>
+												</td>
+											</tr>
+											<tr v-if="weapon.special.length !== 0" class="specials-row">
+												<td class="small" colspan="7" v-html="weapon.special.join( ', ' )"></td>
+											</tr>
+										</template>
 
-									</tbody>
-								</table>
+										</tbody>
+									</table>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -347,9 +364,9 @@
 			this.addWeapon( weaponData[ 0 ], false )
 
 			this.makeTooltips()
+
 		},
 		components: {
-			FacingButton,
 			'facing-button': FacingButton,
 		},
 		props: [ 'vehicleData', 'sponsor' ],
@@ -502,7 +519,7 @@
 				// can this weapon be removed
 				weapon.removable = removable
 
-				this.vehicleData.weapons.push( weapon )
+				this.vehicleData.weapons.push( _.cloneDeep( weapon ) )
 
 				$( '#vehicleWeaponCardBody_' + this.uid ).collapse( 'show' )
 
@@ -573,35 +590,29 @@
 				$( '#vehiclePerkCardBody_' + this.uid ).collapse( 'show' )
 
 				this.hideTooltips()
-			}
-			,
+			},
 			removePerk( index )
 			{
 				this.vehicleData.perks.splice( index, 1 )
-			}
-			,
+			},
 			extraHasSponsor( item )
 			{
 				return item.sponsors.length === 0 || // empty sponsor property means any sponsor can use it
 					(this.hasSponsor && item.sponsors.includes( this.sponsorSlug ))
-			}
-			,
+			},
 			makeTooltips()
 			{
 				$( '[data-toggle="tooltip"]', this.$refs.container ).tooltip()
-			}
-			,
+			},
 			hideTooltips()
 			{
 				$( '[data-toggle="tooltip"]', this.$refs.container ).tooltip( 'hide' )
-			}
-			,
+			},
 			rebuildTooltips()
 			{
 				$( '[data-toggle="tooltip"]', this.$refs.container ).tooltip( 'dispose' )
 				$( '[data-toggle="tooltip"]', this.$refs.container ).tooltip()
-			}
-			,
+			},
 			onFacingChanged( extraType, index, facing )
 			{
 				this.vehicleData[ extraType ][ index ].facing = facing

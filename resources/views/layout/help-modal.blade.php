@@ -11,7 +11,9 @@
 				<p>Hey there Stranger.</p>
 				<p>Welcome to the Garage.</p>
 				<p>You looking for a new ride? Well you came to the right place. We'll build you the ride of your life. Or maybe your death. Someone's death, anyways.
-					It's up to you who makes it through that final gate. You gonna live long enough to ride to fame, fortune and a ticket to Mars? Or you gonna burn up and die trying? Either way, if you get your ride from the Gaslands Garage, the audience is gonna love you. So let's get building.</p>
+					It's up to you who makes it through that final gate.</p>
+				<p>You gonna live long enough to ride to fame, fortune and a ticket to Mars? Or you gonna burn up and die trying? Either way, if you get your ride from the Gaslands Garage, the audience is gonna love you.</p>
+				<p>So let's get building.</p>
 				<h5>What is Gaslands?</h5>
 				<p>Gaslands is a miniatures game set on post-apocalyptic Earth, where players compete to earn a ticket off world by racing and fighting in vehicles. Think Mad Max.</p>
 				<p>Learn more and buy the rules and accessories on the <a href="https://gaslands.com/">Gaslands website</a> or join the
