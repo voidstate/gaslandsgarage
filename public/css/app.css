@@ -14091,6 +14091,14 @@ body.light-bg > .container-fluid {
   background: linear-gradient(to bottom, #c4ae3e 0%, rgba(196, 174, 62, 0.738) 19%, rgba(196, 174, 62, 0.541) 34%, rgba(196, 174, 62, 0.382) 47%, rgba(196, 174, 62, 0.278) 56.5%, rgba(196, 174, 62, 0.194) 65%, rgba(196, 174, 62, 0.126) 73%, rgba(196, 174, 62, 0.075) 80.2%, rgba(196, 174, 62, 0.042) 86.1%, rgba(196, 174, 62, 0.021) 91%, rgba(196, 174, 62, 0.008) 95.2%, rgba(196, 174, 62, 0.002) 98.2%, rgba(196, 174, 62, 0) 100%);
 }
 
+body.chrome-bg {
+  /*background: rgba(220, 240, 242, 1);
+  background: linear-gradient(to bottom, rgba(220,240,242,1) 0%, rgba(50,175,200,1) 40%, rgba(49,176,196,1) 48%, rgba(226,245,248,1) 50%, rgba(191,119,51,1) 51%, rgba(238,196,135,1) 100%);*/
+  background: #fefefe;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f7f7f7), color-stop(49%, #c9c9c9), color-stop(50%, #d9d9d9), to(white));
+  background: linear-gradient(to bottom, #f7f7f7 0%, #c9c9c9 49%, #d9d9d9 50%, white 100%);
+}
+
 body.animated-bg {
   background-position: 0 0;
   background-repeat: repeat;

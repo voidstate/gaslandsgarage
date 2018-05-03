@@ -7,7 +7,8 @@ const bgClasses = new Map( [
 	[ 2, 'dark' ],
 	[ 3, 'bright' ],
 	[ 4, 'light' ],
-	[ 5, 'animated' ] ] )
+	[ 5, 'chrome' ],
+	[ 6, 'animated' ] ] )
 
 let currentBgIndex = 0
 
