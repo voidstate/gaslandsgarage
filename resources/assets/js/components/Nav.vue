@@ -129,7 +129,14 @@
 							</span>
 						</span>
 
-						<span class="d-lg-none ml-1">Auth</span>
+						<span class="d-lg-none ml-1">
+							<span v-show="loggedIn">
+								Log Out
+							</span>
+							<span v-show="!loggedIn">
+								Log In
+							</span>
+						</span>
 
 					</a>
 
@@ -139,11 +146,13 @@
 								<i class="fab fa-facebook-square"></i> Log In with Facebook
 							</button>
 						</div>
+						<!--
 						<div class="dropdown-item" v-show="!loggedIn">
 							<button class="btn btn-google btn-block border-white" v-on:click="loginGoogle">
 								<i class="fab fa-google"></i> Log In with Google
 							</button>
 						</div>
+						-->
 						<div class="dropdown-item" v-show="loggedIn">
 							<div class="media user-profile">
 								<img class="profile-image mr-3" v-bind:src="userThumbnail" alt="Your Face!">
@@ -223,7 +232,7 @@
 			{
 				this.loggedIn = authorised
 
-				if( authorised )
+				if ( authorised )
 				{
 					this.userName = auth.getUserName()
 					this.userThumbnail = auth.getUserThumbnail()
