@@ -327,7 +327,6 @@
 			},
 			onToggleAccordions()
 			{
-
 				this.accordionsOpen = !this.accordionsOpen
 
 				Cookies.set( 'accordionsOpen', this.accordionsOpen )

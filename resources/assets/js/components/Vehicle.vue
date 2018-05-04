@@ -497,10 +497,6 @@
 				{
 					Vue.popupAlert.alert( 'warning', 'Too many slots used.' )
 				}
-			},
-			accordionOpen()
-			{
-				console.log( 'accordionOpen', this.accordionOpen )
 			}
 		},
 		methods: {

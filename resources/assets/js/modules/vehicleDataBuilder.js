@@ -45,7 +45,7 @@ function getExtra( extraType, slug )
 		throw new Error( `Extra ("${ slug }") not recognised for ${ extraType }` )
 	}
 
-	return extra
+	return _.cloneDeep( extra )
 }
 
 const shortKeys = [
@@ -178,7 +178,6 @@ export default {
 				{
 					dehydratedVehicle[ extraType ] = dehydratedVehicle[ extraType ].map( slug =>
 					{
-
 						let additionalProperties = { removable: true }
 
 						if( extraType === 'weapons' && slug.indexOf( '!' ) !== -1 )

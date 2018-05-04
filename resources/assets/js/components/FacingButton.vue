@@ -42,6 +42,12 @@
 	export default {
 		name: 'facingButton',
 		props: [ 'extra' ],
+		/*data()
+		{
+			return {
+				extra: _.cloneDeep( this.extra )
+			}
+		},*/
 		methods: {
 			changeExtraFacing()
 			{
