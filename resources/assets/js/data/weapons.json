@@ -44,7 +44,7 @@
     "attack": "4D6",
     "range": "double",
     "ammo": null,
-    "slots": 3,
+    "slots": 1,
     "special": [],
     "cost": 6,
     "sponsors": []
