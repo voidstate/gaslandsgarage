@@ -172,7 +172,8 @@
 						<div class="card-header">
 							<div class="accordion-header mb-0"
 							     data-toggle="collapse"
-							     v-bind:data-target="'#vehicleWeaponCardBody_' + this.uid">
+							     v-bind:data-target="'#vehicleWeaponCardBody_' + this.uid"
+							     v-on:click="onAccordionClick">
 								<button class="btn btn-link">
 									Weapons
 								</button>
@@ -239,7 +240,8 @@
 					<div class="card" v-show="hasUpgrades">
 						<div class="card-header">
 							<div class="mb-0 collapsed" data-toggle="collapse"
-							     v-bind:data-target="'#vehicleUpgradeCardBody_' + this.uid">
+							     v-bind:data-target="'#vehicleUpgradeCardBody_' + this.uid"
+							     v-on:click="onAccordionClick">
 								<button class="btn btn-link">
 									Upgrades
 								</button>
@@ -251,7 +253,7 @@
 						     v-bind:class="{ 'd-block': accordionOpen }"
 						     class="collapse d-print-block">
 							<div class="card-body">
-								<table class="table table-sm">
+								<table class="table table-sm table-dark">
 									<thead class="thead-dark">
 									<tr>
 										<th scope="col"></th>
@@ -295,7 +297,8 @@
 					<div class="card" v-show="hasPerks">
 						<div class="card-header">
 							<div class="mb-0" data-toggle="collapse"
-							     v-bind:data-target="'#vehiclePerkCardBody_' + this.uid">
+							     v-bind:data-target="'#vehiclePerkCardBody_' + this.uid"
+							     v-on:click="onAccordionClick">
 								<button class="btn btn-link">
 									Perks
 								</button>
@@ -307,7 +310,7 @@
 						     v-bind:class="{ 'd-block': accordionOpen }"
 						     class="collapse d-print-block">
 							<div class="card-body">
-								<table class="table table-sm">
+								<table class="table table-sm table-dark">
 									<thead class="thead-dark">
 									<tr>
 										<th scope="col"></th>
@@ -490,7 +493,7 @@
 			},
 			slotsOverspent( newValue, oldValue )
 			{
-				if ( newValue && !oldValue )
+				if( newValue && !oldValue )
 				{
 					Vue.popupAlert.alert( 'warning', 'Too many slots used.' )
 				}
@@ -562,13 +565,13 @@
 			},
 			upgradeHasFacing( extraType, upgrade )
 			{
-				if ( extraType === 'weapons' )
+				if( extraType === 'weapons' )
 				{
 					return (upgrade.type === 'shooting' && !upgrade.special.includes( 'Crew Fired' )) ||
 						upgrade.type === 'smash'
 				}
 
-				if ( extraType === 'upgrades' )
+				if( extraType === 'upgrades' )
 				{
 					return upgrade.slug === 'armour'
 				}
@@ -578,7 +581,7 @@
 			addPerk( perk, removable )
 			{
 				// can only buy each perk once
-				if ( _.find( this.vehicleData.perks, { 'slug': perk.slug } ) )
+				if( _.find( this.vehicleData.perks, { 'slug': perk.slug } ) )
 				{
 					Vue.popupAlert.alert( 'danger', `Perk already added: ${ perk.name }` )
 					return
@@ -588,7 +591,7 @@
 				perk.removable = removable
 
 				// vehicle perks are free
-				if ( perk.cost === undefined )
+				if( perk.cost === undefined )
 				{
 					perk.cost = 0
 				}
@@ -624,6 +627,14 @@
 			onFacingChanged( extraType, index, facing )
 			{
 				this.vehicleData[ extraType ][ index ].facing = facing
+			},
+			// disable Bootstrap event by cancelling propagation
+			onAccordionClick( event )
+			{
+				if( this.accordionOpen )
+				{
+					event.stopPropagation()
+				}
 			}
 		}
 	}
