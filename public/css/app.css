@@ -14094,9 +14094,77 @@ body.light-bg > .container-fluid {
 body.chrome-bg {
   /*background: rgba(220, 240, 242, 1);
   background: linear-gradient(to bottom, rgba(220,240,242,1) 0%, rgba(50,175,200,1) 40%, rgba(49,176,196,1) 48%, rgba(226,245,248,1) 50%, rgba(191,119,51,1) 51%, rgba(238,196,135,1) 100%);*/
+  color: #40343a !important;
   background: #fefefe;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f7f7f7), color-stop(49%, #c9c9c9), color-stop(50%, #d9d9d9), to(white));
-  background: linear-gradient(to bottom, #f7f7f7 0%, #c9c9c9 49%, #d9d9d9 50%, white 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(whitesmoke), color-stop(50%, #e0e0e0), color-stop(51%, #c2c2c2), to(#ededed));
+  background: linear-gradient(to bottom, whitesmoke 0%, #e0e0e0 50%, #c2c2c2 51%, #ededed 100%);
+}
+
+body.chrome-bg .team-details .card {
+  border-color: #7d6c75;
+  -webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.33);
+          box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.33);
+}
+
+body.chrome-bg .team-details .card-body {
+  background-color: #7d6c75;
+  background: -webkit-gradient(linear, left top, left bottom, from(whitesmoke), color-stop(50%, #e0e0e0), color-stop(51%, #c2c2c2), to(#ededed));
+  background: linear-gradient(to bottom, whitesmoke 0%, #e0e0e0 50%, #c2c2c2 51%, #ededed 100%);
+}
+
+body.chrome-bg .vehicle > .card {
+  border-color: #7d6c75;
+  -webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.33);
+          box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.33);
+  background-color: #574950 !important;
+  background: -webkit-gradient(linear, left top, left bottom, from(whitesmoke), color-stop(50%, #e0e0e0), color-stop(51%, #c2c2c2), to(#ededed)) !important;
+  background: linear-gradient(to bottom, whitesmoke 0%, #e0e0e0 50%, #c2c2c2 51%, #ededed 100%) !important;
+}
+
+body.chrome-bg .vehicle .vehicle-card-header,
+body.chrome-bg .vehicle .card-header,
+body.chrome-bg .vehicle .card-body {
+  background-color: transparent;
+}
+
+body.chrome-bg .vehicle .vehicle-card-header .badge {
+  background-color: #574950 !important;
+}
+
+body.chrome-bg .vehicle .vehicle-stats .btn {
+  background-color: #574950 !important;
+  border-color: #574950 !important;
+}
+
+body.chrome-bg .vehicle .vehicle-extras .card {
+  border-color: #bdadb5;
+}
+
+body.chrome-bg .vehicle .vehicle-extras .card-header {
+  background-color: #574950;
+}
+
+body.chrome-bg .vehicle .vehicle-extras thead th {
+  background-color: #7d6c75;
+}
+
+body.chrome-bg .vehicle .vehicle-extras th,
+body.chrome-bg .vehicle .vehicle-extras td {
+  background-color: #bdadb5;
+}
+
+body.chrome-bg .vehicle .vehicle-extras .badge {
+  background-color: #daced4;
+}
+
+body.chrome-bg .main-row .btn.btn-primary,
+body.chrome-bg .main-row .btn.btn-secondary {
+  background-color: #574950 !important;
+  border-color: #daced4;
+}
+
+body.chrome-bg .main-row .btn.btn-outline-primary {
+  border-color: #574950;
 }
 
 body.animated-bg {

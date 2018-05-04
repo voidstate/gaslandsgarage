@@ -170,7 +170,8 @@
 					<!-- Weapons -->
 					<div class="card" v-show="hasWeapons">
 						<div class="card-header">
-							<div class="accordion-header mb-0" data-toggle="collapse"
+							<div class="accordion-header mb-0"
+							     data-toggle="collapse"
 							     v-bind:data-target="'#vehicleWeaponCardBody_' + this.uid">
 								<button class="btn btn-link">
 									Weapons
@@ -180,6 +181,7 @@
 						</div>
 						<div v-bind:id="'vehicleWeaponCardBody_' + this.uid"
 						     v-bind:data-parent="'#vehicleAccordion_' + this.uid"
+						     v-bind:class="{ 'd-block': accordionOpen }"
 						     class="collapse d-print-block">
 							<div class="card-body">
 								<div class="table-responsive">
@@ -246,6 +248,7 @@
 						</div>
 						<div v-bind:id="'vehicleUpgradeCardBody_' + this.uid"
 						     v-bind:data-parent="'#vehicleAccordion_' + this.uid"
+						     v-bind:class="{ 'd-block': accordionOpen }"
 						     class="collapse d-print-block">
 							<div class="card-body">
 								<table class="table table-sm">
@@ -301,6 +304,7 @@
 						</div>
 						<div v-bind:id="'vehiclePerkCardBody_' + this.uid"
 						     v-bind:data-parent="'#vehicleAccordion_' + this.uid"
+						     v-bind:class="{ 'd-block': accordionOpen }"
 						     class="collapse d-print-block">
 							<div class="card-body">
 								<table class="table table-sm">
@@ -369,7 +373,7 @@
 		components: {
 			'facing-button': FacingButton,
 		},
-		props: [ 'vehicleData', 'sponsor' ],
+		props: [ 'vehicleData', 'sponsor', 'accordionOpen' ],
 		data()
 		{
 			return {
@@ -486,10 +490,14 @@
 			},
 			slotsOverspent( newValue, oldValue )
 			{
-				if( newValue && !oldValue )
+				if ( newValue && !oldValue )
 				{
 					Vue.popupAlert.alert( 'warning', 'Too many slots used.' )
 				}
+			},
+			accordionOpen()
+			{
+				console.log( 'accordionOpen', this.accordionOpen )
 			}
 		},
 		methods: {
@@ -554,13 +562,13 @@
 			},
 			upgradeHasFacing( extraType, upgrade )
 			{
-				if( extraType === 'weapons' )
+				if ( extraType === 'weapons' )
 				{
 					return (upgrade.type === 'shooting' && !upgrade.special.includes( 'Crew Fired' )) ||
 						upgrade.type === 'smash'
 				}
 
-				if( extraType === 'upgrades' )
+				if ( extraType === 'upgrades' )
 				{
 					return upgrade.slug === 'armour'
 				}
@@ -570,7 +578,7 @@
 			addPerk( perk, removable )
 			{
 				// can only buy each perk once
-				if( _.find( this.vehicleData.perks, { 'slug': perk.slug } ) )
+				if ( _.find( this.vehicleData.perks, { 'slug': perk.slug } ) )
 				{
 					Vue.popupAlert.alert( 'danger', `Perk already added: ${ perk.name }` )
 					return
@@ -580,7 +588,7 @@
 				perk.removable = removable
 
 				// vehicle perks are free
-				if( perk.cost === undefined )
+				if ( perk.cost === undefined )
 				{
 					perk.cost = 0
 				}

@@ -72,6 +72,24 @@
 						<span class="d-lg-none ml-1">Save Current Team</span> </a>
 
 				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#" v-on:click.prevent="printTeam">
+
+						<span data-toggle="tooltip"
+						      data-placement="bottom"
+						      data-html="true"
+						      title="Print Team"
+						      class="d-none d-sm-inline">
+							<i class="fas fa-lg fa-fw fa-print" data-fa-transform="shrink-1"></i>
+						</span>
+
+						<span class="d-sm-none">
+						<i class="fas fa-lg fa-fw fa-print" data-fa-transform="shrink-1"></i>
+						</span>
+
+						<span class="d-lg-none ml-1">Print Team</span> </a>
+
+				</li>
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown">
 
@@ -92,6 +110,7 @@
 					</a>
 
 					<div class="dropdown-menu">
+						<a class="dropdown-item" href="#" v-on:click.prevent="toggleAccordions">Toggle Accordions</a>
 						<a class="dropdown-item" href="#" v-on:click.prevent="toggleBackground">Toggle Background</a>
 						<a class="dropdown-item" href="#" v-on:click.prevent="resetTeam">Reset Team</a>
 					</div>
@@ -224,6 +243,10 @@
 			{
 				backgroundSwitcher.toggleBackground()
 			},
+			toggleAccordions()
+			{
+				eventBus.$emit( 'team.toggle-accordions' )
+			},
 			resetTeam()
 			{
 				eventBus.$emit( 'team.reset' )
@@ -272,6 +295,10 @@
 			saveTeam()
 			{
 				eventBus.$emit( 'team.save' )
+			},
+			printTeam()
+			{
+				window.print()
 			},
 			addTeam()
 			{

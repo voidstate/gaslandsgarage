@@ -15,6 +15,7 @@
 			<vehicle v-for="(vehicleData, index) in vehicles"
 			         v-bind:vehicleData="vehicleData"
 			         v-bind:sponsor="sponsor"
+			         v-bind:accordionOpen="accordionsOpen"
 			         :key="vehicleData.uid"
 			         v-on:updated="onVehicleUpdated( index, $event )"
 			         v-on:deleted="onVehicleDeleted( index )"></vehicle>
@@ -31,8 +32,12 @@
 	import vehicleDataBuilder from '../modules/vehicleDataBuilder'
 	import auth from '../modules/auth'
 
+	import Cookies from 'js-cookie'
+
 	const getData = function ()
 	{
+		let data
+
 		if( window.location.hash )
 		{
 			try
@@ -44,19 +49,23 @@
 				{
 					throw new Error( 'Failed to hydrate' )
 				}
-				return hydrated
+				data = hydrated
 			}
 			catch( err )
 			{
 				Vue.popupAlert.alert( 'danger', 'Team stored in web address not recognised. Have you pasted it all in?' )
 				console.error( err )
-				return vehicleDataBuilder.baseTeamData()
+				data = vehicleDataBuilder.baseTeamData()
 			}
 		}
 		else
 		{
-			return vehicleDataBuilder.baseTeamData()
+			data = vehicleDataBuilder.baseTeamData()
 		}
+
+		data.accordionsOpen = Cookies.get( 'accordionsOpen' ) || false
+
+		return data
 	}
 
 	export default {
@@ -67,6 +76,7 @@
 			eventBus.$on( 'team.reset', this.onResetTeam )
 			eventBus.$on( 'team.save', this.onSave )
 			eventBus.$on( 'team.load', this.onLoad )
+			eventBus.$on( 'team.toggle-accordions', this.onToggleAccordions )
 
 			setTimeout( () => this.emitSummary(), 100 )
 		},
@@ -314,6 +324,15 @@
 			onVehicleDeleted( index )
 			{
 				this.vehicles.splice( index, 1 )
+			},
+			onToggleAccordions()
+			{
+
+				this.accordionsOpen = !this.accordionsOpen
+
+				Cookies.set( 'accordionsOpen', this.accordionsOpen )
+
+				Vue.popupAlert.alert( 'info', 'Accordions will now ' + ( this.accordionsOpen ? 'remain open' : 'open and close when clicked' ) + '.' )
 			}
 		}
 	}

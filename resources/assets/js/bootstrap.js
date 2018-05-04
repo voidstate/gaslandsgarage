@@ -75,6 +75,7 @@ import faGoogle from '@fortawesome/fontawesome-free-brands/faGoogle'
 import faInfoCircle from '@fortawesome/fontawesome-free-solid/faInfoCircle'
 import faLock from '@fortawesome/fontawesome-free-solid/faLock'
 import faPlusSquare from '@fortawesome/fontawesome-free-solid/faPlusSquare'
+import faPrint from '@fortawesome/fontawesome-free-solid/faPrint'
 import faQuestionCircle from '@fortawesome/fontawesome-free-solid/faQuestionCircle'
 //import faRandom from '@fortawesome/fontawesome-free-solid/faRandom'
 //import faShieldAlt from '@fortawesome/fontawesome-free-solid/faShieldAlt'
@@ -97,6 +98,7 @@ fontawesome.library.add(
 	faInfoCircle,
 	faLock,
 	faPlusSquare,
+	faPrint,
 	faQuestionCircle,
 	//faRandom,
 	//faShieldAlt,
