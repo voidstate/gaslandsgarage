@@ -161,9 +161,68 @@ body.light-bg {
 body.chrome-bg {
   /*background: rgba(220, 240, 242, 1);
   background: linear-gradient(to bottom, rgba(220,240,242,1) 0%, rgba(50,175,200,1) 40%, rgba(49,176,196,1) 48%, rgba(226,245,248,1) 50%, rgba(191,119,51,1) 51%, rgba(238,196,135,1) 100%);*/
+  color: $gray-800 !important;
+  background: rgba(254, 254, 254, 1);
+  background: linear-gradient(to bottom, rgba(245, 245, 245, 1) 0%, rgba(224, 224, 224, 1) 50%, rgba(194, 194, 194, 1) 51%, rgba(237, 237, 237, 1) 100%);
 
-  background: rgba(254,254,254,1);
-  background: linear-gradient(to bottom, rgba(247,247,247,1) 0%, rgba(201,201,201,1) 49%, rgba(217,217,217,1) 50%, rgba(255,255,255,1) 100%);
+  .team-details {
+    .card {
+      border-color: $gray-600;
+      box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.33);
+    }
+    .card-body {
+      background-color: $gray-600;
+      background: linear-gradient(to bottom, rgba(245, 245, 245, 1) 0%, rgba(224, 224, 224, 1) 50%, rgba(194, 194, 194, 1) 51%, rgba(237, 237, 237, 1) 100%);
+    }
+  }
+  .vehicle {
+    & > .card {
+      border-color: $gray-600;
+      box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.33);
+      background-color: $gray-700 !important;
+      background: linear-gradient(to bottom, rgba(245, 245, 245, 1) 0%, rgba(224, 224, 224, 1) 50%, rgba(194, 194, 194, 1) 51%, rgba(237, 237, 237, 1) 100%) !important;
+
+    }
+    .vehicle-card-header, .card-header, .card-body {
+      background-color: transparent;
+    }
+    .vehicle-card-header .badge {
+      background-color: $gray-700 !important;
+    }
+    .vehicle-stats .btn {
+      background-color: $gray-700 !important;
+      border-color: $gray-700 !important;
+    }
+    .vehicle-extras {
+      .card {
+        border-color: $gray-500;
+      }
+      .card-header {
+        background-color: $gray-700;
+      }
+      thead th {
+        background-color: $gray-600;
+      }
+      th, td {
+        background-color: $gray-500;
+      }
+      .badge {
+        background-color: $gray-400;
+      }
+    }
+  }
+
+  .main-row {
+    .btn.btn-primary, .btn.btn-secondary {
+      background-color: $gray-700 !important;
+      border-color: $gray-400;
+    }
+
+    .btn.btn-outline-primary {
+      border-color: $gray-700;
+    }
+  }
+
 }
 
 body.animated-bg {
