@@ -174,6 +174,9 @@ body.chrome-bg {
       background-color: $gray-600;
       background: linear-gradient(to bottom, rgba(245, 245, 245, 1) 0%, rgba(224, 224, 224, 1) 50%, rgba(194, 194, 194, 1) 51%, rgba(237, 237, 237, 1) 100%);
     }
+    .svg-icon {
+      filter: invert(0);
+    }
   }
   .vehicle {
     & > .card {
@@ -195,10 +198,11 @@ body.chrome-bg {
     }
     .vehicle-extras {
       .card {
-        border-color: $gray-500;
+        border-color: $gray-600;
       }
       .card-header {
-        background-color: $gray-700;
+        //background-color: $gray-700;
+        background: linear-gradient(to bottom, $gray-800, $gray-700 100%);
       }
       thead th {
         background-color: $gray-600;
