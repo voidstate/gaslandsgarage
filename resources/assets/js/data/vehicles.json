@@ -12,7 +12,7 @@
       {
         "name": "Full Throttle",
         "slug": "fullthrottle",
-        "description": ""
+        "description": "Long straight is permitted in any gear. Not hazardous or trivial in any gear."
       },
       {
         "name": "Pivot",
@@ -42,7 +42,7 @@
       {
         "name": "Roll Cage",
         "slug": "roll-cage",
-        "description": ""
+        "description": "Ignore 2 hits from a flip."
       }
     ],
     "cost": 5,
@@ -133,7 +133,7 @@
       {
         "name": "Slip Away",
         "slug": "slipaway",
-        "description": ""
+        "description": "Free activation after choosing to evade against a tailgate, T-bone or sideswipe."
       }
     ],
     "cost": 15,
@@ -210,12 +210,12 @@
       {
         "name": "Big Tyres",
         "slug": "bigtyres",
-        "description": ""
+        "description": "Ignore rough surfaces. Treat treacherous surfaces as hazardous."
       },
       {
         "name": "Crush Attack",
         "slug": "crush",
-        "description": ""
+        "description": "After resolving a collision against specific vehicles (see p.32), ignore the obstruction for the rest of the movement step."
       }
     ],
     "cost": 25,
@@ -298,17 +298,17 @@
       {
         "name": "Airwolf",
         "slug": "airwolf",
-        "description": ""
+        "description": "At the start of its activation, make a single pivot of up to 90 degrees."
       },
       {
         "name": "Airborne",
         "slug": "airborne",
-        "description": ""
+        "description": "Ignore obstructions, etc. (see p.32)."
       },
       {
         "name": "Bomb Away",
         "slug": "bombaway",
-        "description": ""
+        "description": "Dropped weapons require 0 build slots."
       }
     ],
     "cost": 10,
@@ -329,6 +329,23 @@
     "maxGear": 4,
     "slots": 4,
     "crew": 2,
+    "perks": [
+      {
+        "name": "Airwolf",
+        "slug": "airwolf",
+        "description": "At the start of its activation, make a single pivot of up to 90 degrees."
+      },
+      {
+        "name": "Airborne",
+        "slug": "airborne",
+        "description": "Ignore obstructions, etc. (see p.32)."
+      },
+      {
+        "name": "Bomb Away",
+        "slug": "bombaway",
+        "description": "Dropped weapons require 0 build slots."
+      }
+    ],
     "cost": 30,
     "sponsors": [
       "rutherford"
@@ -343,7 +360,23 @@
     "maxGear": 3,
     "slots": 4,
     "crew": 3,
-    "perks": [],
+    "perks": [
+      {
+        "name": "Pivot",
+        "slug": "pivot",
+        "description": "At the start of its activation, if in gear 1, turn to face any direction."
+      },
+      {
+        "name": "Crush Attack",
+        "slug": "crush",
+        "description": "After resolving a collision against specific vehicles (see p.32), ignore the obstruction for the rest of the movement step."
+      },
+      {
+        "name": "All Terrain",
+        "slug": "allterrain",
+        "description": "Ignore rough and treacherous surfaces."
+      }
+    ],
     "cost": 40,
     "sponsors": [
       "rutherford"
