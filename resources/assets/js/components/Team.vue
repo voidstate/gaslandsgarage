@@ -9,14 +9,14 @@
 				v-on:sponsorChanged="onSponsorChanged"
 				v-on:maxCostChanged="onMaxCostChanged"></team-details>
 		<new-vehicle-button
-				v-on:selected="onVehicleAdded"
-				v-bind:sponsor="sponsor"></new-vehicle-button>
+				v-bind:sponsor="sponsor"
+				v-on:selected="onVehicleAdded"></new-vehicle-button>
 		<draggable v-model="vehicles" v-on:start="onVehicleDragStart" v-on:end="onVehicleDragEnd" class="row">
 			<vehicle v-for="(vehicleData, index) in vehicles"
 			         v-bind:vehicleData="vehicleData"
 			         v-bind:sponsor="sponsor"
 			         v-bind:accordionOpen="accordionsOpen"
-			         :key="vehicleData.uid"
+			         v-bind:key="vehicleData.uid"
 			         v-on:updated="onVehicleUpdated( index, $event )"
 			         v-on:deleted="onVehicleDeleted( index )"></vehicle>
 		</draggable>

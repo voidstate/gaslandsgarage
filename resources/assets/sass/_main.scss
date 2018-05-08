@@ -305,8 +305,14 @@ body.landscape-bg {
  * Modals
  */
 
+.modal-content {
+  border-radius: 0;
+  border-width: 4px;
+}
+
 .modal-header {
   background-color: $darker-brown;
+  border-radius: 0;
 }
 
 .modal-body {

@@ -25,6 +25,8 @@
     @extend %mono;
   }
   .vehicle {
+    break-inside: avoid;
+    break-after: auto;
     table, th, td, .accordion-header, .vehicle-stats .btn, .vehicle-hull-box, .facing-button {
       @extend %mono;
     }

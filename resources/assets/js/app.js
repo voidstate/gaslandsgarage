@@ -11,8 +11,14 @@ require( './bootstrap' );
  */
 
 import backgroundSwitcher from './modules/backgroundSwitcher'
+
 document.addEventListener( 'DOMContentLoaded', () => backgroundSwitcher.initBackground() )
 
+const credit = $( '#voidstateCredit' )
+credit.one( 'click', () =>
+{
+	credit.addClass( 'animated tada' )
+} )
 
 /*
  * Help modal
@@ -20,17 +26,18 @@ document.addEventListener( 'DOMContentLoaded', () => backgroundSwitcher.initBack
 
 // better to load this with XHR? Faster pages but lose SEO.
 
-
 /*
  * Vue components
  */
 
 import Vue from 'vue'
+
 window.Vue = Vue
 
 // popups
 // can be used by vue as a plug in (also by JS with show method)
 import popupAlertVueModule from './plugins/popupAlert'
+
 Vue.use( popupAlertVueModule.vueModule )
 
 // team

@@ -85,7 +85,7 @@
 						        class="btn btn-secondary dropdown-toggle w-100"
 						        data-toggle="dropdown">
 
-							<span class="d-sm-none d-md-inline">
+							<span class="d-none d-md-inline">
 								<i class="fas fa-plus-square btn-icon"></i>
 							</span>
 
@@ -110,7 +110,7 @@
 								class="btn btn-secondary dropdown-toggle w-100"
 								data-toggle="dropdown">
 
-							<span class="d-sm-none d-md-inline">
+							<span class="d-none d-md-inline">
 								<i class="fas fa-plus-square btn-icon"></i>
 							</span>
 
@@ -135,7 +135,7 @@
 						        class="btn btn-secondary dropdown-toggle w-100"
 						        data-toggle="dropdown">
 
-							<span class="d-sm-none d-md-inline">
+							<span class="d-none d-md-inline">
 								<i class="fas fa-plus-square btn-icon"></i>
 							</span>
 

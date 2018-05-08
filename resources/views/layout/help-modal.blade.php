@@ -8,12 +8,12 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<p>Hey there Stranger.</p>
+				<p>Hey there, Stranger.</p>
 				<p>Welcome to the Garage.</p>
 				<p>You looking for a new ride? Well you came to the right place. We'll build you the ride of your life. Or maybe your death. Someone's death, anyways.
 					It's up to you who makes it through that final gate.</p>
 				<p>You gonna live long enough to ride to fame, fortune and a ticket to Mars? Or you gonna burn up and die trying? Either way, if you get your ride from the Gaslands Garage, the audience is gonna love you.</p>
-				<p>So let's get building.</p>
+				<p>So, what you waiting for, Stranger? Let's get building.</p>
 				<h5>What is Gaslands?</h5>
 				<p>Gaslands is a miniatures game set on post-apocalyptic Earth, where players compete to earn a ticket off world by racing and fighting in vehicles. Think Mad Max.</p>
 				<p>Learn more and buy the rules and accessories on the <a href="https://gaslands.com/">Gaslands website</a> or join the
@@ -33,10 +33,18 @@
 							'1'+'0'+'3'+';'+'a'+'s'+'&'+'#'+'1'+'0'+'8'+';'+'&'+'#'+'9'+'7'+';'+'n'+'d'+'&'+'#'+'1'+'1'+'5'+';'+
 							'&'+'#'+'1'+'0'+'3'+';'+'a'+'&'+'#'+'1'+'1'+'4'+';'+'&'+'#'+'9'+'7'+';'+'g'+'e'+'&'+'#'+'4'+'6'+';'+
 							'c'+'o'+'&'+'#'+'4'+'6'+';'+'u'+'k'+'<'+'/'+'a'+'>');</script>.</p>
+				<h5>How Can I help?</h5>
+				<h6>Good</h6>
+				<p>Report bugs and make suggestions. OR just send me nice emails.</p>
+				<h6>Better</h6>
+				<p>Add bugs and suggestions to the
+					<a href="https://github.com/voidstate/gaslandsgarage" target="_blank">Github repository</a>.</p>
+				<h6>Good</h6>
+				<p>Clone the repo and fix bugs yourself!</p>
 				<h5>Credits</h5>
 				<p>Gaslands and all related properties, images and text are owned by Mike Hutchinson. Mike has created something awesome in Gaslands.</p>
 				<p>Gaslands Garage is built using awesome open source technologies. The stack is built on...</p>
-				<p>PHP</p>
+				<h6>PHP</h6>
 				<ul>
 					<li>
 						<a href="https://laravel.com/" target="_blank">Laravel</a> for the best backend framework. Probably overkill for this project but it's spoiled me.
@@ -45,7 +53,7 @@
 						<a href="https://kint-php.github.io/kint/" target="_blank">Kint</a> for readable errors
 					</li>
 				</ul>
-				<p>JS</p>
+				<h6>JS</h6>
 				<ul>
 					<li>
 						<a href="https://vuejs.org/" target="_blank">Vue</a> for a blazing fast virtual DOM-based JS framework that makes my brain hurt sometimes
@@ -66,7 +74,7 @@
 						<a href="https://popper.js.org/" target="_blank">Popper</a> for elegant tooltips
 					</li>
 				</ul>
-				<p>UI & Styling</p>
+				<h6>UI & Styling</h6>
 				<ul>
 					<li>
 						<a href="https://laravel.com/" target="_blank">Bootstrap 4</a> for its stylish responsive layout and components
@@ -78,7 +86,7 @@
 						<a href="https://fontawesome.com/" target="_blank">Font Awesome 5</a> for beautiful SVG icons
 					</li>
 				</ul>
-				<p>Fonts</p>
+				<h6>Fonts</h6>
 				<ul>
 					<li>
 						<a href="https://fonts.google.com/specimen/Passion+One" target="_blank">Passion One</a> for headings
@@ -87,13 +95,13 @@
 						<a href="https://fonts.google.com/specimen/Khand" target="_blank">Khand</a> for body text
 					</li>
 				</ul>
-				<p>Icons</p>
+				<h6>Icons</h6>
 				<ul>
 					<li>
 						<a href="https://thenounproject.com" target="_blank">The Noun Project</a> Creative Commons SVGs by Arthur Shlain, Kimmi Studio & Nikita Kozin
 					</li>
 				</ul>
-				<p>Images</p>
+				<h6>Images</h6>
 				<ul>
 					<li>
 						<a href="/images/backgrounds/landscapes/barren-desert-filtered.jpg" target="_blank">The desert road picture</a> is from a wallpaper site - I haven't been able to find the original source
@@ -102,7 +110,7 @@
 						<a href="https://marlborolt.deviantart.com/gallery/48477164/Seamless-Textures" target="_blank">marlborolt</a> for most of the seamless backgrounds
 					</li>
 				</ul>
-				<p>Build Tools</p>
+				<h6>Build Tools</h6>
 				<ul>
 					<li>
 						<a href="https://webpack.js.org/" target="_blank">Webpack</a> for making stuff smaller and faster in ways I don't really understand
