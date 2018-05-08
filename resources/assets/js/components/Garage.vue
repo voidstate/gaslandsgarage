@@ -12,29 +12,29 @@
 					<div class="alert alert-info" v-show="!hasTeams">
 						<i class="fas fa-info-circle"></i> You have not saved any teams yet. Once you do, they will appear here.
 					</div>
-					<ul class="list-group list-group-flush" v-for="team of teams">
-						<li class="list-group-item">
-							<div class="team d-flex w-100">
-								<div class="w-50 mr-3">
+					<table class="w-100">
+						<template v-for="team of teams">
+							<tr class="team">
+								<td class="align-top pr-3">
 									<h5 class="mb-0">{{ team.name }}</h5>
 									<p>{{ team.sponsor }}</p>
-								</div>
-								<div class="mr-3">
+								</td>
+								<td class="align-top pr-3">
 									<p>
 										{{ team.cost }}/{{ team.max_cost }} cans<br> {{ team.vehicle_count }} vehicles<br> {{ team.vehicle_names }}
 									</p>
-								</div>
-								<div class="ml-auto">
-									<button class="btn btn-primary" v-on:click="onLoad( team.id )">
+								</td>
+								<td class="align-top text-right">
+									<button class="btn btn-primary btn-sm mb-1" v-on:click="onLoad( team.id )">
 										<i class="fas fa-fw fa-cloud-download-alt"></i>
 									</button>
-									<button class="btn btn-primary" v-on:click="onDelete( team.id )">
+									<button class="btn btn-primary btn-sm mb-1" v-on:click="onDelete( team.id )">
 										<i class="fas fa-fw fa-trash-alt"></i>
 									</button>
-								</div>
-							</div>
-						</li>
-					</ul>
+								</td>
+							</tr>
+						</template>
+					</table>
 				</div>
 			</div>
 		</div>
