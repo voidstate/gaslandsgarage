@@ -204,7 +204,7 @@
 										</thead>
 										<tbody>
 
-										<template v-for="(weapon, index) in vehicleData.weapons">
+										<template v-for="(weapon, index) in modifiedVehicleData.weapons">
 											<tr>
 												<th scope="row">
 													{{ weapon.name}}
@@ -268,7 +268,7 @@
 									</thead>
 									<tbody>
 
-									<template v-for="(upgrade, index) in vehicleData.upgrades">
+									<template v-for="(upgrade, index) in modifiedVehicleData.upgrades">
 										<tr>
 											<th scope="row">
 												{{ upgrade.name}}
@@ -322,7 +322,7 @@
 									</thead>
 									<tbody>
 
-									<template v-for="(perk, index) in vehicleData.perks">
+									<template v-for="(perk, index) in modifiedVehicleData.perks">
 										<tr>
 											<th scope="row">
 												{{ perk.name}}

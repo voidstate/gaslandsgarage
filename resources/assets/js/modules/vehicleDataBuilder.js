@@ -248,7 +248,7 @@ export default {
 
 			for( const extraType of extras )
 			{
-				const addedExtras = _.filter( vehicle[ extraType ], extra => extra.cost > 0 )
+				const addedExtras = _.filter( vehicle[ extraType ], extra => extra.cost !== 0 ) // @todo shoddy way of determining built-in upgrades
 
 				if( addedExtras.length )
 				{

@@ -55,7 +55,7 @@
     "special": [
       "-2 hull, -4 cans. Middleweight vehicles only."
     ],
-    "cost": 6,
+    "cost": -4,
     "sponsors": [
       "warden"
     ]
