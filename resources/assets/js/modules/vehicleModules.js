@@ -1,44 +1,38 @@
-const modules = {
-	sponsors: {
-		idris( vehicle )
-		{
+const bombAwayPerk = ( vehicle, extra, extraIndex ) =>
+{
+	if( vehicle.slug === 'gyrocopter' || vehicle.slug === 'helicopter' )
+	{
+		vehicle[ 'weapons' ][ extraIndex ].cost = 0
+	}
 
-		}
-	},
+	return vehicle
+}
+
+const modules = {
+	sponsors: {},
 	vehicles: {},
 	weapons: {
 		oil( vehicle, extra, extraIndex )
 		{
-
-			console.log( 'oil', vehicle, extra )
-
-			if( vehicle.slug === 'gyrocopter' || vehicle.slug === 'helicopter' )
-			{
-				vehicle[ 'weapons' ][ extraIndex ].cost = 0
-			}
-
-			console.log( 'new cost', extra.cost )
-
-			console.log( vehicle )
-
-			return vehicle
+			return bombAwayPerk( ...arguments )
 		},
-		/*caltrops()
+		caltrops( vehicle, extra, extraIndex )
 		{
+			return bombAwayPerk( ...arguments )
+		},
+		glue( vehicle, extra, extraIndex )
+		{
+			return bombAwayPerk( ...arguments )
+		},
+		mines( vehicle, extra, extraIndex )
+		{
+			return bombAwayPerk( ...arguments )
 
 		},
-		glue()
+		smoke( vehicle, extra, extraIndex )
 		{
-
-		},
-		mines()
-		{
-
-		},
-		smoke()
-		{
-
-		}*/
+			return bombAwayPerk( ...arguments )
+		}
 	},
 	upgrades: {
 		armour( vehicle )
@@ -50,7 +44,7 @@ const modules = {
 		{
 			vehicle.crew++
 
-			if ( vehicle.crew > vehicle.maxCrew )
+			if( vehicle.crew > vehicle.maxCrew )
 			{
 				vehicle.crew = vehicle.maxCrew
 			}
@@ -79,7 +73,7 @@ const modules = {
 		{
 			vehicle.maxGear++
 
-			if ( vehicle.maxGear > 6 )
+			if( vehicle.maxGear > 6 )
 			{
 				vehicle.maxGear = 6
 			}
@@ -102,34 +96,32 @@ export default {
 		vehicle = _.cloneDeep( vehicle ) // don't modify original if from Vue $data
 
 		let vehicleModule = modules.vehicles[ vehicle.slug ]
-		if ( vehicleModule )
+		if( vehicleModule )
 		{
 			vehicle = vehicleModule( vehicle )
 		}
 
-		if ( vehicle.sponsor )
+		if( vehicle.sponsor )
 		{
 			let sponsorModule = modules.sponsors[ vehicle.sponsor.slug ]
-			if ( sponsorModule )
+			if( sponsorModule )
 			{
 				vehicle = sponsorModule( vehicle )
 			}
 		}
 
 		// loop through "extras" within that vehicle, passing vehicle to found modules
-		for ( let extraType of extraTypes )
+		for( let extraType of extraTypes )
 		{
 			for( const [ vehicleExtraIndex, vehicleExtra ] of vehicle[ extraType ].entries() )
 			{
 				let extraModule = modules[ extraType ][ vehicleExtra.slug ]
-				if ( extraModule )
+				if( extraModule )
 				{
 					vehicle = extraModule( vehicle, vehicleExtra, vehicleExtraIndex )
 				}
 			}
 		}
-
-		console.log( 'vehicle', vehicle )
 
 		return vehicle
 	}

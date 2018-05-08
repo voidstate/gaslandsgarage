@@ -11,7 +11,7 @@
 		<new-vehicle-button
 				v-on:selected="onVehicleAdded"
 				v-bind:sponsor="sponsor"></new-vehicle-button>
-		<div class="row">
+		<draggable v-model="vehicles" v-on:start="onVehicleDragStart" v-on:end="onVehicleDragEnd" class="row">
 			<vehicle v-for="(vehicleData, index) in vehicles"
 			         v-bind:vehicleData="vehicleData"
 			         v-bind:sponsor="sponsor"
@@ -19,7 +19,7 @@
 			         :key="vehicleData.uid"
 			         v-on:updated="onVehicleUpdated( index, $event )"
 			         v-on:deleted="onVehicleDeleted( index )"></vehicle>
-		</div>
+		</draggable>
 	</div>
 </template>
 
@@ -33,6 +33,7 @@
 	import auth from '../modules/auth'
 
 	import Cookies from 'js-cookie'
+	import draggable from 'vuedraggable'
 
 	const getData = function ()
 	{
@@ -91,7 +92,8 @@
 		components: {
 			vehicle: Vehicle,
 			'new-vehicle-button': NewVehicleButton,
-			'team-details': TeamDetails
+			'team-details': TeamDetails,
+			draggable
 		},
 		data()
 		{
@@ -331,7 +333,15 @@
 
 				Cookies.set( 'accordionsOpen', this.accordionsOpen )
 
-				Vue.popupAlert.alert( 'info', 'Accordions will now ' + ( this.accordionsOpen ? 'remain open' : 'open and close when clicked' ) + '.' )
+				Vue.popupAlert.alert( 'info', 'Accordions will now ' + (this.accordionsOpen ? 'remain open' : 'open and close when clicked') + '.' )
+			},
+			onVehicleDragStart( evt )
+			{
+				$( '.vehicle' ).removeClass( 'animated' )
+			},
+			onVehicleDragEnd()
+			{
+				$( '.vehicle' ).addClass( 'animated' )
 			}
 		}
 	}
