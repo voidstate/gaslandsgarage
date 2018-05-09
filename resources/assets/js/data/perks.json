@@ -405,7 +405,7 @@
     "name": "Hell for Leather",
     "slug":"hellforleather",
     "description": "Can choose a long straight in any gear. It is never hazardous or trivial.",
-    "cost": 2,
+    "cost": 5,
     "sponsors": [
       "idris",
       "slime"

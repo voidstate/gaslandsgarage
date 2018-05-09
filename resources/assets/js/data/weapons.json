@@ -113,7 +113,7 @@
     "slug": "grenades",
     "type": "shooting",
     "attack": "1D6",
-    "range": "double",
+    "range": "medium",
     "ammo": 5,
     "slots": 0,
     "special": [
@@ -130,7 +130,7 @@
     "slug": "molotovs",
     "type": "shooting",
     "attack": "1D6",
-    "range": "double",
+    "range": "medium",
     "ammo": 3,
     "slots": 0,
     "special": [
