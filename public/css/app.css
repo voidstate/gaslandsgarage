@@ -14075,7 +14075,7 @@ body.chrome-bg {
 }
 
 body.chrome-bg .main-row {
-	color: #40343a !important;
+  color: #40343a !important;
 }
 
 body.chrome-bg .team-details .card {
@@ -14242,13 +14242,13 @@ body.landscape-bg .vehicle > .card {
  */
 
 .modal-content {
-	border-radius: 0;
-	border-width: 4px;
+  border-radius: 0;
+  border-width: 4px;
 }
 
 .modal-header {
   background-color: #332212;
-	border-radius: 0;
+  border-radius: 0;
 }
 
 .modal-body {
@@ -14324,16 +14324,16 @@ body.landscape-bg .vehicle > .card {
 }
 
 .modal-dialog.popup-alert.alert-modal .modal-header {
-  border-radius: 0.3rem;
+  border-radius: 0;
 }
 
 .modal-dialog.popup-alert.confirm-modal .modal-body {
-  border-radius: 0.2rem 0.2rem 0 0;
+  border-radius: 0;
 }
 
 .modal-dialog.popup-alert.confirm-modal .modal-footer {
   border: none;
-  border-radius: 0 0 0.2rem 0.2rem;
+  border-radius: 0;
 }
 
 /*
@@ -14678,12 +14678,12 @@ body.landscape-bg .vehicle > .card {
     margin: 0;
   }
 
-	.vehicle {
-		-webkit-column-break-inside: avoid;
-		break-inside: avoid;
-		-webkit-column-break-after: auto;
-		break-after: auto;
-	}
+  .vehicle {
+    -webkit-column-break-inside: avoid;
+            break-inside: avoid;
+    -webkit-column-break-after: auto;
+            break-after: auto;
+  }
 
   .vehicle-stats {
     padding-top: 0 !important;
