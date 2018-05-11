@@ -87,7 +87,7 @@
     "name": "Road Warrior",
     "slug":"roadwarrior",
     "description": "Remove a Hazard Token when causing 1+ hits",
-    "cost": 1,
+    "cost": 2,
     "sponsors": [
       "rutherford",
       "warden"

@@ -205,7 +205,7 @@
     "attack": "-",
     "range": "large",
     "ammo": 3,
-    "slots": 1,
+    "slots": 0,
     "special": [
       "Template counts as a treacherous surface and counts as an obstruction for determining cover."
     ],
