@@ -11,7 +11,7 @@
 						{{ cost }} cans
 					</span>
 				</div>
-				<div class="slots-badge" v-bind:class="{ 'slots-overspent' : slotsOverspent }">
+				<div class="slots-badge d-print-none" v-bind:class="{ 'slots-overspent' : slotsOverspent }">
 					<span class="badge badge-dark">
 						<i class="fas fa-cog slots-icon"></i>
 						{{ slots }}/{{ maxSlots }} slots
@@ -30,7 +30,7 @@
 				<div v-show="hasNewLabel">
 					{{ vehicleData.name }}
 				</div>
-				<div class="d-none d-print-block">
+				<div class="d-none d-print-block mt-1">
 					{{ weight }}
 				</div>
 			</div>

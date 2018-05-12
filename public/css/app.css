@@ -1,4 +1,7 @@
-@import url(//fonts.googleapis.com/css?family=Passion+One);@import url(//fonts.googleapis.com/css?family=Khand:300,400,700);@charset "UTF-8";
+@import url(//fonts.googleapis.com/css?family=Passion+One);
+@import url(//fonts.googleapis.com/css?family=Khand:300,400,500,700);
+
+@charset "UTF-8";
 
 /*!
  * animate.css -http://daneden.me/animate
@@ -14671,6 +14674,26 @@ body.landscape-bg .vehicle > .card {
     margin: 10mm 5mm;
 }
 
+	body {
+		line-height: .9rem !important;
+	}
+
+	body,
+	th,
+	.btn,
+	.badge {
+		font-weight: 500 !important;
+	}
+
+	body,
+	.btn {
+		font-size: 1.05rem !important;
+	}
+
+	h4.vehicle-label {
+		font-size: 1.6rem;
+	}
+
   body,
   body > .container-fluid,
   .main-row {
@@ -14693,6 +14716,11 @@ body.landscape-bg .vehicle > .card {
   .slots-badge {
     right: 1.25rem !important;
   }
+
+	.cost-badge .badge,
+	.slots-badge .badge {
+		font-size: 100% !important;
+	}
 
   i.fas {
     color: #000;
