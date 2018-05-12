@@ -57,3 +57,22 @@ Vue.component( 'garage', require( './components/Garage.vue' ) )
 const garage = new Vue( {
 	el: '#garage'
 } );
+
+/*
+ * Title watcher
+ */
+
+import eventBus from './modules/eventBus'
+
+const baseTitle = document.title
+
+eventBus.$on( 'team.summary-changed', event =>
+{
+
+	const newTitle = event.name + ' · ' + baseTitle
+
+	if( document.title != newTitle )
+	{
+		document.title = newTitle;
+	}
+} )
