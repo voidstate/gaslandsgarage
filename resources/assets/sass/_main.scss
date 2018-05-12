@@ -539,6 +539,12 @@ body.landscape-bg {
       height: 1.25rem;
     }
   }
+  .vehicle-ammo-boxes {
+    .vehicle-ammo-box {
+      width: 1.125rem;
+      height: 1.125rem;
+    }
+  }
   .vehicle-buttons {
     .btn-group {
       margin-bottom: 0;
@@ -626,6 +632,7 @@ body.landscape-bg {
         }
       }
     }
+
   }
 }
 

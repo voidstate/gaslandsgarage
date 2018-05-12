@@ -131,7 +131,7 @@
     "type": "shooting",
     "attack": "1D6",
     "range": "medium",
-    "ammo": 3,
+    "ammo": 5,
     "slots": 0,
     "special": [
       "Crew Fired",

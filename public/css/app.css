@@ -14535,6 +14535,11 @@ body.landscape-bg .vehicle > .card {
   height: 1.25rem;
 }
 
+.vehicle .vehicle-ammo-boxes .vehicle-ammo-box {
+	width: 1.125rem;
+	height: 1.125rem;
+}
+
 .vehicle .vehicle-buttons .btn-group {
   margin-bottom: 0;
 }
@@ -14664,6 +14669,7 @@ body.landscape-bg .vehicle > .card {
   .vehicle .accordion-header,
   .vehicle .vehicle-stats .btn,
   .vehicle .vehicle-hull-box,
+  .vehicle .vehicle-ammo-box,
   .vehicle .facing-button {
     color: #000 !important;
     border-color: #000 !important;

@@ -199,7 +199,7 @@
 											<th scope="col">
 												<img src="/images/icons/drum.svg" alt="Cans" class="svg-icon">
 											</th>
-											<th scope="col"></th>
+											<th scope="col" class="d-print-none"></th>
 										</tr>
 										</thead>
 										<tbody>
@@ -217,7 +217,7 @@
 												<td>{{ weapon.ammo || '&#8734;' }}</td>
 												<td>{{ weapon.slots}}</td>
 												<td>{{ getWeaponCost( weapon ) || 'free' }}</td>
-												<td class="text-right">
+												<td class="text-right d-print-none">
 												<span class="close-button" v-if="weapon.removable" v-on:click="removeWeapon( index )">
 													<i class="fas fa-times"></i>
 												</span>
@@ -225,6 +225,14 @@
 											</tr>
 											<tr v-if="weapon.special.length !== 0" class="specials-row">
 												<td class="small" colspan="7" v-html="weapon.special.join( ', ' )"></td>
+											</tr>
+											<tr class="d-none d-print-table-row" v-if="weapon.ammo">
+												<th></th>
+												<td class="text-left" colspan="6">
+													<div class="card-body vehicle-ammo-boxes d-none d-print-block pb-2">
+														<div class="vehicle-ammo-box border d-inline-block mr-1" v-for="n in weapon.ammo"></div>
+													</div>
+												</td>
 											</tr>
 										</template>
 
@@ -263,7 +271,7 @@
 										<th scope="col">
 											<img src="/images/icons/drum.svg" alt="Cans" class="svg-icon">
 										</th>
-										<th scope="col"></th>
+										<th scope="col" class="d-print-none"></th>
 									</tr>
 									</thead>
 									<tbody>
@@ -275,7 +283,7 @@
 											</th>
 											<td>{{ upgrade.slots}}</td>
 											<td>{{ getUpgradeCost( upgrade ) || 'free' }}</td>
-											<td class="text-right">
+											<td class="text-right d-print-none">
 											<span class="close-button" v-if="upgrade.removable" v-on:click="removeUpgrade( index )">
 												<i class="fas fa-times"></i>
 											</span>
@@ -317,7 +325,7 @@
 										<th scope="col">
 											<img src="/images/icons/drum.svg" alt="Cans" class="svg-icon">
 										</th>
-										<th scope="col"></th>
+										<th scope="col" class="d-print-none"></th>
 									</tr>
 									</thead>
 									<tbody>
@@ -328,7 +336,7 @@
 												{{ perk.name}}
 											</th>
 											<td>{{ perk.cost || 'free' }}</td>
-											<td class="text-right">
+											<td class="text-right d-print-none">
 											<span class="close-button" v-if="perk.removable" v-on:click="removePerk( index )">
 												<i class="fas fa-times"></i>
 											</span>
