@@ -68,11 +68,8 @@ const baseTitle = document.title
 
 eventBus.$on( 'team.summary-changed', event =>
 {
-
-	const newTitle = event.name + ' · ' + baseTitle
-
-	if( document.title != newTitle )
+	if( event.name != 'New Team' )
 	{
-		document.title = newTitle;
+		document.title = event.name + ' · ' + baseTitle;
 	}
 } )
