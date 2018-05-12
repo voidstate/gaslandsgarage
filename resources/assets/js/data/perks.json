@@ -1,7 +1,7 @@
 [
   {
-    "name": "Double-barrelled Aggression",
-    "slug":"aggression",
+    "name": "Double-Barrelled",
+    "slug": "doublebarrelled",
     "description": "Up to 3 crew gain +1 hit with handguns",
     "cost": 2,
     "sponsors": [
@@ -27,7 +27,7 @@
     "name": "Battlehammer",
     "slug":"battlehammer",
     "description": "When making a smash attack, gain +1 dice for each Hazard Token.",
-    "cost": 2,
+    "cost": 4,
     "sponsors": [
       "slime",
       "warden"
@@ -63,7 +63,7 @@
     "name": "Murder Tractor",
     "slug":"murdertractor",
     "description": "Can make piledriver attacks, like a War Rig.",
-    "cost": 2,
+    "cost": 4,
     "sponsors": [
       "slime",
       "warden"
@@ -147,7 +147,7 @@
     "name": "Evasive",
     "slug":"evasive",
     "description": "Counts a 5+ as a success when evading.",
-    "cost": 1,
+    "cost": 5,
     "sponsors": [
       "miyazaki"
     ],
@@ -213,7 +213,7 @@
     "name": "Return Fire",
     "slug":"returnfire",
     "description": "Once per gear step, when attacked, gain +1 Hazard Token to to also attack.",
-    "cost": 3,
+    "cost": 5,
     "sponsors": [
       "rutherford",
       "mishkin"
@@ -333,7 +333,7 @@
     "name": "Expertise",
     "slug":"expertise",
     "description": "+1 handling.",
-    "cost": 2,
+    "cost": 3,
     "sponsors": [
       "miyazaki",
       "idris"
@@ -345,7 +345,7 @@
     "name": "Handbrake Artist",
     "slug":"handbrakeartist",
     "description": "When applying a spin result, may face any direction.",
-    "cost": 2,
+    "cost": 5,
     "sponsors": [
       "miyazaki",
       "idris"
@@ -381,6 +381,18 @@
     "name": "Force Transferal",
     "slug":"transferal",
     "description": "On losing 1+ hull from a blast attack, may stick shift up.",
+    "cost": 2,
+    "sponsors": [
+      "idris",
+      "slime"
+    ],
+    "weights": [
+    ]
+  },
+  {
+    "name": "Overload",
+    "slug": "overload",
+    "description": "May roll an extra skid dice but if does not shift up, gains a hazard token.",
     "cost": 2,
     "sponsors": [
       "idris",

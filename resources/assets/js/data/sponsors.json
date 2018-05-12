@@ -36,6 +36,10 @@
       {
         "name": "Elegance",
         "description": "May not purchase heavyweight vehicles."
+      },
+      {
+        "name": "Showing Off",
+        "description": "Gsin an audience vote for each vehicle, if all vehicles resolved a spin, slide and shift result."
       }
     ]
   },

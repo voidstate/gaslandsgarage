@@ -56,7 +56,7 @@
     "attack": "8D6",
     "range": "double",
     "ammo": 3,
-    "slots": 2,
+    "slots": 3,
     "special": [
       "+2 Hazard Tokens when fired if not a tank"
     ],
@@ -88,7 +88,7 @@
     "slots": 2,
     "special": [
       "Large Burst Template",
-      "Burst",
+      "Fire",
       "Explosive"
     ],
     "cost": 6,
@@ -173,9 +173,9 @@
     "name": "Glue Dropper",
     "slug": "glue",
     "type": "dropped",
-    "attack": "1D6",
+    "attack": "-",
     "range": "large",
-    "ammo": 3,
+    "ammo": 1,
     "slots": 1,
     "special": [
       "Template counts as a treacherous surface. When overlapped, lose 2 gears."
