@@ -188,7 +188,7 @@
     "slug": "mines",
     "type": "dropped",
     "attack": "3D6",
-    "range": "large",
+    "range": "small",
     "ammo": 1,
     "slots": 1,
     "special": [

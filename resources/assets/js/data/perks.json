@@ -469,5 +469,15 @@
       "middleweights",
       "heavyweights"
     ]
+  },
+  {
+    "name": "Experimental Teleporter",
+    "slug": "teleporter",
+    "description": "Gain 3 hazard token and roll a skid dice. On a hazard, opponent places vehicle within long range, otherwise place vehicle within medium range.",
+    "cost": 7,
+    "sponsors": [
+      "mishkin"
+    ],
+    "weights": []
   }
 ]
