@@ -1,3 +1,5 @@
+import popupAlert from '../plugins/popupAlert'
+
 const bombAwayPerk = ( vehicle, extra, extraIndex ) =>
 {
 	if( vehicle.slug === 'gyrocopter' || vehicle.slug === 'helicopter' )
@@ -40,13 +42,15 @@ const modules = {
 			vehicle.hull += 2
 			return vehicle
 		},
-		extracrew( vehicle )
+		crew( vehicle )
 		{
 			vehicle.crew++
 
 			if( vehicle.crew > vehicle.maxCrew )
 			{
 				vehicle.crew = vehicle.maxCrew
+
+				popupAlert.alert( 'warning', 'Maximum crew of ' + vehicle.maxCrew + ' exceeded.' )
 			}
 
 			return vehicle
