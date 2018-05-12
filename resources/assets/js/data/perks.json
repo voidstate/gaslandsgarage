@@ -260,7 +260,7 @@
   {
     "name": "Loader",
     "slug":"loader",
-    "description": "May assign 2 crew to a weapon to gain +1 hit.",
+    "description": "May assign 2 crew to a weapon to gain +1 bonus to hit.",
     "cost": 2,
     "sponsors": [
       "rutherford",
@@ -272,7 +272,7 @@
   {
     "name": "Fully Loaded",
     "slug":"fullyloaded",
-    "description": "When attacking with a shooting weapon with 2+ ammo, gain +1 hit.",
+    "description": "When attacking with a shooting weapon with 2+ ammo, gain +1 dice.",
     "cost": 2,
     "sponsors": [
       "rutherford",

@@ -379,7 +379,6 @@
 			this.addWeapon( weaponData[ 0 ], false )
 
 			this.makeTooltips()
-
 		},
 		components: {
 			'facing-button': FacingButton,
@@ -572,13 +571,14 @@
 				if( extraType === 'weapons' )
 				{
 					return (upgrade.type === 'shooting' && !upgrade.special.includes( 'Crew Fired' )) ||
-						upgrade.type === 'smash'
+						upgrade.type === 'smash' ||
+						upgrade.type === 'dropped'
 				}
 
-				if( extraType === 'upgrades' )
+				/*if( extraType === 'upgrades' )
 				{
 					return upgrade.slug === 'armour'
-				}
+				}*/
 
 				return false
 			},

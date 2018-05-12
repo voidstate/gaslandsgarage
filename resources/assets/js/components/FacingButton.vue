@@ -1,6 +1,6 @@
 <template>
 	<button class="facing-button btn btn-sm btn-primary"
-	        v-on:click="changeExtraFacing">
+	        v-on:click="toggleExtraFacing">
 
 		<img src="/images/icons/front-facing.svg"
 		     class="svg-icon"
@@ -41,6 +41,13 @@
 <script>
 	export default {
 		name: 'facingButton',
+		mounted()
+		{
+			if( !this.frontAllowed )
+			{
+				this.changeExtraFacing( 'rear' )
+			}
+		},
 		props: [ 'extra' ],
 		/*data()
 		{
@@ -48,36 +55,59 @@
 				extra: _.cloneDeep( this.extra )
 			}
 		},*/
-		methods: {
-			changeExtraFacing()
+		computed: {
+			frontAllowed()
 			{
-				const turretAllowed = this.extra.type !== undefined && this.extra.type === 'shooting',
-				      newFacing = this.getNextFacing( this.extra.facing, turretAllowed )
-
-				this.$emit( 'changed', newFacing )
+				return this.extra.type !== undefined && this.extra.type !== 'dropped'
 			},
-			getNextFacing( currentFacing, turretAllowed = false )
+			turretAllowed()
 			{
-				let facings = [ 'front', 'side', 'rear' ]
+				return this.extra.type !== undefined && this.extra.type === 'shooting'
+			},
+			facings()
+			{
+				let facings = [ 'side', 'rear' ]
 
-				if( turretAllowed )
+				if( this.frontAllowed )
+				{
+					facings.unshift( 'front' )
+				}
+
+				if( this.turretAllowed )
 				{
 					facings.push( 'turret' )
 				}
 
-				if( !facings.includes( currentFacing ) )
+				return facings
+			}
+		},
+		methods: {
+			toggleExtraFacing()
+			{
+				const newFacing = this.getNextFacing( this.extra.facing )
+				this.changeExtraFacing( newFacing )
+			},
+			changeExtraFacing( newFacing )
+			{
+				console.log( 'changeExtraFacing', newFacing )
+
+				this.$emit( 'changed', newFacing )
+			},
+			getNextFacing( currentFacing )
+			{
+				if( !this.facings.includes( currentFacing ) )
 				{
-					currentFacing = facings[ 0 ]
+					currentFacing = this.facings[ 0 ]
 				}
 
-				let index = facings.indexOf( currentFacing ) + 1
+				let index = this.facings.indexOf( currentFacing ) + 1
 
-				if( index >= facings.length )
+				if( index >= this.facings.length )
 				{
 					index = 0
 				}
 
-				return facings[ index ]
+				return this.facings[ index ]
 			},
 		}
 	}
