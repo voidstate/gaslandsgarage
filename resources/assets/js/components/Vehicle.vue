@@ -5,6 +5,9 @@
 				<div class="float-right close-button d-print-none" v-on:click="deleteVehicle">
 					<i class="fas fa-times"></i>
 				</div>
+				<div class="duplicate-button d-print-none" v-on:click="duplicateVehicle">
+					<i class="fas fa-copy"></i>
+				</div>
 				<div class="cost-badge">
 					<span class="badge badge-dark">
 						<img src="/images/icons/drum.svg" alt="Can">
@@ -376,7 +379,10 @@
 		mounted()
 		{
 			// everyone gets a handgun
-			this.addWeapon( weaponData[ 0 ], false )
+			if( !_.find( this.vehicleData.weapons, { 'slug': 'handgun' } ) )
+			{
+				this.addWeapon( weaponData[ 0 ], false )
+			}
 
 			this.makeTooltips()
 		},
@@ -510,6 +516,10 @@
 			deleteVehicle()
 			{
 				this.$emit( 'deleted' )
+			},
+			duplicateVehicle()
+			{
+				this.$emit( 'duplicated' )
 			},
 			editLabel()
 			{

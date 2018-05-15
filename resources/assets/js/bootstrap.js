@@ -65,6 +65,7 @@ import fontawesome from '@fortawesome/fontawesome'
 
 import faCar from '@fortawesome/fontawesome-free-solid/faCar'
 import faCog from '@fortawesome/fontawesome-free-solid/faCog'
+import faCopy from '@fortawesome/fontawesome-free-solid/faCopy'
 import faCheckCircle from '@fortawesome/fontawesome-free-solid/faCheckCircle'
 import faCloudDownloadAlt from '@fortawesome/fontawesome-free-solid/faCloudDownloadAlt'
 import faCloudUploadAlt from '@fortawesome/fontawesome-free-solid/faCloudUploadAlt'
@@ -88,6 +89,7 @@ import faUsers from '@fortawesome/fontawesome-free-solid/faUsers'
 fontawesome.library.add(
 	faCar,
 	faCog,
+	faCopy,
 	faCheckCircle,
 	faCloudDownloadAlt,
 	faCloudUploadAlt,

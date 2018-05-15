@@ -18,7 +18,8 @@
 			         v-bind:accordionOpen="accordionsOpen"
 			         v-bind:key="vehicleData.uid"
 			         v-on:updated="onVehicleUpdated( index, $event )"
-			         v-on:deleted="onVehicleDeleted( index )"></vehicle>
+			         v-on:deleted="onVehicleDeleted( index )"
+			         v-on:duplicated="onVehicleDuplicated( index )"></vehicle>
 		</draggable>
 	</div>
 </template>
@@ -326,6 +327,12 @@
 			onVehicleDeleted( index )
 			{
 				this.vehicles.splice( index, 1 )
+			},
+			onVehicleDuplicated( index )
+			{
+				const dupe = _.cloneDeep( this.vehicles[ index ] )
+				dupe.uid = vehicleDataBuilder.getUid()
+				this.vehicles.splice( index + 1, 0, dupe )
 			},
 			onToggleAccordions()
 			{

@@ -136,6 +136,10 @@ export default {
 	{
 		return perkData
 	},
+	getUid()
+	{
+		return Math.random().toString( 36 ).substr( 2, 9 )
+	},
 	/**
 	 * Get vehicle data instance from generic base data
 	 *
@@ -146,7 +150,7 @@ export default {
 	{
 		let vehicle = Object.assign(
 			{
-				uid: Math.random().toString( 36 ).substr( 2, 9 ),
+				uid: this.getUid(),
 				label: baseVehicleData.name,
 				maxCrew: baseVehicleData.crew * 2,
 				weapons: [],

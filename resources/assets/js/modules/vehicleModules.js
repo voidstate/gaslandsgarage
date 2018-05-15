@@ -50,7 +50,8 @@ const modules = {
 			{
 				vehicle.crew = vehicle.maxCrew
 
-				popupAlert.alert( 'warning', 'Maximum crew of ' + vehicle.maxCrew + ' exceeded.' )
+				popupAlert.alert( 'warning', 'Maximum crew of ' + vehicle.maxCrew + ' exceeded. Please remove the extra upgrades.Janet' +
+					'' )
 			}
 
 			return vehicle

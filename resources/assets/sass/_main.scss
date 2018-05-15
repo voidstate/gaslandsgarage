@@ -190,8 +190,10 @@ body.chrome-bg {
     .vehicle-card-header, .card-header, .card-body {
       background-color: transparent;
     }
-    .vehicle-card-header .badge {
-      background-color: $gray-700 !important;
+    .vehicle-card-header {
+      .badge {
+        background-color: $gray-700 !important;
+      }
     }
     .vehicle-stats .btn {
       background-color: $gray-700 !important;
@@ -491,6 +493,15 @@ body.landscape-bg {
     min-height: 70px;
     background-color: $dark-blue;
     border-bottom: 0;
+    .duplicate-button {
+      position: absolute;
+      top: 2.45rem;
+      right: 1.2rem;
+      cursor: pointer;
+      &:hover {
+        color: #28676b;
+      }
+    }
     .slots-overspent .badge {
       background-color: $danger;
     }
