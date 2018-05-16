@@ -223,7 +223,7 @@
     "special": [
       "In a collision, add 2 dice. Do not gain Hazard Tokens from collisions on own activation."
     ],
-    "cost": 3,
+    "cost": 4,
     "sponsors": []
   },
   {
