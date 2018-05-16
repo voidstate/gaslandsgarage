@@ -303,7 +303,7 @@
     "slots": 0,
     "special": [
       "Electrical",
-      "Target may not discard ammo toens during its next activation."
+      "Target may not discard ammo tokens during its next activation."
     ],
     "cost": 2,
     "sponsors": [
