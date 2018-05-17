@@ -4,8 +4,6 @@ const modules = {
 	weapons: {
 		boomram( vehicle )
 		{
-			console.log( 'boomram', _.findIndex( vehicle.weapons, [ 'slug', 'boomram' ] ) )
-
 			return _.findIndex( vehicle.weapons, [ 'slug', 'boomram' ] ) === -1
 		}
 	},
