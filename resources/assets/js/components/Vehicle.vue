@@ -593,7 +593,7 @@
 			{
 				if( extraType === 'weapons' )
 				{
-					return (upgrade.type === 'shooting' && !upgrade.special.includes( 'Crew Fired' )) ||
+					return (upgrade.type === 'shooting' && !upgrade.special.includes( 'Crew Fired' ) && upgrade.slug !== 'thumper') ||
 						upgrade.type === 'smash' ||
 						upgrade.type === 'dropped'
 				}

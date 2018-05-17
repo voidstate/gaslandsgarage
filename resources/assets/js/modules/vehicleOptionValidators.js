@@ -4,7 +4,17 @@ const modules = {
 	weapons: {
 		boomram( vehicle )
 		{
-			return _.findIndex( vehicle.weapons, [ 'slug', 'boomram' ] ) === -1
+			if( _.findIndex( vehicle.weapons, [ 'slug', 'boomram' ] ) !== -1 )
+			{
+				return false
+			}
+
+			if( vehicle.slug === 'bike' )
+			{
+				return false
+			}
+
+			return true
 		}
 	},
 	upgrades: {
