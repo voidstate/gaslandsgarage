@@ -9,6 +9,8 @@
     ],
     "cost": 4,
     "sponsors": [
+    ],
+    "weights": [
     ]
   },
   {
@@ -21,6 +23,8 @@
     ],
     "cost": 4,
     "sponsors": [
+    ],
+    "weights": [
     ]
   },
   {
@@ -33,6 +37,8 @@
     ],
     "cost": 6,
     "sponsors": [
+    ],
+    "weights": [
     ]
   },
   {
@@ -45,6 +51,8 @@
     ],
     "cost": 4,
     "sponsors": [
+    ],
+    "weights": [
     ]
   },
   {
@@ -58,6 +66,9 @@
     "cost": -4,
     "sponsors": [
       "warden"
+    ],
+    "weights": [
+      "middleweight"
     ]
   }
 ]

@@ -29,7 +29,6 @@ const modules = {
 		mines( vehicle, extra, extraIndex )
 		{
 			return bombAwayPerk( ...arguments )
-
 		},
 		smoke( vehicle, extra, extraIndex )
 		{
@@ -50,8 +49,7 @@ const modules = {
 			{
 				vehicle.crew = vehicle.maxCrew
 
-				popupAlert.alert( 'warning', 'Maximum crew of ' + vehicle.maxCrew + ' exceeded. Please remove the extra upgrades.Janet' +
-					'' )
+				popupAlert.alert( 'warning', 'Maximum crew of ' + vehicle.maxCrew + ' exceeded. Please remove the extra upgrades.' )
 			}
 
 			return vehicle

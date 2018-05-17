@@ -370,6 +370,7 @@
 
 	import vehicleDataBuilder from '../modules/vehicleDataBuilder'
 	import vehicleModules from '../modules/vehicleModules'
+	import vehicleOptionValidator from '../modules/vehicleOptionValidators'
 
 	const weaponData = vehicleDataBuilder.weaponData()
 	const upgradeData = vehicleDataBuilder.upgradeData()
@@ -437,14 +438,17 @@
 			{
 				return _.filter( weaponData, weapon =>
 				{
-					return this.extraHasSponsor( weapon )
+					return this.extraHasSponsor( weapon ) &&
+						vehicleOptionValidator.validateExtra( this.modifiedVehicleData, 'weapons', weapon )
 				} )
 			},
 			upgradeOptions()
 			{
 				return _.filter( upgradeData, upgrade =>
 				{
-					return this.extraHasSponsor( upgrade )
+					return this.extraHasSponsor( upgrade ) &&
+						(upgrade.weights.length === 0 || upgrade.weights.includes( this.vehicleData.weight )) &&
+						vehicleOptionValidator.validateExtra( this.modifiedVehicleData, 'upgrades', upgrade )
 				} )
 			},
 			perkOptions()
@@ -557,6 +561,15 @@
 			{
 				return vehicleDataBuilder.getExtraCost( 'weapons', weapon )
 			},
+			/*getUpgradeOptions()
+			{
+				return _.filter( upgradeData, upgrade =>
+				{
+					return this.extraHasSponsor( upgrade ) &&
+						(upgrade.weights.length === 0 || upgrade.weights.includes( this.vehicleData.weight )) &&
+						vehicleOptionValidator.validateExtra( this.modifiedVehicleData, 'upgrades', upgrade )
+				} )
+			},*/
 			addUpgrade( upgrade, removable )
 			{
 				// can this upgrade be removed
