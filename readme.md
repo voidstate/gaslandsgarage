@@ -2,16 +2,24 @@ Hey there Stranger.
 
 Welcome to the Garage.
 
+![Gaslands Garage](public/images/mockups/mockup.jpg?raw=true)
+
+
 You looking for a new ride? Well you came to the right place. We'll build you the ride of your life. Or maybe your death. Someone's death, anyways.
     It's up to you who makes it through that final gate. You gonna live long enough to ride to fame, fortune and a ticket to Mars? Or you gonna burn up and die trying? 
     
-Either way, if you get your ride from the Gaslands Garage, the audience is gonna love you. So let's get building.
+Either way, if you get your ride from the Gaslands Garage, the audience is gonna love you. 
+
+So let's get building!
 
 ## What is Gaslands?
 
-Gaslands is a miniatures game set on post-apocalyptic Earth, where players compete to earn a ticket off world by racing and fighting in vehicles. Think Mad Max, only with Matchbox cars.
+Gaslands is a miniatures game set on post-apocalyptic Earth, where players compete to earn a ticket off world by racing and fighting in armed, modified vehicles. Think Mad Max, only with Matchbox cars.
+
 Learn more on the [Gaslands website](https://gaslands.com/) or
-    [Facebook group](https://www.facebook.com/groups/gaslands/). Buy from your FLGS or direct from [Osprey Publishing](https://ospreypublishing.com/gaslands).
+    [Facebook group](https://www.facebook.com/groups/gaslands/). 
+    
+Buy the gamefrom your FLGS or direct from [Osprey Publishing](https://ospreypublishing.com/gaslands). It's a bargain for the amount of fun it delivers.
 
 ## What is this Gaslands Garage?
 
