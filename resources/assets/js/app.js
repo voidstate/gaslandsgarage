@@ -4,7 +4,7 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require( './bootstrap' );
+require( './bootstrap' )
 
 /*
  * Background
@@ -54,19 +54,19 @@ Vue.use( popupAlertVueModule.vueModule )
 Vue.component( 'team', require( './components/Team.vue' ) )
 const team = new Vue( {
 	el: '#team'
-} );
+} )
 
 // nav
 Vue.component( 'site-nav', require( './components/Nav.vue' ) )
 const siteNav = new Vue( {
 	el: '#nav'
-} );
+} )
 
 // garage
 Vue.component( 'garage', require( './components/Garage.vue' ) )
 const garage = new Vue( {
 	el: '#garage'
-} );
+} )
 
 /*
  * Title watcher
