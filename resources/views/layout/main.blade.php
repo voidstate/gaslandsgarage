@@ -4,7 +4,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 
-	<title>The Workshop &middot; Gaslands Garage</title>
+	<title>Gaslands Garage &middot; The Workshop &middot; Gaslands Team Builder</title>
 
 	<!-- Favicon -->
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -22,6 +22,12 @@
 	<meta property="og:title" content="Gaslands Garage">
 	<meta property="og:url" content="https://gaslandsgarage.co.uk">
 	<meta property="og:image" content="https://gaslandsgarage.co.uk/images/social/og-image.jpg">
+
+	<!-- SEO -->
+	<meta name="description" content="A Team and Vehicle Builder for the Gaslands Miniatures Game">
+	<meta name="keywords" content="Gaslands, Garage, Cars, Motorbikes, Tanks, Gyrocopters, Helicopters, Weapons, Miniguns, Miniatures, Tabletop, Dice, Earth, Mars, Osprey">
+	<meta name="robots" content="index, follow">
+	<meta name="web_author" content="voidstate<https://github.com/voidstate>">
 
 	<!-- Site CSS -->
 	<link rel="stylesheet" href="/css/app.css">
