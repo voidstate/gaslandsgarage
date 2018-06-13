@@ -94,15 +94,16 @@
 
 							Weapon
 						</button>
-						<div class="dropdown-menu">
+						<div class="dropdown-menu scrollable-dropdown-menu">
 							<a v-for="(weapon, index) in weaponOptions"
 							   :key="index"
 							   class="dropdown-item"
 							   href="#"
 							   v-on:click.prevent="addWeapon(weapon, true)"
 							   data-toggle="tooltip"
-							   data-placement="auto"
+							   data-placement="right"
 							   data-html="true"
+							   data-boundary="window"
 							   v-bind:title="'Type: ' + weapon.type + '<br>Attack: ' + weapon.attack + '<br>Range: ' + weapon.range + '<br>Slots: ' + weapon.slots"> {{ weapon.name }} ({{ weapon.cost }}) </a>
 						</div>
 					</div>
@@ -119,21 +120,22 @@
 
 							Upgrade
 						</button>
-						<div class="dropdown-menu">
+						<div class="dropdown-menu scrollable-dropdown-menu">
 							<a v-for="(upgrade, index) in upgradeOptions"
 							   :key="index"
 							   class="dropdown-item"
 							   href="#"
 							   v-on:click.prevent="addUpgrade(upgrade, true)"
 							   data-toggle="tooltip"
-							   data-placement="auto"
+							   data-placement="right"
 							   data-html="true"
+							   data-boundary="window"
 							   v-bind:title="'Slots: ' + upgrade.slots"> {{ upgrade.name }} ({{ upgrade.cost }}) </a>
 						</div>
 					</div>
 
 					<div class="btn-group w-100">
-						<button v-bind:disabled="!hasSponsor"
+						<button v-bind:disabled="!hasSponsor && !allowAllPerks"
 						        type="button"
 						        class="btn btn-secondary dropdown-toggle w-100"
 						        data-toggle="dropdown">
@@ -144,16 +146,17 @@
 
 							Perk
 						</button>
-						<div class="dropdown-menu">
+						<div class="dropdown-menu scrollable-dropdown-menu">
 							<a v-for="(perk, index) in perkOptions"
 							   :key="index"
 							   class="dropdown-item"
 							   href="#"
 							   v-on:click.prevent="addPerk(perk, true)"
 							   data-toggle="tooltip"
-							   data-placement="auto"
+							   data-placement="left"
 							   data-html="true"
-							   v-bind:title="perk.description"> {{ perk.name }} ({{ perk.cost }}) </a>
+							   data-boundary="window"
+							   v-bind:title="perk.description[ $descriptionMode ]"> {{ perk.name }} ({{ perk.cost }}) </a>
 						</div>
 					</div>
 				</div>
@@ -226,8 +229,8 @@
 												</span>
 												</td>
 											</tr>
-											<tr v-if="weapon.special.length !== 0" class="specials-row">
-												<td class="small" colspan="7" v-html="weapon.special.join( ', ' )"></td>
+											<tr v-if="weapon.specials.length !== 0" class="specials-row">
+												<td class="small" colspan="7" v-html="getExtraSpecialsList( weapon )"></td>
 											</tr>
 											<tr class="d-none d-print-table-row" v-if="weapon.ammo">
 												<th></th>
@@ -292,8 +295,8 @@
 											</span>
 											</td>
 										</tr>
-										<tr v-if="upgrade.special.length !== 0" class="specials-row">
-											<td class="small" colspan="5" v-html="upgrade.special.join( ', ' )"></td>
+										<tr v-if="upgrade.specials.length !== 0" class="specials-row">
+											<td class="small" colspan="5" v-html="getExtraSpecialsList( upgrade )"></td>
 										</tr>
 									</template>
 
@@ -346,7 +349,7 @@
 											</td>
 										</tr>
 										<tr class="specials-row">
-											<td class="small" colspan="4" v-html="perk.description"></td>
+											<td class="small" colspan="4" v-html="perk.description[ $descriptionMode ]"></td>
 										</tr>
 									</template>
 
@@ -380,7 +383,7 @@
 		mounted()
 		{
 			// everyone gets a handgun
-			if( !_.find( this.vehicleData.weapons, { 'slug': 'handgun' } ) )
+			if ( !_.find( this.vehicleData.weapons, { 'slug': 'handgun' } ) )
 			{
 				this.addWeapon( weaponData[ 0 ], false )
 			}
@@ -390,7 +393,12 @@
 		components: {
 			'facing-button': FacingButton,
 		},
-		props: [ 'vehicleData', 'sponsor', 'accordionOpen' ],
+		props: [
+			'vehicleData',
+			'sponsor',
+			'allowAllPerks',
+			'accordionOpen'
+		],
 		data()
 		{
 			return {
@@ -453,6 +461,11 @@
 			},
 			perkOptions()
 			{
+				if ( this.allowAllPerks )
+				{
+					return perkData
+				}
+
 				return _.filter( perkData, perk =>
 				{
 					return this.extraHasSponsor( perk ) &&
@@ -510,7 +523,7 @@
 			},
 			slotsOverspent( newValue, oldValue )
 			{
-				if( newValue && !oldValue )
+				if ( newValue && !oldValue )
 				{
 					Vue.popupAlert.alert( 'warning', 'Too many slots used.' )
 				}
@@ -591,9 +604,9 @@
 			},
 			upgradeHasFacing( extraType, upgrade )
 			{
-				if( extraType === 'weapons' )
+				if ( extraType === 'weapons' )
 				{
-					return (upgrade.type === 'shooting' && !upgrade.special.includes( 'Crew Fired' ) && upgrade.slug !== 'thumper') ||
+					return (upgrade.type === 'shooting' && !upgrade.specials.includes( 'Crew Fired' ) && upgrade.slug !== 'thumper') ||
 						upgrade.type === 'smash' ||
 						upgrade.type === 'dropped'
 				}
@@ -608,7 +621,7 @@
 			addPerk( perk, removable )
 			{
 				// can only buy each perk once
-				if( _.find( this.vehicleData.perks, { 'slug': perk.slug } ) )
+				if ( _.find( this.vehicleData.perks, { 'slug': perk.slug } ) )
 				{
 					Vue.popupAlert.alert( 'danger', `Perk already added: ${ perk.name }` )
 					return
@@ -618,7 +631,7 @@
 				perk.removable = removable
 
 				// vehicle perks are free
-				if( perk.cost === undefined )
+				if ( perk.cost === undefined )
 				{
 					perk.cost = 0
 				}
@@ -632,6 +645,23 @@
 			removePerk( index )
 			{
 				this.vehicleData.perks.splice( index, 1 )
+			},
+			getExtraSpecialsList( extra )
+			{
+				let formatted = []
+
+				extra.specials.forEach( special =>
+				{
+					// handle text descriptions (use cookie to enable full - see app.js)
+					if ( _.isObject( special ) )
+					{
+						special = special[ this.$descriptionMode ]
+					}
+
+					formatted.push( special )
+				} )
+
+				return formatted.join( ', ' )
 			},
 			extraHasSponsor( item )
 			{
@@ -658,7 +688,7 @@
 			// disable Bootstrap event by cancelling propagation
 			onAccordionClick( event )
 			{
-				if( this.accordionOpen )
+				if ( this.accordionOpen )
 				{
 					event.stopPropagation()
 				}

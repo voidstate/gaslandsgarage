@@ -64,6 +64,10 @@ const shortKeys = [
 		full: 'sponsor'
 	},
 	{
+		short: 'a',
+		full: 'allowAllPerks'
+	},
+	{
 		short: 'm',
 		full: 'maxCost'
 	},
@@ -105,7 +109,10 @@ function getFullKey( shortKey )
 	return fullKey.full
 }
 
+let descriptionMode = 'short'
+
 export default {
+
 	baseTeamData()
 	{
 		return {
@@ -113,6 +120,7 @@ export default {
 			name: 'New Team',
 			maxCost: 50,
 			sponsor: null,
+			allowAllPerks: false,
 			vehicles: []
 		}
 	},
@@ -211,6 +219,8 @@ export default {
 			hydratedTeam.sponsor = getSponsor( hydratedTeam.sponsor )
 		}
 
+		hydratedTeam.allowAllPerks = hydratedTeam.allowAllPerks !== undefined
+
 		return hydratedTeam
 	},
 	/**
@@ -231,6 +241,11 @@ export default {
 		if( team.sponsor )
 		{
 			dehydratedTeam.sponsor = team.sponsor.slug
+		}
+
+		if ( team.allowAllPerks )
+		{
+			dehydratedTeam.allowAllPerks = team.allowAllPerks
 		}
 
 		if( team.maxCost !== 50 )

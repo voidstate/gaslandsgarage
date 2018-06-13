@@ -5,7 +5,8 @@ body > .container-fluid {
   padding: 60px 15px 0;
 }
 
-/*
+/* {
+
  * Typography
  */
 
@@ -31,6 +32,40 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #EA4335;
     color: $white;
   }
+}
+
+/*
+ * Forms
+ */
+
+input[type=checkbox].toggle-checkbox {
+  /* to hide the checkbox itself */
+  display: none;
+
+  // unchecked icon
+  + label span {
+    margin-right: .15rem;
+  }
+
+}
+
+/*
+ * Dropdowns
+ */
+
+.scrollable-dropdown-menu {
+  height: auto;
+  max-height: calc(100vh - 120px);
+  margin-top: 60px;
+  overflow-x: hidden;
+}
+
+/*
+ * Tooltips
+ */
+
+.tooltip {
+  z-index: 2010 !important;
 }
 
 /*
@@ -425,6 +460,10 @@ body.landscape-bg {
 }
 
 .vehicle {
+  &:hover {
+    z-index: 2000; // fix vehicles blocking other vehicles' dropdowns
+  }
+
   > .card {
     border-color: $dark-blue;
   }

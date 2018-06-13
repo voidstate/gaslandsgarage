@@ -3,18 +3,23 @@
 		<team-details
 				v-bind:name="name"
 				v-bind:sponsor="sponsor"
+				v-bind:allowAllPerks="allowAllPerks"
 				v-bind:cost="cost"
 				v-bind:maxCost="maxCost"
 				v-on:nameChanged="onNameChanged"
 				v-on:sponsorChanged="onSponsorChanged"
+				v-on:allowAllPerksChanged="onAllowAllPerksChanged"
 				v-on:maxCostChanged="onMaxCostChanged"></team-details>
+
 		<new-vehicle-button
 				v-bind:sponsor="sponsor"
 				v-on:selected="onVehicleAdded"></new-vehicle-button>
+
 		<draggable v-model="vehicles" v-on:start="onVehicleDragStart" v-on:end="onVehicleDragEnd" v-bind:options="{handle:'.vehicle-card-header'}" class="row">
 			<vehicle v-for="(vehicleData, index) in vehicles"
 			         v-bind:vehicleData="vehicleData"
 			         v-bind:sponsor="sponsor"
+			         v-bind:allowAllPerks="allowAllPerks"
 			         v-bind:accordionOpen="accordionsOpen"
 			         v-bind:key="vehicleData.uid"
 			         v-on:updated="onVehicleUpdated( index, $event )"
@@ -40,20 +45,20 @@
 	{
 		let data
 
-		if( window.location.hash )
+		if ( window.location.hash )
 		{
 			try
 			{
 				let hash     = window.location.hash.match( /\#(.*)/ )[ 1 ],
 				    hydrated = vehicleDataBuilder.deserialize( hash )
 
-				if( !hydrated )
+				if ( !hydrated )
 				{
 					throw new Error( 'Failed to hydrate' )
 				}
 				data = hydrated
 			}
-			catch( err )
+			catch ( err )
 			{
 				Vue.popupAlert.alert( 'danger', 'Team stored in web address not recognised. Have you pasted it all in?' )
 				console.error( err )
@@ -66,6 +71,8 @@
 		}
 
 		data.accordionsOpen = Cookies.get( 'accordionsOpen' ) || false
+
+		console.log( 'data', _.cloneDeep( data ) );
 
 		return data
 	}
@@ -118,6 +125,10 @@
 			cost()
 			{
 				this.emitSummary()
+			},
+			allowAllPerks()
+			{
+				console.log( 'allowAllPerks', this.allowAllPerks )
 			}
 		},
 		methods: {
@@ -151,19 +162,19 @@
 			},
 			onSave()
 			{
-				if( !auth.isLoggedIn() )
+				if ( !auth.isLoggedIn() )
 				{
 					Vue.popupAlert.alert( 'warning', 'Please log in to save this team.' )
 					return
 				}
 
-				if( !this.vehicles.length )
+				if ( !this.vehicles.length )
 				{
 					Vue.popupAlert.alert( 'warning', 'Please add some vehicles to your team.' )
 					return
 				}
 
-				if( !this.name || this.name === 'New Team' )
+				if ( !this.name || this.name === 'New Team' )
 				{
 					Vue.popupAlert.alert( 'warning', 'Please name your team. Click on the name to change it.' )
 					return
@@ -171,7 +182,7 @@
 
 				let vehicleNames = []
 
-				for( const vehicle of this.vehicles )
+				for ( const vehicle of this.vehicles )
 				{
 					vehicleNames.push( (vehicle.label || vehicle.name) + ' (' + vehicleDataBuilder.getVehicleCost( vehicle, this.sponsorSlug ) + ')' )
 				}
@@ -219,7 +230,7 @@
 							.catch( error =>
 								{
 									// duplicate
-									if( error.response.status === 418 )
+									if ( error.response.status === 418 )
 									{
 										Vue.popupAlert.confirm( 'This appears to be a duplicate team. Do you want to edit the existing team or create a new one?',
 											{
@@ -228,7 +239,7 @@
 											} )
 											.then( ( action ) =>
 											{
-												if( action === 'edit' || action === 'create' )
+												if ( action === 'edit' || action === 'create' )
 												{
 													saveTeam( '/garage/save/' + action )
 														.then( response =>
@@ -251,12 +262,12 @@
 											} )
 									}
 									// validation
-									else if( error.response.status === 422 )
+									else if ( error.response.status === 422 )
 									{
 										let errorMessages = []
-										for( const key in error.response.data.errors )
+										for ( const key in error.response.data.errors )
 										{
-											for( const errorMessage of error.response.data.errors[ key ] )
+											for ( const errorMessage of error.response.data.errors[ key ] )
 											{
 												errorMessages.push( errorMessage )
 											}
@@ -298,7 +309,7 @@
 				this.sponsor = sponsor
 
 				// remove illegal vehicles
-				if( this.hasSponsor )
+				if ( this.hasSponsor )
 				{
 					let numVehicles = this.vehicles.length
 
@@ -308,11 +319,15 @@
 					} )
 
 					let newNumVehicles = this.vehicles.length
-					if( newNumVehicles !== numVehicles )
+					if ( newNumVehicles !== numVehicles )
 					{
 						Vue.popupAlert.alert( 'danger', (numVehicles - newNumVehicles) + ' illegal vehicles removed.' )
 					}
 				}
+			},
+			onAllowAllPerksChanged( allowAllPerks )
+			{
+				this.allowAllPerks = allowAllPerks
 			},
 			onVehicleAdded( baseVehicleData )
 			{

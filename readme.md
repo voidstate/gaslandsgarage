@@ -9,17 +9,25 @@ Either way, if you get your ride from the Gaslands Garage, the audience is gonna
 
 ## What is Gaslands?
 
-Gaslands is a miniatures game set on post-apocalyptic Earth, where players compete to earn a ticket off world by racing and fighting in vehicles. Think Mad Max.
-Learn more on the <a href="https://gaslands.com/">Gaslands website</a> or
-    <a href="https://www.facebook.com/groups/gaslands/">Facebook group</a>.
+Gaslands is a miniatures game set on post-apocalyptic Earth, where players compete to earn a ticket off world by racing and fighting in vehicles. Think Mad Max, only with Matchbox cars.
+Learn more on the [Gaslands website](https://gaslands.com/) or
+    [Facebook group](https://www.facebook.com/groups/gaslands/). Buy from your FLGS or direct from [Osprey Publishing](https://ospreypublishing.com/gaslands).
 
 ## What is this Gaslands Garage?
 
 A Vue JS/Laravel based web app for building teams of vehicles to use in the Gaslands game.
 
+Try it now at [Gaslands Garage](https://gaslandsgarage.co.uk/).
+
 ## Who Are You?
 
-I'm a web developer from Leeds, Uk, who's geeky enough to come home from work and carry on programming for fun.
+I'm a web developer from Leeds, UK, who's geeky enough to come home from work and carry on programming for fun.
+
+## FAQ
+
+##### Why do the descriptions only include a page reference and not the full rules?
+
+Mike contacted me and asked me to remove them. In his words, "the text of the rulebook is all I have". I have kept enough to jog your memory but not to play the game if you don't already have the rules.
 
 ## Bugs / Issues
 
@@ -35,7 +43,7 @@ Please [open a ticket](https://github.com/voidstate/gaslandsgarage/issues) on Gi
 
 ## Contributors
 
-- Voidstate (https://github.com/voidstate)
+- [Voidstate](https://github.com/voidstate)
 
 
 ## License

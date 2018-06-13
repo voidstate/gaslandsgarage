@@ -4,7 +4,7 @@
     "slug": "armour",
     "slots": 1,
     "max": null,
-    "special": [
+    "specials": [
       "+2 Hull"
     ],
     "cost": 4,
@@ -18,7 +18,7 @@
     "slug": "crew",
     "slots": 0,
     "max": null,
-    "special": [
+    "specials": [
       "+1 crew up to a maximum of twice the vehicle's starting crew value."
     ],
     "cost": 4,
@@ -32,8 +32,11 @@
     "slug": "nitro",
     "slots": 0,
     "max": null,
-    "special": [
-      "Activate twice. First activation must be a long straight. Then gains Hazard Tokens until has 5."
+    "specials": [
+      {
+        "short": "Activate twice. See page 36.",
+        "full": "Activate twice. First activation must be a long straight. Then gains Hazard Tokens until has 5."
+      }
     ],
     "cost": 6,
     "sponsors": [
@@ -46,8 +49,11 @@
     "slug": "tracks",
     "slots": 1,
     "max": 1,
-    "special": [
-      "-1 Max Gear. +1 Handling. Ignore rough and treacherous surfaces."
+    "specials": [
+      {
+        "short": "-1 Max Gear. +1 Handling. See page 36.",
+        "full": "-1 Max Gear. +1 Handling. Ignore rough and treacherous surfaces."
+      }
     ],
     "cost": 4,
     "sponsors": [
@@ -60,8 +66,11 @@
     "slug": "prisoncar",
     "slots": 0,
     "max": 1,
-    "special": [
-      "-2 hull, -4 cans. Middleweight vehicles only."
+    "specials": [
+      {
+        "short": "-2 hull, -4 cans. See page 36.",
+        "full": "-2 hull, -4 cans. Middleweight vehicles only."
+      }
     ],
     "cost": -4,
     "sponsors": [

@@ -24,7 +24,17 @@ credit.one( 'click', () =>
  * Help modal
  */
 
-// better to load this with XHR? Faster pages but lose SEO.
+// better to load this with XHR? Probably not. We get faster pages but lose SEO.
+
+/*
+ * Full description?
+ *
+ * @see https://vuejs.org/v2/cookbook/adding-instance-properties.html#Base-Example
+ */
+
+import Cookies from 'js-cookie'
+
+Vue.prototype.$descriptionMode = Cookies.get( 'enableFullDescription' ) ? 'full' : 'short' // manually set this cookie to enable full descriptions
 
 /*
  * Vue components
@@ -68,7 +78,7 @@ const baseTitle = document.title
 
 eventBus.$on( 'team.summary-changed', event =>
 {
-	if( event.name != 'New Team' )
+	if ( event.name !== 'New Team' )
 	{
 		document.title = event.name + ' · ' + baseTitle;
 	}

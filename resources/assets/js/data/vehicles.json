@@ -12,12 +12,18 @@
       {
         "name": "Full Throttle",
         "slug": "fullthrottle",
-        "description": "Long straight is permitted in any gear. Not hazardous or trivial in any gear."
+        "description": {
+          "short": "Long straight is permitted in any gear. See page 31.",
+          "full": "Long straight is permitted in any gear. Not hazardous or trivial in any gear."
+        }
       },
       {
         "name": "Pivot",
         "slug": "pivot",
-        "description": ""
+        "description": {
+          "short": "May change to face any directions. See page 31.",
+          "full": "When gear is 1, may pivot about its centre to face any direction."
+        }
       }
     ],
     "cost": 5,
@@ -42,7 +48,10 @@
       {
         "name": "Roll Cage",
         "slug": "roll-cage",
-        "description": "Ignore 2 hits from a flip."
+        "description": {
+          "short": "Ignore some hits from a flip. See page 31.",
+          "full": "Ignore 2 hits from a flip."
+        }
       }
     ],
     "cost": 5,
@@ -133,7 +142,10 @@
       {
         "name": "Slip Away",
         "slug": "slipaway",
-        "description": "Free activation after choosing to evade against a tailgate, T-bone or sideswipe."
+        "description": {
+          "short": "Free activation after choosing to evading. See page 31.",
+          "full": "Free activation after choosing to evade against a tailgate, T-bone or sideswipe."
+        }
       }
     ],
     "cost": 15,
@@ -210,12 +222,18 @@
       {
         "name": "Big Tyres",
         "slug": "bigtyres",
-        "description": "Ignore rough surfaces. Treat treacherous surfaces as hazardous."
+        "description": {
+          "short": "Downgrade surfaces. See page 32.",
+          "full": "Ignore rough surfaces. Treat treacherous surfaces as hazardous."
+        }
       },
       {
         "name": "Crush Attack",
         "slug": "crush",
-        "description": "After resolving a collision against specific vehicles (see p.32), ignore the obstruction for the rest of the movement step."
+        "description": {
+          "short": "After resolving a collision, ignore the obstruction. See page 32.",
+          "full": "After resolving a collision against specific vehicles (see page 32), ignore the obstruction for the rest of the movement step."
+        }
       }
     ],
     "cost": 25,
@@ -273,7 +291,10 @@
       {
         "name": "Special War Rig Rules",
         "slug": "warrig",
-        "description": "See p.52"
+        "description": {
+          "short": "See page 52.",
+          "full": "See page 52."
+        }
       }
     ],
     "cost": 40,
@@ -298,17 +319,26 @@
       {
         "name": "Airwolf",
         "slug": "airwolf",
-        "description": "At the start of its activation, make a single pivot of up to 90 degrees."
+        "description": {
+          "short": "At the start of its activation, make a single pivot. See page 32.",
+          "full": "At the start of its activation, make a single pivot of up to 90 degrees."
+        }
       },
       {
         "name": "Airborne",
         "slug": "airborne",
-        "description": "Ignore obstructions, etc. (see p.32)."
+        "description": {
+          "short": "Ignore obstructions, etc. See page 32.",
+          "full": "Ignore obstructions, etc. See page 32."
+        }
       },
       {
         "name": "Bomb Away",
         "slug": "bombaway",
-        "description": "Dropped weapons require 0 build slots."
+        "description": {
+          "short": "Dropped weapons require 0 build slots.",
+          "full": "Dropped weapons require 0 build slots."
+        }
       }
     ],
     "cost": 10,
@@ -333,17 +363,26 @@
       {
         "name": "Airwolf",
         "slug": "airwolf",
-        "description": "At the start of its activation, make a single pivot of up to 90 degrees."
+        "description": {
+          "short": "At the start of its activation, make a single pivot. See page 32.",
+          "full": "At the start of its activation, make a single pivot of up to 90 degrees."
+        }
       },
       {
         "name": "Airborne",
         "slug": "airborne",
-        "description": "Ignore obstructions, etc. (see p.32)."
+        "description": {
+          "short": "Ignore obstructions, etc. See page 32.",
+          "full": "Ignore obstructions, etc. See page 32."
+        }
       },
       {
         "name": "Bomb Away",
         "slug": "bombaway",
-        "description": "Dropped weapons require 0 build slots."
+        "description": {
+          "short": "Dropped weapons require 0 build slots.",
+          "full": "Dropped weapons require 0 build slots."
+        }
       }
     ],
     "cost": 30,
@@ -364,17 +403,26 @@
       {
         "name": "Pivot",
         "slug": "pivot",
-        "description": "At the start of its activation, if in gear 1, turn to face any direction."
+        "description": {
+          "short": "May change to face any directions. See page 32.",
+          "full": "At the start of its activation, if in gear 1, turn to face any direction."
+        }
       },
       {
         "name": "Crush Attack",
         "slug": "crush",
-        "description": "After resolving a collision against specific vehicles (see p.32), ignore the obstruction for the rest of the movement step."
+        "description": {
+          "short": "After resolving a collision, ignore the obstruction. See page 32.",
+          "full": "After resolving a collision against specific vehicles (see p.32), ignore the obstruction for the rest of the movement step."
+        }
       },
       {
         "name": "All Terrain",
         "slug": "allterrain",
-        "description": "Ignore rough and treacherous surfaces."
+        "description": {
+          "short": "Ignore rough and treacherous surfaces.",
+          "full": "Ignore rough and treacherous surfaces."
+        }
       }
     ],
     "cost": 40,

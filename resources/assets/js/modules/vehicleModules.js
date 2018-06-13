@@ -118,6 +118,7 @@ export default {
 		{
 			for( const [ vehicleExtraIndex, vehicleExtra ] of vehicle[ extraType ].entries() )
 			{
+				// do we have a module?
 				let extraModule = modules[ extraType ][ vehicleExtra.slug ]
 				if( extraModule )
 				{

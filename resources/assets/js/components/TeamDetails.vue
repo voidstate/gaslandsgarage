@@ -17,7 +17,11 @@
 						</div>
 
 						<div class="mb-2">
-							<sponsor-button v-bind:sponsor="sponsor" v-on:selected="onSponsorSelected"></sponsor-button>
+							<sponsor-button
+									v-bind:sponsor="sponsor"
+									v-bind:allowAllPerks="allowAllPerks"
+									v-on:selected="onSponsorSelected"
+									v-on:allowAllPerksChanged="onAllowAllPerksChanged"></sponsor-button>
 						</div>
 
 						<h5 class="mb-1" v-show="hasSponsor">Perks</h5>
@@ -26,12 +30,12 @@
 						     class="perk-container d-inline-block mr-3 mb-1">
 							<button data-toggle="tooltip"
 							        data-placement="auto"
-							        v-bind:title="perk.description"
+							        v-bind:title="perk.description[ $descriptionMode ]"
 							        class="btn btn-sm btn-outline-primary text-white"
 							        href="#">
 								{{ perk.name }}
 								<div class="d-none d-print-block small">
-									{{ perk.description }}
+									{{ perk.description[ $descriptionMode ] }}
 								</div>
 							</button>
 
@@ -76,6 +80,8 @@
 			$( '[data-toggle="tooltip"]', this.$refs.container ).tooltip()
 
 			this.initScrollObserver()
+
+			console.log( 'team details mounted', this.allowAllPerks )
 		},
 		components: {
 			'sponsor-button': SponsorButton,
@@ -85,6 +91,7 @@
 			'cost',
 			'maxCost',
 			'sponsor',
+			'allowAllPerks'
 		],
 		data()
 		{
@@ -186,6 +193,10 @@
 			onSponsorSelected( sponsor )
 			{
 				this.$emit( 'sponsorChanged', sponsor )
+			},
+			onAllowAllPerksChanged( allowAllPerks )
+			{
+				this.$emit( 'allowAllPerksChanged', allowAllPerks )
 			}
 		}
 	}

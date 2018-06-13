@@ -7,7 +7,7 @@
     "range": "medium",
     "ammo": null,
     "slots": 0,
-    "special": [
+    "specials": [
       "Crew Fired"
     ],
     "cost": 0,
@@ -21,7 +21,7 @@
     "range": "double",
     "ammo": null,
     "slots": 1,
-    "special": [],
+    "specials": [],
     "cost": 2,
     "sponsors": []
   },
@@ -33,7 +33,7 @@
     "range": "double",
     "ammo": null,
     "slots": 1,
-    "special": [],
+    "specials": [],
     "cost": 4,
     "sponsors": []
   },
@@ -45,7 +45,7 @@
     "range": "double",
     "ammo": null,
     "slots": 1,
-    "special": [],
+    "specials": [],
     "cost": 6,
     "sponsors": []
   },
@@ -57,8 +57,11 @@
     "range": "double",
     "ammo": 3,
     "slots": 3,
-    "special": [
-      "+2 Hazard Tokens when fired if not a tank"
+    "specials": [
+      {
+        "short": "Gain Hazard Tokens when fired. See page 33.",
+        "full": "Gain +2 Hazard Tokens when fired if not a tank."
+      }
     ],
     "cost": 6,
     "sponsors": []
@@ -71,7 +74,7 @@
     "range": "double",
     "ammo": 3,
     "slots": 2,
-    "special": [
+    "specials": [
       "Blast",
       "Highly Explosive"
     ],
@@ -86,7 +89,7 @@
     "range": "large",
     "ammo": 3,
     "slots": 2,
-    "special": [
+    "specials": [
       "Large Burst Template",
       "Fire",
       "Explosive"
@@ -102,8 +105,11 @@
     "range": "double",
     "ammo": 3,
     "slots": 1,
-    "special": [
-      "Ignore terrain and cover when attacking"
+    "specials": [
+      {
+        "short": "See page 35.",
+        "full": "Ignore terrain and cover when attacking."
+      }
     ],
     "cost": 4,
     "sponsors": []
@@ -116,7 +122,7 @@
     "range": "medium",
     "ammo": 5,
     "slots": 0,
-    "special": [
+    "specials": [
       "Crew Fired",
       "Blast",
       "Explosive",
@@ -133,7 +139,7 @@
     "range": "medium",
     "ammo": 5,
     "slots": 0,
-    "special": [
+    "specials": [
       "Crew Fired",
       "Fire",
       "Blitz"
@@ -149,8 +155,11 @@
     "range": "large",
     "ammo": 3,
     "slots": 0,
-    "special": [
-      "Template counts as a treacherous surface"
+    "specials": [
+      {
+        "short": "See page 35.",
+        "full": "Template counts as a treacherous surface."
+      }
     ],
     "cost": 2,
     "sponsors": []
@@ -163,8 +172,11 @@
     "range": "small",
     "ammo": 3,
     "slots": 1,
-    "special": [
-      "Template counts as a treacherous surface. When overlapped, causes 2 damage and is removed."
+    "specials": [
+      {
+        "short": "See page 34.",
+        "full": "Template counts as a treacherous surface. When overlapped, causes 2 damage and is removed."
+      }
     ],
     "cost": 1,
     "sponsors": []
@@ -177,8 +189,11 @@
     "range": "large",
     "ammo": 1,
     "slots": 1,
-    "special": [
-      "Template counts as a treacherous surface. When overlapped, lose 2 gears."
+    "specials": [
+      {
+        "short": "See page 34.",
+        "full": "Template counts as a treacherous surface. When overlapped, lose 2 gears."
+      }
     ],
     "cost": 1,
     "sponsors": []
@@ -191,9 +206,12 @@
     "range": "small",
     "ammo": 1,
     "slots": 1,
-    "special": [
-      "When template is overlapped, make 3D6 attack with blast then template is removed.",
-      "Blast"
+    "specials": [
+      "Blast",
+      {
+        "short": "See page 34.",
+        "full": "When template is overlapped, make 3D6 attack with blast then template is removed."
+      }
     ],
     "cost": 1,
     "sponsors": []
@@ -206,8 +224,11 @@
     "range": "large",
     "ammo": 3,
     "slots": 0,
-    "special": [
-      "Template counts as a treacherous surface and counts as an obstruction for determining cover."
+    "specials": [
+      {
+        "short": "See page 35.",
+        "full": "Template counts as a treacherous surface and counts as an obstruction for determining cover."
+      }
     ],
     "cost": 1,
     "sponsors": []
@@ -220,8 +241,11 @@
     "range": "smash",
     "ammo": 0,
     "slots": 1,
-    "special": [
-      "In a collision, add 2 dice. Do not gain Hazard Tokens from collisions on own activation."
+    "specials": [
+      {
+        "short": "See page 35.",
+        "full": "In a collision, add 2 dice. Do not gain Hazard Tokens from collisions on own activation."
+      }
     ],
     "cost": 4,
     "sponsors": []
@@ -234,9 +258,12 @@
     "range": "smash",
     "ammo": 1,
     "slots": 1,
-    "special": [
-      "On first collision, add 6 dice. See special rules.",
-      "Highly Explosive"
+    "specials": [
+      "Highly Explosive",
+      {
+        "short": "See page 34.",
+        "full": "On first collision, add 6 dice. Also see page 34."
+      }
     ],
     "cost": 3,
     "sponsors": [
@@ -250,9 +277,12 @@
     "range": "medium",
     "ammo": 1,
     "slots": 2,
-    "special": [
+    "specials": [
       "Electrical",
-      "Attacks every vehicle within medium range (friend or foe). See special rules."
+      {
+        "short": "See page 35.",
+        "full": "Attacks every vehicle within medium range (friend or foe). See special rules."
+      }
     ],
     "cost": 4,
     "sponsors": [
@@ -267,9 +297,12 @@
     "range": "double",
     "ammo": 1,
     "slots": 2,
-    "special": [
+    "specials": [
       "Electrical",
-      "Attacks multiple vehicles. See special rules."
+      {
+        "short": "See page 33.",
+        "full": "Attacks multiple vehicles. See page 33."
+      }
     ],
     "cost": 6,
     "sponsors": [
@@ -284,9 +317,12 @@
     "range": "double",
     "ammo": 1,
     "slots": 2,
-    "special": [
+    "specials": [
       "Electrical",
-      "Does not cause damage. Each hit increases the target's current gear. See special rules."
+      {
+        "short": "See page 35.",
+        "full": "Does not cause damage. Each hit increases the target's current gear. See page 35."
+      }
     ],
     "cost": 6,
     "sponsors": [
@@ -301,9 +337,12 @@
     "range": "double",
     "ammo": 1,
     "slots": 0,
-    "special": [
+    "specials": [
       "Electrical",
-      "Target may not discard ammo tokens during its next activation."
+      {
+        "short": "See page 34.",
+        "full": "Target may not discard ammo tokens during its next activation."
+      }
     ],
     "cost": 2,
     "sponsors": [

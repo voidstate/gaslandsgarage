@@ -64,6 +64,7 @@ if (token) {
 import fontawesome from '@fortawesome/fontawesome'
 
 import faCar from '@fortawesome/fontawesome-free-solid/faCar'
+
 import faCog from '@fortawesome/fontawesome-free-solid/faCog'
 import faCopy from '@fortawesome/fontawesome-free-solid/faCopy'
 import faCheckCircle from '@fortawesome/fontawesome-free-solid/faCheckCircle'
@@ -82,6 +83,8 @@ import faQuestionCircle from '@fortawesome/fontawesome-free-solid/faQuestionCirc
 //import faShieldAlt from '@fortawesome/fontawesome-free-solid/faShieldAlt'
 import faSpinner from '@fortawesome/fontawesome-free-solid/faSpinner'
 import faTimes from '@fortawesome/fontawesome-free-solid/faTimes'
+import faToggleOff from '@fortawesome/fontawesome-free-solid/faToggleOff'
+import faToggleOn from '@fortawesome/fontawesome-free-solid/faToggleOn'
 import faTrashAlt from '@fortawesome/fontawesome-free-solid/faTrashAlt'
 import faUnlock from '@fortawesome/fontawesome-free-solid/faUnlock'
 import faUsers from '@fortawesome/fontawesome-free-solid/faUsers'
@@ -106,6 +109,8 @@ fontawesome.library.add(
 	//faShieldAlt,
 	faSpinner,
 	faTimes,
+	faToggleOff,
+	faToggleOn,
 	faTrashAlt,
 	faUsers,
 	faUnlock

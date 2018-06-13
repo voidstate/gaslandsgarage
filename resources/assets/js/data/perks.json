@@ -2,7 +2,10 @@
   {
     "name": "Double-Barrelled",
     "slug": "doublebarrelled",
-    "description": "Up to 3 crew gain +1 hit with handguns",
+    "description": {
+      "short": "Bonus to hit with handguns. See page 50.",
+      "full": "Up to 3 crew gain +1 hit with handguns."
+    },
     "cost": 2,
     "sponsors": [
       "slime",
@@ -13,8 +16,11 @@
   },
   {
     "name": "Boarding Party",
-    "slug":"boardingparty",
-    "description": "Ignore being distracted",
+    "slug": "boardingparty",
+    "description": {
+      "short": "Ignore being distracted. See page 50.",
+      "full": "Ignore being distracted."
+    },
     "cost": 2,
     "sponsors": [
       "slime",
@@ -25,8 +31,11 @@
   },
   {
     "name": "Battlehammer",
-    "slug":"battlehammer",
-    "description": "When making a smash attack, gain +1 dice for each Hazard Token.",
+    "slug": "battlehammer",
+    "description": {
+      "short": "Hazard tokens aid smash attacks. See page 50.",
+      "full": "When making a smash attack, gain +1 dice for each Hazard Token."
+    },
     "cost": 4,
     "sponsors": [
       "slime",
@@ -37,8 +46,11 @@
   },
   {
     "name": "Terrifying Lunatic",
-    "slug":"lunatic",
-    "description": "When an opposing vehicle ends within short range, it gains a Hazard Token.",
+    "slug": "lunatic",
+    "description": {
+      "short": "Give Hazard Tokens to opponents. See page 50.",
+      "full": "When an opposing vehicle ends within short range, it gains a Hazard Token."
+    },
     "cost": 5,
     "sponsors": [
       "slime",
@@ -49,8 +61,11 @@
   },
   {
     "name": "Grinderman",
-    "slug":"grinderman",
-    "description": "Can add Hazard Tokens to smash targets instead of hull points.",
+    "slug": "grinderman",
+    "description": {
+      "short": "Damage with Hazard Tokens instead. See page 50.",
+      "full": "Can add Hazard Tokens to smash targets instead of hull points."
+    },
     "cost": 5,
     "sponsors": [
       "slime",
@@ -61,8 +76,11 @@
   },
   {
     "name": "Murder Tractor",
-    "slug":"murdertractor",
-    "description": "Can make piledriver attacks, like a War Rig.",
+    "slug": "murdertractor",
+    "description": {
+      "short": "Make piledriver attacks. See page 50.",
+      "full": "Can make piledriver attacks, like a War Rig."
+    },
     "cost": 4,
     "sponsors": [
       "slime",
@@ -73,8 +91,11 @@
   },
   {
     "name": "Powder Keg",
-    "slug":"powderkeg",
-    "description": "Add +1 to explosion checks. Treat as one weights-class heavier when it explodes.",
+    "slug": "powderkeg",
+    "description": {
+      "short": "Explodes more easily and does more damage when exploding. See page 50.",
+      "full": "Add +1 to explosion checks. Treat as one weights-class heavier when it explodes."
+    },
     "cost": 1,
     "sponsors": [
       "rutherford",
@@ -85,8 +106,11 @@
   },
   {
     "name": "Road Warrior",
-    "slug":"roadwarrior",
-    "description": "Remove a Hazard Token when causing 1+ hits",
+    "slug": "roadwarrior",
+    "description": {
+      "short": "Do damage to remove Hazard Tokens. See page 50.",
+      "full": "Remove a Hazard Token when causing 1+ hits"
+    },
     "cost": 2,
     "sponsors": [
       "rutherford",
@@ -97,8 +121,11 @@
   },
   {
     "name": "Cover Me",
-    "slug":"coverme",
-    "description": "Once per activation, may remove a Hazard Token and place it on a friendly vehicle within double range.",
+    "slug": "coverme",
+    "description": {
+      "short": "Transfer Hazard Tokens to friendly vehicles. See page 50.",
+      "full": "Once per activation, may remove a Hazard Token and place it on a friendly vehicle within double range."
+    },
     "cost": 2,
     "sponsors": [
       "rutherford",
@@ -109,8 +136,11 @@
   },
   {
     "name": "Fist of Steel",
-    "slug":"fistofsteel",
-    "description": "Take a Hazard Token to reroll all dice during a smash.",
+    "slug": "fistofsteel",
+    "description": {
+      "short": "Take Hazard Tokens to reroll dice during a smash. See page 50.",
+      "full": "Take a Hazard Token to reroll all dice during a smash."
+    },
     "cost": 4,
     "sponsors": [
       "rutherford",
@@ -121,8 +151,11 @@
   },
   {
     "name": "Madman",
-    "slug":"madman",
-    "description": "At the end of activation, if has 4+ Hazard Tokens, may move a Hazard Token to a vehicle within medium range.",
+    "slug": "madman",
+    "description": {
+      "short": "May move a Hazard Token to another vehicle. See page 50.",
+      "full": "At the end of activation, if has 4+ Hazard Tokens, may move a Hazard Token to a vehicle within medium range."
+    },
     "cost": 3,
     "sponsors": [
       "rutherford",
@@ -133,8 +166,11 @@
   },
   {
     "name": "Crowd Pleaser",
-    "slug":"crowdpleaser",
-    "description": "If this vehicle wipes out, gain +1 Audience Vote.",
+    "slug": "crowdpleaser",
+    "description": {
+      "short": "Gain Audience Votes for wiping out. See page 50.",
+      "full": "If this vehicle wipes out, gain +1 Audience Vote."
+    },
     "cost": 1,
     "sponsors": [
       "rutherford",
@@ -145,8 +181,11 @@
   },
   {
     "name": "Evasive",
-    "slug":"evasive",
-    "description": "Counts a 5+ as a success when evading.",
+    "slug": "evasive",
+    "description": {
+      "short": "Improved evade chance. See page 50.",
+      "full": "Counts a 5+ as a success when evading."
+    },
     "cost": 5,
     "sponsors": [
       "miyazaki"
@@ -156,8 +195,11 @@
   },
   {
     "name": "Powerslide",
-    "slug":"powerslide",
-    "description": "May use any template except a long straight when sliding.",
+    "slug": "powerslide",
+    "description": {
+      "short": "May use different templates when sliding. See page 50.",
+      "full": "May use any template except a long straight when sliding."
+    },
     "cost": 5,
     "sponsors": [
       "miyazaki"
@@ -167,8 +209,11 @@
   },
   {
     "name": "Slippery",
-    "slug":"slippery",
-    "description": "Smash attacks against this vehicle suffer -2 attack dice.",
+    "slug": "slippery",
+    "description": {
+      "short": "Smash attacks against this vehicle suffer a penalty. See page 50.",
+      "full": "Smash attacks against this vehicle suffer -2 attack dice."
+    },
     "cost": 3,
     "sponsors": [
       "miyazaki"
@@ -178,8 +223,11 @@
   },
   {
     "name": "Trick Driving",
-    "slug":"trickdriving",
-    "description": "May count current gear as one higher or lower when selecting a template. Unpermitted manoeuvres counts as hazardous.",
+    "slug": "trickdriving",
+    "description": {
+      "short": "May count current gear as higher or lower when selecting a template. See page 50.",
+      "full": "May count current gear as one higher or lower when selecting a template. Unpermitted manoeuvres counts as hazardous."
+    },
     "cost": 5,
     "sponsors": [
       "miyazaki"
@@ -189,8 +237,11 @@
   },
   {
     "name": "Stunt Driver",
-    "slug":"stuntdriver",
-    "description": "Gain 3 hazard tokens to ignore any obstructions.",
+    "slug": "stuntdriver",
+    "description": {
+      "short": "Gain Hazard Tokens to ignore obstructions. See page 50.",
+      "full": "Gain 3 Hazard Tokens to ignore any obstructions."
+    },
     "cost": 7,
     "sponsors": [
       "miyazaki"
@@ -200,8 +251,11 @@
   },
   {
     "name": "Chrome-Whisperer",
-    "slug":"chromewhisperer",
-    "description": "My push it any number ot times.",
+    "slug": "chromewhisperer",
+    "description": {
+      "short": "May push it extra times. See page 50.",
+      "full": "May push it any number of times."
+    },
     "cost": 2,
     "sponsors": [
       "miyazaki"
@@ -211,8 +265,11 @@
   },
   {
     "name": "Return Fire",
-    "slug":"returnfire",
-    "description": "Once per gear step, when attacked, gain +1 Hazard Token to to also attack.",
+    "slug": "returnfire",
+    "description": {
+      "short": "When attacked, gain Hazard Tokens to also attack. See page 50.",
+      "full": "Once per gear step, when attacked, gain +1 Hazard Token to also attack."
+    },
     "cost": 5,
     "sponsors": [
       "rutherford",
@@ -223,8 +280,11 @@
   },
   {
     "name": "Dead-Eye",
-    "slug":"deadeye",
-    "description": "Up to 3 crew gain +1 hit against targets within double range but not medium range.",
+    "slug": "deadeye",
+    "description": {
+      "short": "Some crew gain a hit bonus. See page 50.",
+      "full": "Up to 3 crew gain +1 hit against targets within double range but not medium range."
+    },
     "cost": 3,
     "sponsors": [
       "rutherford",
@@ -235,8 +295,11 @@
   },
   {
     "name": "Rapid Fire",
-    "slug":"rapidfire",
-    "description": "Once per attack step, one crew may fire twice.",
+    "slug": "rapidfire",
+    "description": {
+      "short": "Crew gains extra attack. See page 50.",
+      "full": "Once per attack step, one crew may fire twice."
+    },
     "cost": 2,
     "sponsors": [
       "rutherford",
@@ -247,8 +310,11 @@
   },
   {
     "name": "Headshot",
-    "slug":"headshot",
-    "description": "With shooting attacks, critical hit do 3 hits (not 2).",
+    "slug": "headshot",
+    "description": {
+      "short": "With shooting attacks, critical hit do extra damage. See page 50.",
+      "full": "With shooting attacks, critical hit do 3 hits (not 2)."
+    },
     "cost": 4,
     "sponsors": [
       "rutherford",
@@ -259,8 +325,11 @@
   },
   {
     "name": "Loader",
-    "slug":"loader",
-    "description": "May assign 2 crew to a weapon to gain +1 bonus to hit.",
+    "slug": "loader",
+    "description": {
+      "short": "May assign multiple crew to a weapon to gain a bonus to hit. See page 50.",
+      "full": "May assign 2 crew to a weapon to gain +1 bonus to hit."
+    },
     "cost": 2,
     "sponsors": [
       "rutherford",
@@ -271,8 +340,11 @@
   },
   {
     "name": "Fully Loaded",
-    "slug":"fullyloaded",
-    "description": "When attacking with a shooting weapon with 2+ ammo, gain +1 dice.",
+    "slug": "fullyloaded",
+    "description": {
+      "short": "When attacking with a weapon with extra ammo, gain extra dice. See page 50.",
+      "full": "When attacking with a shooting weapon with 2+ ammo, gain +1 dice."
+    },
     "cost": 2,
     "sponsors": [
       "rutherford",
@@ -283,8 +355,11 @@
   },
   {
     "name": "Big Tyres",
-    "slug":"bigtyres",
-    "description": "Ignore rough and treacherous surfaces.",
+    "slug": "bigtyres",
+    "description": {
+      "short": "Ignore certain surfaces. See page 50.",
+      "full": "Ignore rough and treacherous surfaces."
+    },
     "cost": 2,
     "sponsors": [
       "miyazaki",
@@ -295,8 +370,11 @@
   },
   {
     "name": "Moment of Glory",
-    "slug":"momentofglory",
-    "description": "Once per game, after rolling skid dice, change the results.",
+    "slug": "momentofglory",
+    "description": {
+      "short": "May change skid dice results. See page 50.",
+      "full": "Once per game, after rolling skid dice, change the results."
+    },
     "cost": 2,
     "sponsors": [
       "miyazaki",
@@ -307,8 +385,11 @@
   },
   {
     "name": "Easy Rider",
-    "slug":"easyrider",
-    "description": "Once per turn, may discard one rolled skid dice.",
+    "slug": "easyrider",
+    "description": {
+      "short": "May discard rolled skid dice. See page 50.",
+      "full": "Once per turn, may discard one rolled skid dice."
+    },
     "cost": 5,
     "sponsors": [
       "miyazaki",
@@ -319,8 +400,11 @@
   },
   {
     "name": "Restraint",
-    "slug":"restraint",
-    "description": "No Hazard Token for shifting down a gear.",
+    "slug": "restraint",
+    "description": {
+      "short": "No Hazard Token for shifting down gears. See page 50.",
+      "full": "No Hazard Token for shifting down a gear."
+    },
     "cost": 2,
     "sponsors": [
       "miyazaki",
@@ -331,8 +415,11 @@
   },
   {
     "name": "Expertise",
-    "slug":"expertise",
-    "description": "+1 handling.",
+    "slug": "expertise",
+    "description": {
+      "short": "Bonus handling. See page 50.",
+      "full": "+1 handling."
+    },
     "cost": 3,
     "sponsors": [
       "miyazaki",
@@ -343,8 +430,11 @@
   },
   {
     "name": "Handbrake Artist",
-    "slug":"handbrakeartist",
-    "description": "When applying a spin result, may face any direction.",
+    "slug": "handbrakeartist",
+    "description": {
+      "short": "Improved spin. See page 50.",
+      "full": "When applying a spin result, may face any direction."
+    },
     "cost": 5,
     "sponsors": [
       "miyazaki",
@@ -355,8 +445,11 @@
   },
   {
     "name": "Hot Start",
-    "slug":"hotstart",
-    "description": "Roll a D6 at the start of the game. Start in that gear.",
+    "slug": "hotstart",
+    "description": {
+      "short": "Start the game in higher gear. See page 50.",
+      "full": "Roll a D6 at the start of the game. Start in that gear."
+    },
     "cost": 1,
     "sponsors": [
       "idris",
@@ -367,8 +460,11 @@
   },
   {
     "name": "Slipstream",
-    "slug":"slipstream",
-    "description": "During a skid check, gain 1 shift result if there is a vehicle within short range in front.",
+    "slug": "slipstream",
+    "description": {
+      "short": "Gain shift results from vehicles in front. See page 50.",
+      "full": "During a skid check, gain 1 shift result if there is a vehicle within short range in front."
+    },
     "cost": 2,
     "sponsors": [
       "idris",
@@ -379,8 +475,11 @@
   },
   {
     "name": "Force Transferal",
-    "slug":"transferal",
-    "description": "On losing 1+ hull from a blast attack, may stick shift up.",
+    "slug": "transferal",
+    "description": {
+      "short": "Stick shift up after blast attack. See page 50.",
+      "full": "On losing 1+ hull from a blast attack, may stick shift up."
+    },
     "cost": 2,
     "sponsors": [
       "idris",
@@ -392,7 +491,10 @@
   {
     "name": "Overload",
     "slug": "overload",
-    "description": "May roll an extra skid dice but if does not shift up, gains a hazard token.",
+    "description": {
+      "short": "Roll extra skid dice at the risk of Hazard Tokens. See page 51.",
+      "full": "May roll an extra skid dice but if does not shift up, gains a Hazard Token."
+    },
     "cost": 2,
     "sponsors": [
       "idris",
@@ -403,8 +505,11 @@
   },
   {
     "name": "Time Extended",
-    "slug":"timeextended",
-    "description": "After passing a gate, may remove any number of Hazard Tokens.",
+    "slug": "timeextended",
+    "description": {
+      "short": "After passing a gate, remove Hazard Tokens. See page 51.",
+      "full": "After passing a gate, may remove any number of Hazard Tokens."
+    },
     "cost": 3,
     "sponsors": [
       "idris",
@@ -415,8 +520,11 @@
   },
   {
     "name": "Hell for Leather",
-    "slug":"hellforleather",
-    "description": "Can choose a long straight in any gear. It is never hazardous or trivial.",
+    "slug": "hellforleather",
+    "description": {
+      "short": "Can always choose a long straight. See page 51.",
+      "full": "Can choose a long straight in any gear. It is never hazardous or trivial."
+    },
     "cost": 5,
     "sponsors": [
       "idris",
@@ -427,8 +535,11 @@
   },
   {
     "name": "Rocket Thrusters",
-    "slug":"rocketthrusters",
-    "description": "When flipped, may choose the long straight, veer, or gentle templates.",
+    "slug": "rocketthrusters",
+    "description": {
+      "short": "When flipped, choose template. See page 51.",
+      "full": "When flipped, may choose the long straight, veer, or gentle templates."
+    },
     "cost": 1,
     "sponsors": [
       "mishkin"
@@ -438,8 +549,11 @@
   },
   {
     "name": "Whizbang",
-    "slug":"whizbang",
-    "description": "At the start of each game, gain a random speed perk.",
+    "slug": "whizbang",
+    "description": {
+      "short": "Gain a random speed perk. See page 51.",
+      "full": "At the start of each game, gain a random speed perk."
+    },
     "cost": 1,
     "sponsors": [
       "mishkin"
@@ -449,8 +563,11 @@
   },
   {
     "name": "Gyroscope",
-    "slug":"gyroscope",
-    "description": "At the start of each game, gain a random precision perk.",
+    "slug": "gyroscope",
+    "description": {
+      "short": "Gain a random precision perk. See page 51.",
+      "full": "At the start of each game, gain a random precision perk."
+    },
     "cost": 1,
     "sponsors": [
       "mishkin"
@@ -460,8 +577,11 @@
   },
   {
     "name": "Mobile Mechanic",
-    "slug":"mechanic",
-    "description": "Once per turn, instead of attacking, a crewmember may repair 1 hull.",
+    "slug": "mechanic",
+    "description": {
+      "short": "A crewmember may repair hull. See page 51.",
+      "full": "Once per turn, instead of attacking, a crewmember may repair 1 hull."
+    },
     "cost": 5,
     "sponsors": [
       "mishkin"
@@ -471,8 +591,11 @@
   },
   {
     "name": "Experimental Nuclear Engine",
-    "slug":"nuclearengine",
-    "description": "+2 max gear (up to 6). If fails a flip check, explodes. When explodes, counts as heavyweights.",
+    "slug": "nuclearengine",
+    "description": {
+      "short": "+2 max gear (up to 6). If fails a flip check, explodes. See page 51.",
+      "full": "+2 max gear (up to 6). If fails a flip check, explodes. When explodes, counts as heavyweights."
+    },
     "cost": 1,
     "sponsors": [
       "mishkin"
@@ -485,7 +608,10 @@
   {
     "name": "Experimental Teleporter",
     "slug": "teleporter",
-    "description": "Gain 3 hazard token and roll a skid dice. On a hazard, opponent places vehicle within long range, otherwise place vehicle within medium range.",
+    "description": {
+      "short": "Gain hazard tokens to attempt a teleport. See page 51.",
+      "full": "Gain 3 hazard token and roll a skid dice. On a hazard, opponent places vehicle within long range, otherwise place vehicle within medium range."
+    },
     "cost": 7,
     "sponsors": [
       "mishkin"

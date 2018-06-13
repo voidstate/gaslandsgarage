@@ -1,45 +1,69 @@
 [
   {
-  "name": "Rutherford",
-  "slug": "rutherford",
-  "perks": [
-    {
-      "name": "Military Hardware",
-      "description": "May purchase a single tank and single helicopter."
-    },
-    {
-      "name": "Well Stocked",
-      "description": "Any weapon with 3 ammo has 4 ammo."
-    },
-    {
-      "name": "Might is Right",
-      "description": "May not purchase lightweight vehicles."
-    },
-    {
-      "name": "Televised Carnage",
-      "description": "If a vehicle causes 6+ hits in one attack, before evades, gain +1 Audience Vote."
-    }
-  ]
-},
+    "name": "Rutherford",
+    "slug": "rutherford",
+    "perks": [
+      {
+        "name": "Military Hardware",
+        "description": {
+          "short": "May purchase tanks and helicopters.",
+          "full": "May purchase a single tank and single helicopter."
+        }
+      },
+      {
+        "name": "Well Stocked",
+        "description": {
+          "short": "Extra ammo. See page 48.",
+          "full": "Any weapon with 3 ammo has 4 ammo."
+        }
+      },
+      {
+        "name": "Might is Right",
+        "description": {
+          "short": "May not purchase lightweight vehicles.",
+          "full": "May not purchase lightweight vehicles."
+        }
+      },
+      {
+        "name": "Televised Carnage",
+        "description": {
+          "short": "Cause massive damage to gain Audience Votes. See page 48.",
+          "full": "If a vehicle causes 6+ hits in one attack, before evades, gain +1 Audience Vote."
+        }
+      }
+    ]
+  },
   {
     "name": "Miyazaki",
     "slug": "miyazaki",
     "perks": [
       {
         "name": "Virtuoso",
-        "description": "The first time each vehicle pushes it, they do not gain a Hazard Token."
+        "description": {
+          "short": "May push it without gaining a Hazard Token. See page 48.",
+          "full": "The first time each vehicle pushes it, they do not gain a Hazard Token."
+        }
       },
       {
         "name": "Evasive Maneouvres",
-        "description": "Before making an evade roll, gain Hazard Tokens to add +1 to each evade dice for every Hazard Token."
+        "description": {
+          "short": "Improve evade rolls by gaining Hazard Tokens. See page 49.",
+          "full": "Before making an evade roll, gain Hazard Tokens to add +1 to each evade dice for every Hazard Token."
+        }
       },
       {
         "name": "Elegance",
-        "description": "May not purchase heavyweight vehicles."
+        "description": {
+          "short": "May not purchase heavyweight vehicles.",
+          "full": "May not purchase heavyweight vehicles."
+        }
       },
       {
         "name": "Showing Off",
-        "description": "Gsin an audience vote for each vehicle, if all vehicles resolved a spin, slide and shift result."
+        "description": {
+          "short": "Gain Audience Votes by spinning, sliding and shifting. See page 49.",
+          "full": "Gain an Audience Vote for each vehicle, if all vehicles resolved a spin, slide and shift result."
+        }
       }
     ]
   },
@@ -49,15 +73,24 @@
     "perks": [
       {
         "name": "Thumpermonkey",
-        "description": "May purchase electrical weapons and upgrades."
+        "description": {
+          "short": "May purchase electrical weapons and upgrades.",
+          "full": "May purchase electrical weapons and upgrades."
+        }
       },
       {
         "name": "Dynamo",
-        "description": "After a vehicle activates in Phase 4, 5, or 6, add +1 Ammo Token to a single electrical weapon or upgrade."
+        "description": {
+          "short": "Extra ammo for electrical weapons or upgrades. See page 49.",
+          "full": "After a vehicle activates in Phase 4, 5, or 6, add +1 Ammo Token to a single electrical weapon or upgrade."
+        }
       },
       {
         "name": "All the Toys",
-        "description": "When attacking with a type of weapon that has not been attacked with this game, gain +1 Audience Vote."
+        "description": {
+          "short": "Gain Audience Votes for using a new type of weapon. See page 49.",
+          "full": "When attacking with a type of weapon that has not been attacked with this game, gain +1 Audience Vote."
+        }
       }
     ]
   },
@@ -67,19 +100,31 @@
     "perks": [
       {
         "name": "N2O Addict",
-        "description": "May purchase the Nitro upgrade at half cost."
+        "description": {
+          "short": "Cheaper Nitro upgrades. See page 49.",
+          "full": "May purchase the Nitro upgrade at half cost."
+        }
       },
       {
         "name": "Speed Demon",
-        "description": "When a vehicle uses Nitro, only gain up to 3 Hazard Tokens."
+        "description": {
+          "short": "Gain fewer Hazard Tokens when using a Nitro. See page 49.",
+          "full": "When a vehicle uses Nitro, only gain up to 3 Hazard Tokens."
+        }
       },
       {
         "name": "Cult of Speed",
-        "description": "When a vehicle selects a long straight in gear phase 1, 2, or 3, gain +1 Audience Vote."
+        "description": {
+          "short": "Gain Audience Votes for long straights. See page 49.",
+          "full": "When a vehicle selects a long straight in gear phase 1, 2, or 3, gain +1 Audience Vote."
+        }
       },
       {
         "name": "Kiss My Asphalt",
-        "description": "May not purchase gyrocopters."
+        "description": {
+          "short": "May not purchase gyrocopters.",
+          "full": "May not purchase gyrocopters."
+        }
       }
     ]
   },
@@ -89,11 +134,17 @@
     "perks": [
       {
         "name": "Live Fast",
-        "description": "If a vehicle begins the wipeout step with more Hazard Tokens than hull points, +1 Audience Vote."
+        "description": {
+          "short": "Gain Audience Votes for having Hazard Tokens. See page 49.",
+          "full": "If a vehicle begins the wipeout step with more Hazard Tokens than hull points, +1 Audience Vote."
+        }
       },
       {
         "name": "Pinball",
-        "description": "If a vehicle is involved in a sideswipe smash, immediately resolves another movement step."
+        "description": {
+          "short": "Move again after a sideswipe. See page 49.",
+          "full": "If a vehicle is involved in a sideswipe smash, immediately resolves another movement step."
+        }
       }
     ]
   },
@@ -103,11 +154,17 @@
     "perks": [
       {
         "name": "Prison Cars",
-        "description": "May purchase the Prison Car upgrade."
+        "description": {
+          "short": "May purchase the Prison Car upgrade. See page 49.",
+          "full": "May purchase the Prison Car upgrade."
+        }
       },
       {
         "name": "Fireworks",
-        "description": "If a vehicle explodes, gain +1 Audience Vote if it is middleweight and +2 Audience Vote if it is heavyweight."
+        "description": {
+          "short": "Gain Audience Votes for exploding. See page 49.",
+          "full": "If a vehicle explodes, gain +1 Audience Vote if it is middleweight and +2 Audience Vote if it is heavyweight."
+        }
       }
     ]
   }
