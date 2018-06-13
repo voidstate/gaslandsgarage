@@ -2,15 +2,14 @@ Hey there Stranger.
 
 Welcome to the Garage.
 
-![Gaslands Garage](public/images/mockups/mockup.jpg?raw=true)
-
-
 You looking for a new ride? Well you came to the right place. We'll build you the ride of your life. Or maybe your death. Someone's death, anyways.
     It's up to you who makes it through that final gate. You gonna live long enough to ride to fame, fortune and a ticket to Mars? Or you gonna burn up and die trying? 
     
 Either way, if you get your ride from the Gaslands Garage, the audience is gonna love you. 
 
 So let's get building!
+
+[![Gaslands Garage](public/images/mockups/mockup.jpg?raw=true)](https://gaslandsgarage.co.uk/)
 
 ## What is Gaslands?
 
