@@ -21,7 +21,7 @@
 				   v-bind:title="'Perks: ' + getPerkNames( sponsor )"> {{ sponsor.name }} </a>
 			</div>
 		</div>
-		<div class="d-inline-block ml-sm-3">
+		<div class="d-inline-block ml-sm-3 d-print-none">
 			<div class="form-check">
 				<input class="form-check-input toggle-checkbox"
 				       type="checkbox"

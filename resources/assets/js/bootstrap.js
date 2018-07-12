@@ -71,6 +71,8 @@ import faCheckCircle from '@fortawesome/fontawesome-free-solid/faCheckCircle'
 import faCloudDownloadAlt from '@fortawesome/fontawesome-free-solid/faCloudDownloadAlt'
 import faCloudUploadAlt from '@fortawesome/fontawesome-free-solid/faCloudUploadAlt'
 //import faCube from '@fortawesome/fontawesome-free-solid/faCube'
+import faEyeDropper from '@fortawesome/fontawesome-free-solid/faEyeDropper'
+import faEllipsisH from '@fortawesome/fontawesome-free-solid/faEllipsisH'
 import faExclamationTriangle from '@fortawesome/fontawesome-free-solid/faExclamationTriangle'
 import faFacebookSquare from '@fortawesome/fontawesome-free-brands/faFacebookSquare'
 import faGoogle from '@fortawesome/fontawesome-free-brands/faGoogle'
@@ -97,6 +99,8 @@ fontawesome.library.add(
 	faCloudDownloadAlt,
 	faCloudUploadAlt,
 	//faCube,
+	faEyeDropper,
+	faEllipsisH,
 	faExclamationTriangle,
 	faFacebookSquare,
 	faGoogle,

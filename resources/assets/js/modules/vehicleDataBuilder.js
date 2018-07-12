@@ -87,7 +87,15 @@ const shortKeys = [
 	{
 		short: 'p',
 		full: 'perks'
-	}
+	},
+	{
+		short: 'c1',
+		full: 'foregroundColour'
+	},
+	{
+		short: 'c2',
+		full: 'backgroundColour'
+	},
 ]
 
 const extraShortKeys = _.map( extras, key => _.find( shortKeys, [ 'full', key ] ).short )
@@ -163,7 +171,11 @@ export default {
 				maxCrew: baseVehicleData.crew * 2,
 				weapons: [],
 				upgrades: [],
-				perks: []
+				perks: [],
+				colours: {
+					foreground: null,
+					background: null
+				}
 			},
 			_.cloneDeep( baseVehicleData ) )
 
@@ -203,6 +215,15 @@ export default {
 						return Object.assign( getExtra( extraType, slug ),
 							additionalProperties )
 					} )
+				}
+			}
+
+			// handle colours
+			if( dehydratedVehicle.foregroundColour && dehydratedVehicle.backgroundColour )
+			{
+				dehydratedVehicle.colours = {
+					foreground: '#' + dehydratedVehicle.foregroundColour,
+					background: '#' + dehydratedVehicle.backgroundColour
 				}
 			}
 
@@ -265,6 +286,12 @@ export default {
 				dehydratedVehicle.label = vehicle.label
 			}
 
+			if( vehicle.colours.foreground !== null && vehicle.colours.background !== null )
+			{
+				dehydratedVehicle.foregroundColour = _.trimStart( vehicle.colours.foreground, '#' )
+				dehydratedVehicle.backgroundColour = _.trimStart( vehicle.colours.background, '#' )
+			}
+
 			for( const extraType of extras )
 			{
 				const addedExtras = _.filter( vehicle[ extraType ], extra => extra.cost !== 0 ) // @todo shoddy way of determining built-in upgrades
@@ -302,6 +329,7 @@ export default {
 
 		let serializedTeam = []
 
+		// team attributes
 		_.forIn( team, ( value, key ) =>
 		{
 			if( key !== 'vehicles' )
@@ -310,6 +338,7 @@ export default {
 			}
 		} )
 
+		// vehicles
 		if( team.vehicles !== undefined )
 		{
 			for( const vehicle of team.vehicles )
@@ -343,6 +372,7 @@ export default {
 		{
 			const [ key, value ] = part.split( '=' )
 
+			// vehicles
 			if( key === 'v' )
 			{
 				let vehicleParts        = value.split( ',' ),
@@ -370,6 +400,7 @@ export default {
 
 				deserializedTeam.vehicles.push( deserializedVehicle )
 			}
+			// team attributes
 			else
 			{
 				deserializedTeam[ getFullKey( key ) ] = decodeURI( value )

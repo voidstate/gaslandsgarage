@@ -80,8 +80,6 @@
 			$( '[data-toggle="tooltip"]', this.$refs.container ).tooltip()
 
 			this.initScrollObserver()
-
-			console.log( 'team details mounted', this.allowAllPerks )
 		},
 		components: {
 			'sponsor-button': SponsorButton,

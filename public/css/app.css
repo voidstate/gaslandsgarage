@@ -3497,7 +3497,7 @@
  */
 
 /*!
- * Bootstrap v4.1.1 (https://getbootstrap.com/)
+ * Bootstrap v4.1.0 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -3556,6 +3556,7 @@ html {
 
 article,
 aside,
+dialog,
 figcaption,
 figure,
 footer,
@@ -3706,7 +3707,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: monospace, monospace;
   font-size: 1em;
 }
 
@@ -4036,6 +4037,13 @@ mark,
 .figure-caption {
   font-size: 90%;
   color: #7d6c75;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 code {
@@ -6004,13 +6012,6 @@ select.form-control-lg:not([size]):not([multiple]),
   display: block;
 }
 
-.was-validated .form-control-file:valid ~ .valid-feedback,
-.was-validated .form-control-file:valid ~ .valid-tooltip,
-.form-control-file.is-valid ~ .valid-feedback,
-.form-control-file.is-valid ~ .valid-tooltip {
-  display: block;
-}
-
 .was-validated .form-check-input:valid ~ .form-check-label,
 .form-check-input.is-valid ~ .form-check-label {
   color: #506620;
@@ -6125,13 +6126,6 @@ select.form-control-lg:not([size]):not([multiple]),
 .custom-select:invalid ~ .invalid-tooltip,
 .custom-select.is-invalid ~ .invalid-feedback,
 .custom-select.is-invalid ~ .invalid-tooltip {
-  display: block;
-}
-
-.was-validated .form-control-file:invalid ~ .invalid-feedback,
-.was-validated .form-control-file:invalid ~ .invalid-tooltip,
-.form-control-file.is-invalid ~ .invalid-feedback,
-.form-control-file.is-invalid ~ .invalid-tooltip {
   display: block;
 }
 
@@ -7519,7 +7513,8 @@ input[type="button"].btn-block {
   border-bottom-right-radius: 0;
 }
 
-.input-group > .custom-file:not(:first-child) .custom-file-label {
+.input-group > .custom-file:not(:first-child) .custom-file-label,
+.input-group > .custom-file:not(:first-child) .custom-file-label::after {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -7645,14 +7640,13 @@ input[type="button"].btn-block {
 }
 
 .custom-control-label {
-  position: relative;
   margin-bottom: 0;
 }
 
 .custom-control-label::before {
   position: absolute;
   top: 0.3rem;
-  left: -1.5rem;
+  left: 0;
   display: block;
   width: 1rem;
   height: 1rem;
@@ -7668,7 +7662,7 @@ input[type="button"].btn-block {
 .custom-control-label::after {
   position: absolute;
   top: 0.3rem;
-  left: -1.5rem;
+  left: 0;
   display: block;
   width: 1rem;
   height: 1rem;
@@ -7834,7 +7828,7 @@ input[type="button"].btn-block {
   bottom: 0;
   z-index: 3;
   display: block;
-  height: 2.19rem;
+  height: calc(calc(2.19rem + 2px) - 1px * 2);
   padding: 0.375rem 0.75rem;
   line-height: 1.6;
   color: #574950;
@@ -10292,7 +10286,6 @@ button.close {
   margin-right: 3px;
   margin-left: 3px;
   text-indent: -999px;
-  cursor: pointer;
   background-color: rgba(255, 250, 247, 0.5);
 }
 
@@ -13891,22 +13884,6 @@ a.text-dark:focus {
   .table-bordered td {
     border: 1px solid #e6dee2 !important;
   }
-
-  .table-dark {
-    color: inherit;
-  }
-
-  .table-dark th,
-  .table-dark td,
-  .table-dark thead th,
-  .table-dark tbody + tbody {
-    border-color: #4f3513;
-  }
-
-  .table .thead-dark th {
-    color: inherit;
-    border-color: #4f3513;
-  }
 }
 
 /*
@@ -14130,6 +14107,10 @@ body.chrome-bg {
   background: linear-gradient(to bottom, whitesmoke 0%, #e0e0e0 50%, #c2c2c2 51%, #ededed 100%);
 }
 
+body.chrome-bg .text-primary {
+  color: #40343a !important;
+}
+
 body.chrome-bg .main-row {
   color: #40343a !important;
 }
@@ -14160,6 +14141,12 @@ body.chrome-bg .vehicle > .card {
   background: linear-gradient(to bottom, whitesmoke 0%, #e0e0e0 50%, #c2c2c2 51%, #ededed 100%) !important;
 }
 
+body.chrome-bg .vehicle h4.vehicle-label {
+  text-shadow: -1px -1px 0 #fffaf7, 1px -1px 0 #fffaf7, -1px 1px 0 #fffaf7, 1px 1px 0 #fffaf7;
+  -moz-text-stroke-color: #fffaf7;
+  -webkit-text-stroke-color: #fffaf7;
+}
+
 body.chrome-bg .vehicle .vehicle-card-header,
 body.chrome-bg .vehicle .card-header,
 body.chrome-bg .vehicle .card-body {
@@ -14168,6 +14155,10 @@ body.chrome-bg .vehicle .card-body {
 
 body.chrome-bg .vehicle .vehicle-card-header .badge {
   background-color: #574950 !important;
+}
+
+body.chrome-bg .vehicle .vehicle-card-header .stripes {
+  top: 0;
 }
 
 body.chrome-bg .vehicle .vehicle-stats .btn {
@@ -14225,6 +14216,12 @@ body.animated-bg .vehicle > .card {
           box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.33);
 }
 
+body.animated-bg .vehicle h4.vehicle-label {
+  text-shadow: -1px -1px 0 #020101, 1px -1px 0 #020101, -1px 1px 0 #020101, 1px 1px 0 #020101;
+  -moz-text-stroke-color: #020101;
+  -webkit-text-stroke-color: #020101;
+}
+
 body.animated-bg .vehicle .vehicle-card-header,
 body.animated-bg .vehicle .card-body {
   background-image: url(/images/textures/texture1.jpg);
@@ -14232,6 +14229,10 @@ body.animated-bg .vehicle .card-body {
 
 body.animated-bg .vehicle .vehicle-card-header .badge {
   background-color: #292125 !important;
+}
+
+body.animated-bg .vehicle .vehicle-card-header .stripes {
+  top: 0;
 }
 
 body.animated-bg .vehicle .vehicle-stats .btn {
@@ -14254,6 +14255,10 @@ body.animated-bg .vehicle .vehicle-extras thead th {
 body.animated-bg .vehicle .vehicle-extras th,
 body.animated-bg .vehicle .vehicle-extras td {
   background-color: #574950;
+}
+
+body.animated-bg .vehicle .vehicle-extras .badge.item-count-badge {
+  background-color: #292125;
 }
 
 body.animated-bg .team-details .card-body {
@@ -14440,57 +14445,14 @@ body.landscape-bg .vehicle > .card {
   padding-top: 0;
 }
 
-.vehicle h4 {
+.vehicle h4.vehicle-label {
   margin-bottom: 0;
-}
-
-.vehicle .close-button:hover {
-  color: #28676b;
-  cursor: pointer;
-}
-
-.vehicle .cost-badge,
-.vehicle .slots-badge {
-  position: absolute;
-  right: 40px;
-}
-
-.vehicle .cost-badge .badge,
-.vehicle .slots-badge .badge {
-  padding: 4px 7px;
-  min-width: 70px;
-  text-align: left;
-  height: 23px;
-  font-weight: normal;
-}
-
-.vehicle .cost-badge .cost-icon,
-.vehicle .cost-badge .slots-icon,
-.vehicle .slots-badge .cost-icon,
-.vehicle .slots-badge .slots-icon {
-  margin-right: 3px;
-}
-
-.vehicle .cost-badge img,
-.vehicle .slots-badge img {
-  -webkit-filter: invert(1);
-          filter: invert(1);
-  height: 15px;
-  width: 15px;
-  position: relative;
-  margin-left: -2px;
-}
-
-.vehicle .cost-badge {
-  top: 10px;
-}
-
-.vehicle .slots-badge {
-  top: 38px;
-}
-
-.vehicle .slots-badge .badge {
-  padding-top: 6px;
+  text-shadow: -1px -1px 0 #28676b, 1px -1px 0 #28676b, -1px 1px 0 #28676b, 1px 1px 0 #28676b;
+  -moz-text-stroke-color: #28676b;
+  -moz-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #28676b;
+  -webkit-text-stroke-width: 2px;
+  paint-order: stroke fill;
 }
 
 .vehicle .vehicle-label,
@@ -14537,21 +14499,126 @@ body.landscape-bg .vehicle > .card {
   min-height: 70px;
   background-color: #0b5156;
   border-bottom: 0;
+  position: relative;
 }
 
-.vehicle .vehicle-card-header .duplicate-button {
-  position: absolute;
-  top: 2.45rem;
-  right: 1.2rem;
+.vehicle .vehicle-card-header > * {
+  z-index: 2;
+  position: relative;
+}
+
+.vehicle .vehicle-card-header .close-button:hover {
+  color: #28676b;
   cursor: pointer;
 }
 
-.vehicle .vehicle-card-header .duplicate-button:hover {
+.vehicle .vehicle-card-header .cost-badge,
+.vehicle .vehicle-card-header .slots-badge {
+  position: absolute;
+  right: 40px;
+}
+
+.vehicle .vehicle-card-header .cost-badge .badge,
+.vehicle .vehicle-card-header .slots-badge .badge {
+  padding: 4px 7px;
+  min-width: 70px;
+  text-align: left;
+  height: 23px;
+  font-weight: normal;
+}
+
+.vehicle .vehicle-card-header .cost-badge .cost-icon,
+.vehicle .vehicle-card-header .cost-badge .slots-icon,
+.vehicle .vehicle-card-header .slots-badge .cost-icon,
+.vehicle .vehicle-card-header .slots-badge .slots-icon {
+  margin-right: 3px;
+}
+
+.vehicle .vehicle-card-header .cost-badge img,
+.vehicle .vehicle-card-header .slots-badge img {
+  -webkit-filter: invert(1);
+  filter: invert(1);
+  height: 15px;
+  width: 15px;
+  position: relative;
+  margin-left: -2px;
+}
+
+.vehicle .vehicle-card-header .cost-badge {
+  top: 10px;
+}
+
+.vehicle .vehicle-card-header .slots-badge {
+  top: 38px;
+}
+
+.vehicle .vehicle-card-header .slots-badge .badge {
+  padding-top: 6px;
+}
+
+.vehicle .vehicle-card-header .more-button {
+  position: absolute;
+  top: 2.45rem;
+  right: 1.125rem;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.vehicle .vehicle-card-header .more-button:hover {
   color: #28676b;
+}
+
+.vehicle .vehicle-card-header .more-dropdown-menu {
+  min-width: 3.5rem;
 }
 
 .vehicle .vehicle-card-header .slots-overspent .badge {
   background-color: #af3224;
+}
+
+.vehicle .vehicle-card-header .stripes {
+  position: absolute;
+  width: 160px;
+  height: 100%;
+  top: -1px;
+  right: 100px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.vehicle .vehicle-card-header .stripes > div {
+  position: relative;
+  z-index: 1;
+  left: -56%;
+  width: 250%;
+  -webkit-transform: rotate(-55deg);
+  transform: rotate(-55deg);
+}
+
+.vehicle .vehicle-card-header .stripes > div.foreground-stripe {
+  height: 30px;
+  margin-left: -12px;
+}
+
+.vehicle .vehicle-card-header .stripes > div.background-stripe {
+  height: 15px;
+}
+
+.vehicle .vehicle-card-header .stripes > div.edge-stripe {
+  height: 1px;
+  background-color: #fffaf7;
+}
+
+.vehicle .vehicle-card-header .stripes > div.edge-stripe.left {
+  margin-left: -20px;
+}
+
+.vehicle .vehicle-card-header .stripes > div.edge-stripe.center {
+  margin-left: -4px;
+}
+
+.vehicle .vehicle-card-header .stripes > div.edge-stripe.right {
+  margin-left: 4px;
 }
 
 .vehicle .vehicle-stats .row {
@@ -14710,6 +14777,23 @@ body.landscape-bg .vehicle > .card {
   width: 17px;
 }
 
+.colour-picker .card .card-body {
+  background-color: white;
+  text-align: center;
+  border: none;
+  overflow-x: scroll;
+}
+
+.colour-picker .card .vc-swatches {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  overflow-x: scroll;
+}
+
+.colour-picker .card .vc-swatches-box {
+  padding-left: 9px;
+}
+
 /*
  * Main page divs
  */
@@ -14780,6 +14864,19 @@ body.landscape-bg .vehicle > .card {
             break-inside: avoid;
     -webkit-column-break-after: auto;
             break-after: auto;
+  }
+
+  h4.vehicle-label {
+    text-shadow: none !important;
+    -moz-text-stroke-color: none !important;
+    -moz-text-stroke-width: 0 !important;
+    -webkit-text-stroke-color: unset !important;
+    -webkit-text-stroke-width: 0 !important;
+  }
+
+  .vehicle .vehicle-card-header .stripes {
+    height: calc(100% - .45rem) !important;
+    top: 0 !important;
   }
 
   .vehicle-stats {

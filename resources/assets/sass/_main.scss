@@ -197,6 +197,10 @@ body.chrome-bg {
   background: rgba(254, 254, 254, 1);
   background: linear-gradient(to bottom, rgba(245, 245, 245, 1) 0%, rgba(224, 224, 224, 1) 50%, rgba(194, 194, 194, 1) 51%, rgba(237, 237, 237, 1) 100%);
 
+  .text-primary {
+    color: $gray-800 !important;
+  }
+
   .main-row {
     color: $gray-800 !important;
   }
@@ -220,7 +224,14 @@ body.chrome-bg {
       box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.33);
       background-color: $gray-700 !important;
       background: linear-gradient(to bottom, rgba(245, 245, 245, 1) 0%, rgba(224, 224, 224, 1) 50%, rgba(194, 194, 194, 1) 51%, rgba(237, 237, 237, 1) 100%) !important;
-
+    }
+    h4.vehicle-label {
+      text-shadow: -1px -1px 0 $white,
+      1px -1px 0 $white,
+      -1px 1px 0 $white,
+      1px 1px 0 $white;
+      -moz-text-stroke-color: $white;
+      -webkit-text-stroke-color: $white;
     }
     .vehicle-card-header, .card-header, .card-body {
       background-color: transparent;
@@ -228,6 +239,9 @@ body.chrome-bg {
     .vehicle-card-header {
       .badge {
         background-color: $gray-700 !important;
+      }
+      .stripes {
+        top: 0;
       }
     }
     .vehicle-stats .btn {
@@ -279,11 +293,24 @@ body.animated-bg {
       border-color: $darkest-brown;
       box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.33);
     }
+    h4.vehicle-label {
+      text-shadow: -1px -1px 0 $black,
+      1px -1px 0 $black,
+      -1px 1px 0 $black,
+      1px 1px 0 $black;
+      -moz-text-stroke-color: $black;
+      -webkit-text-stroke-color: $black;
+    }
     .vehicle-card-header, .card-body {
       background-image: url(/images/textures/texture1.jpg);
     }
-    .vehicle-card-header .badge {
-      background-color: $gray-900 !important;
+    .vehicle-card-header {
+      .badge {
+        background-color: $gray-900 !important;
+      }
+      .stripes {
+        top: 0;
+      }
     }
     .vehicle-stats .btn {
       background-color: $gray-900 !important;
@@ -301,6 +328,9 @@ body.animated-bg {
       }
       th, td {
         background-color: $gray-700;
+      }
+      .badge.item-count-badge {
+        background-color: $gray-900;
       }
     }
   }
@@ -474,77 +504,137 @@ body.landscape-bg {
     padding-top: 0;
   }
 
-  h4 {
+  h4.vehicle-label {
     margin-bottom: 0;
+    text-shadow: -1px -1px 0 $secondary,
+    1px -1px 0 $secondary,
+    -1px 1px 0 $secondary,
+    1px 1px 0 $secondary;
+    -moz-text-stroke-color: $secondary;
+    -moz-text-stroke-width: 2px;
+    -webkit-text-stroke-color: $secondary;
+    -webkit-text-stroke-width: 2px;
+    paint-order: stroke fill;
   }
-  .close-button:hover {
-    color: $secondary;
-    cursor: pointer;
-  }
-  .cost-badge, .slots-badge {
-    position: absolute;
-    right: 40px;
-    .badge {
-      padding: 4px 7px;
-      min-width: 70px;
-      text-align: left;
-      height: 23px;
-      font-weight: normal;
-    }
-    .cost-icon, .slots-icon {
-      margin-right: 3px;
-    }
-    img {
-      filter: invert(1);
-      height: 15px;
-      width: 15px;
-      position: relative;
-      margin-left: -2px;
-    }
-  }
-  .cost-badge {
-    top: 10px;
-  }
-  .slots-badge {
-    top: 38px;
-    .badge {
-      padding-top: 6px;
-    }
-  }
+
   .vehicle-label, .edit-name-container {
     margin-right: 6rem;
   }
+
   .edit-name-input {
     background-color: $lighter-blue;
     color: $white;
     border: none;
     @include placeholder-color($white);
   }
+
   .dropdown-menu {
     z-index: 1040;
   }
+
   .btn {
     .btn-icon, img.btn-svg {
       margin-right: .135rem;
     }
   }
+
   .vehicle-card-header {
     min-height: 70px;
     background-color: $dark-blue;
     border-bottom: 0;
-    .duplicate-button {
+    position: relative; // allows stripes to have 100% height
+    > * {
+      z-index: 2;
+      position: relative;
+    }
+    .close-button:hover {
+      color: $secondary;
+      cursor: pointer;
+    }
+    .cost-badge, .slots-badge {
+      position: absolute;
+      right: 40px;
+      .badge {
+        padding: 4px 7px;
+        min-width: 70px;
+        text-align: left;
+        height: 23px;
+        font-weight: normal;
+      }
+      .cost-icon, .slots-icon {
+        margin-right: 3px;
+      }
+      img {
+        filter: invert(1);
+        height: 15px;
+        width: 15px;
+        position: relative;
+        margin-left: -2px;
+      }
+    }
+    .cost-badge {
+      top: 10px;
+    }
+    .slots-badge {
+      top: 38px;
+      .badge {
+        padding-top: 6px;
+      }
+    }
+    .more-button {
       position: absolute;
       top: 2.45rem;
-      right: 1.2rem;
+      right: 1.125rem;
       cursor: pointer;
+      z-index: 3;
       &:hover {
         color: #28676b;
       }
     }
+    .more-dropdown-menu {
+      min-width: 3.5rem;
+    }
     .slots-overspent .badge {
       background-color: $danger;
     }
+    .stripes {
+      position: absolute;
+      width: 160px;
+      height: 100%;
+      top: -1px;
+      right: 100px;
+      overflow: hidden;
+      z-index: 1;
+      > div {
+        position: relative;
+        z-index: 1;
+        left: -56%;
+        width: 250%;
+        transform: rotate(-55deg);
+        &.foreground-stripe {
+          height: 30px;
+          margin-left: -12px;
+        }
+        &.background-stripe {
+          height: 15px;
+        }
+        &.edge-stripe {
+          height: 1px;
+          background-color: $white;
+          &.left {
+            margin-left: -20px;
+          }
+          &.center {
+            margin-left: -4px;
+          }
+          &.right {
+            margin-left: 4px;
+          }
+        }
+      }
+    }
   }
+
   .vehicle-stats {
     .row {
       margin-right: -6px;
@@ -583,18 +673,21 @@ body.landscape-bg {
     }
 
   }
+
   .vehicle-hull-boxes {
     .vehicle-hull-box {
       width: 1.25rem;
       height: 1.25rem;
     }
   }
+
   .vehicle-ammo-boxes {
     .vehicle-ammo-box {
       width: 1.125rem;
       height: 1.125rem;
     }
   }
+
   .vehicle-buttons {
     .btn-group {
       margin-bottom: 0;
@@ -683,6 +776,25 @@ body.landscape-bg {
       }
     }
 
+  }
+
+}
+
+.colour-picker {
+  .card {
+    .card-body {
+      background-color: white;
+      text-align: center;
+      border: none;
+      overflow-x: scroll;
+    }
+    .vc-swatches {
+      box-shadow: none;
+      overflow-x: scroll;
+    }
+    .vc-swatches-box {
+      padding-left: 9px;
+    }
   }
 }
 

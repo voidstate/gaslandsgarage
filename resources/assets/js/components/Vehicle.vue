@@ -5,8 +5,26 @@
 				<div class="float-right close-button d-print-none" v-on:click="deleteVehicle">
 					<i class="fas fa-times"></i>
 				</div>
-				<div class="duplicate-button d-print-none" v-on:click="duplicateVehicle">
-					<i class="fas fa-copy"></i>
+				<div class="more-button btn-group dropright d-print-none">
+					<div data-toggle="dropdown">
+						<i class="fas fa-ellipsis-h btn-icon"></i>
+					</div>
+					<div class="more-dropdown-menu dropdown-menu px-2">
+						<div class="duplicate-button d-inline-block"
+						     data-toggle="tooltip"
+						     data-placement="bottom"
+						     title="Duplicate vehicle"
+						     v-on:click="duplicateVehicle">
+							<i class="fas fa-copy"></i>
+						</div>
+						<div class="picker-button d-inline-block pl-2"
+						     data-toggle="tooltip"
+						     data-placement="bottom"
+						     title="Vehicle colours"
+						     v-on:click="changeColours">
+							<i class="fas fa-eye-dropper"></i>
+						</div>
+					</div>
 				</div>
 				<div class="cost-badge">
 					<span class="badge badge-dark">
@@ -20,9 +38,20 @@
 						{{ slots }}/{{ maxSlots }} slots
 					</span>
 				</div>
+				<div class="stripes"
+				     v-show="showStripes">
+					<div class="edge-stripe left"></div>
+					<div class="foreground-stripe"
+					     v-bind:style="{ 'background-color': vehicleData.colours.foreground }"></div>
+					<div class="edge-stripe center"></div>
+					<div class="background-stripe"
+					     v-bind:style="{ 'background-color': vehicleData.colours.background }"></div>
+					<div class="edge-stripe right"></div>
+				</div>
 				<h4 v-show="!editingLabel" v-on:click="editLabel" class="vehicle-label">{{ currentLabel }}</h4>
 				<div class="edit-name-container mb-2" v-show="editingLabel">
 					<input class="edit-name-input form-control"
+					       maxlength="30"
 					       placeholder="New name..."
 					       ref="editLabelInput"
 					       v-model="newLabel"
@@ -499,6 +528,10 @@
 			weight()
 			{
 				return _.upperFirst( this.vehicleData.weight )
+			},
+			showStripes()
+			{
+				return this.vehicleData.colours.foreground !== null && this.vehicleData.colours.background !== null
 			}
 		},
 		watch: {
@@ -692,6 +725,10 @@
 				{
 					event.stopPropagation()
 				}
+			},
+			changeColours()
+			{
+				this.$emit( 'changeColours' )
 			}
 		}
 	}

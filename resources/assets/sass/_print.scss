@@ -53,6 +53,19 @@
     }
   }
 
+  h4.vehicle-label {
+    text-shadow: none !important;
+    -moz-text-stroke-color: none !important;
+    -moz-text-stroke-width: 0 !important;
+    -webkit-text-stroke-color: unset !important;
+    -webkit-text-stroke-width: 0 !important;
+  }
+
+  .vehicle .vehicle-card-header .stripes {
+    height: calc(100% - .45rem) !important;
+    top: 0 !important;
+  }
+
   .vehicle-stats {
     padding-top: 0 !important;
   }

@@ -31,6 +31,8 @@
   },
   "dependencies": {
     "intersection-observer": "^0.5.0",
+    "tinycolor2": "^1.4.1",
+    "vue-color": "^2.4.6",
     "vuedraggable": "^2.16.0"
   },
   "eslintConfig": {
