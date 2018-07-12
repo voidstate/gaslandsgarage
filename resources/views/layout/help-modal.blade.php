@@ -33,7 +33,7 @@
 							'1'+'0'+'3'+';'+'a'+'s'+'&'+'#'+'1'+'0'+'8'+';'+'&'+'#'+'9'+'7'+';'+'n'+'d'+'&'+'#'+'1'+'1'+'5'+';'+
 							'&'+'#'+'1'+'0'+'3'+';'+'a'+'&'+'#'+'1'+'1'+'4'+';'+'&'+'#'+'9'+'7'+';'+'g'+'e'+'&'+'#'+'4'+'6'+';'+
 							'c'+'o'+'&'+'#'+'4'+'6'+';'+'u'+'k'+'<'+'/'+'a'+'>');</script>.</p>
-				<h5>How Can I help?</h5>
+				<h5>How Can I Help?</h5>
 				<h6>Good</h6>
 				<p>Report bugs and make suggestions. OR just send me nice emails.</p>
 				<h6>Better</h6>
@@ -41,6 +41,9 @@
 					<a href="https://github.com/voidstate/gaslandsgarage" target="_blank">Github repository</a>.</p>
 				<h6>Best!</h6>
 				<p>Clone the repo, fix bugs and submit a pull request!</p>
+				<h5>FAQ</h5>
+				<h6>My coloured stripes don't print!</h6>
+				<p>You're using IE, aren't you? Or Opera? Unfortunately, only Firefox, Chrome and Safari allow web developers to force the printing of background colours. You can still do it in other browsers, though - look for the option to "Print Background Images" in the print popup.</p>
 				<h5>Credits</h5>
 				<p>Gaslands and all related properties, images and text are owned by Mike Hutchinson. Mike has created something awesome in Gaslands.</p>
 				<p>Gaslands Garage is built using awesome open source technologies. The stack is built on...</p>

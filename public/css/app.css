@@ -14537,7 +14537,7 @@ body.landscape-bg .vehicle > .card {
 .vehicle .vehicle-card-header .cost-badge img,
 .vehicle .vehicle-card-header .slots-badge img {
   -webkit-filter: invert(1);
-  filter: invert(1);
+	filter: invert(1);
   height: 15px;
   width: 15px;
   position: relative;
@@ -14592,7 +14592,7 @@ body.landscape-bg .vehicle > .card {
   left: -56%;
   width: 250%;
   -webkit-transform: rotate(-55deg);
-  transform: rotate(-55deg);
+	transform: rotate(-55deg);
 }
 
 .vehicle .vehicle-card-header .stripes > div.foreground-stripe {
@@ -14786,7 +14786,7 @@ body.landscape-bg .vehicle > .card {
 
 .colour-picker .card .vc-swatches {
   -webkit-box-shadow: none;
-  box-shadow: none;
+	box-shadow: none;
   overflow-x: scroll;
 }
 
@@ -14877,6 +14877,8 @@ body.landscape-bg .vehicle > .card {
   .vehicle .vehicle-card-header .stripes {
     height: calc(100% - .45rem) !important;
     top: 0 !important;
+	  -webkit-print-color-adjust: exact;
+	  color-adjust: exact;
   }
 
   .vehicle-stats {

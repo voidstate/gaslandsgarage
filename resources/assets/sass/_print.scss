@@ -64,6 +64,8 @@
   .vehicle .vehicle-card-header .stripes {
     height: calc(100% - .45rem) !important;
     top: 0 !important;
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
   }
 
   .vehicle-stats {
