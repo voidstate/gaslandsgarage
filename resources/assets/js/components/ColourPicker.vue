@@ -11,7 +11,7 @@
 				<div class="modal-body">
 					<div class="container-fluid">
 						<div class="row">
-							<div class="col-md-6">
+							<div class="col-md-6 px-0 px-md-2">
 								<div class="card">
 									<div class="card-header" v-bind:style="{ 'background-color': foregroundHexColour, 'color': foregroundTextHexColour}">
 										Base Colour
@@ -80,11 +80,11 @@
 			},
 			foregroundTextHexColour()
 			{
-				return tinycolor( this.foregroundColour.hex ).isLight() ? '#000' : '#fff'
+				return tinycolor( this.foregroundHexColour ).isLight() ? '#000' : '#fff'
 			},
 			backgroundTextHexColour()
 			{
-				return tinycolor( this.backgroundColour.hex ).isLight() ? '#000' : '#fff'
+				return tinycolor( this.backgroundHexColour ).isLight() ? '#000' : '#fff'
 			}
 		},
 		methods: {
@@ -98,7 +98,7 @@
 			},
 			save()
 			{
-				this.$emit( 'coloursChanged', this.index, this.foregroundColour.hex, this.backgroundColour.hex )
+				this.$emit( 'coloursChanged', this.index, this.foregroundHexColour, this.backgroundHexColour )
 			},
 			clear()
 			{
