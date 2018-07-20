@@ -64,13 +64,13 @@ if (token) {
 import fontawesome from '@fortawesome/fontawesome'
 
 import faCar from '@fortawesome/fontawesome-free-solid/faCar'
-
 import faCog from '@fortawesome/fontawesome-free-solid/faCog'
 import faCopy from '@fortawesome/fontawesome-free-solid/faCopy'
 import faCheckCircle from '@fortawesome/fontawesome-free-solid/faCheckCircle'
 import faCloudDownloadAlt from '@fortawesome/fontawesome-free-solid/faCloudDownloadAlt'
 import faCloudUploadAlt from '@fortawesome/fontawesome-free-solid/faCloudUploadAlt'
 //import faCube from '@fortawesome/fontawesome-free-solid/faCube'
+import faDice from '@fortawesome/fontawesome-free-solid/faDice'
 import faEyeDropper from '@fortawesome/fontawesome-free-solid/faEyeDropper'
 import faEllipsisH from '@fortawesome/fontawesome-free-solid/faEllipsisH'
 import faExclamationTriangle from '@fortawesome/fontawesome-free-solid/faExclamationTriangle'
@@ -99,6 +99,7 @@ fontawesome.library.add(
 	faCloudDownloadAlt,
 	faCloudUploadAlt,
 	//faCube,
+	faDice,
 	faEyeDropper,
 	faEllipsisH,
 	faExclamationTriangle,

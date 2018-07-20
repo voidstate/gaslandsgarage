@@ -16,7 +16,7 @@ function getVehicle( slug )
 {
 	const vehicle = _.find( vehicleData, [ 'slug', slug ] )
 
-	if( vehicle === undefined )
+	if ( vehicle === undefined )
 	{
 		throw new Error( `Vehicle ("${ slug }") not recognised` )
 	}
@@ -28,7 +28,7 @@ function getSponsor( slug )
 {
 	const sponsor = _.find( sponsorData, [ 'slug', slug ] )
 
-	if( sponsor === undefined )
+	if ( sponsor === undefined )
 	{
 		throw new Error( `Sponsor ("${ slug }") not recognised` )
 	}
@@ -40,7 +40,7 @@ function getExtra( extraType, slug )
 {
 	const extra = _.find( extraData[ extraType ], [ 'slug', slug ] )
 
-	if( extra === undefined )
+	if ( extra === undefined )
 	{
 		throw new Error( `Extra ("${ slug }") not recognised for ${ extraType }` )
 	}
@@ -109,7 +109,7 @@ function getFullKey( shortKey )
 {
 	const fullKey = _.find( shortKeys, [ 'short', shortKey ] )
 
-	if( fullKey === undefined )
+	if ( fullKey === undefined )
 	{
 		throw new Error( `Short key (${ shortKey }) not recognised` )
 	}
@@ -118,6 +118,10 @@ function getFullKey( shortKey )
 }
 
 let descriptionMode = 'short'
+
+const allowedFacings = [ 'front', 'side', 'rear', 'turret' ]
+
+const allowedWarRigLocations = [ 'tractor', 'trailer' ]
 
 export default {
 
@@ -136,17 +140,15 @@ export default {
 	{
 		return weaponData.map( ( weapon ) =>
 		{
+			// add facing and location properties here so they can be watched in Vehicle.vue
 			weapon.facing = 'front'
+			weapon.location = null
 			return weapon
 		} )
 	},
 	upgradeData()
 	{
-		return upgradeData.map( ( upgrade ) =>
-		{
-			upgrade.facing = 'front'
-			return upgrade
-		} )
+		return upgradeData
 	},
 	perkData()
 	{
@@ -180,7 +182,7 @@ export default {
 			_.cloneDeep( baseVehicleData ) )
 
 		// ensure extras have costs
-		for( const extraType of extras )
+		for ( const extraType of extras )
 		{
 			vehicle[ extraType ] = vehicle[ extraType ].map( extra => Object.assign( extra, { cost: 0 } ) )
 		}
@@ -196,20 +198,54 @@ export default {
 		hydratedTeam.vehicles = hydratedTeam.vehicles.map( dehydratedVehicle =>
 		{
 			// rehydrate extras (turn array of slugs into array of data objects)
-			for( const extraType of extras )
+			for ( const extraType of extras )
 			{
-				if( dehydratedVehicle[ extraType ] !== undefined )
+				if ( dehydratedVehicle[ extraType ] !== undefined )
 				{
 					dehydratedVehicle[ extraType ] = dehydratedVehicle[ extraType ].map( slug =>
 					{
 						let additionalProperties = { removable: true }
 
-						if( extraType === 'weapons' && slug.indexOf( '!' ) !== -1 )
+						// ! can mean we have a facing or a location... but which is it?
+						if ( extraType === 'weapons' && slug.indexOf( '!' ) !== -1 )
 						{
-							let [ newSlug, facing ] = slug.split( '!' )
+							const occurrences = _.countBy( slug )[ '!' ]
+
+							let newSlug, facing, location
+
+							// easy - we have both
+							if ( occurrences === 2 )
+							{
+								[ newSlug, facing, location ] = slug.split( '!' )
+							}
+							// trickier - we only have one
+							else
+							{
+								let facingOrLocation
+
+								[ newSlug, facingOrLocation ] = slug.split( '!' )
+
+								if ( facingOrLocation === 'trailer' ) // tractor is ignored when dehydrating
+								{
+									location = facingOrLocation
+								}
+								else
+								{
+									facing = facingOrLocation
+								}
+							}
 
 							slug = newSlug
-							additionalProperties.facing = facing
+
+							if ( facing !== undefined && allowedFacings.indexOf( facing ) !== -1 )
+							{
+								additionalProperties.facing = facing
+							}
+
+							if ( location !== undefined && allowedWarRigLocations.indexOf( location ) !== -1 )
+							{
+								additionalProperties.location = location
+							}
 						}
 
 						return Object.assign( getExtra( extraType, slug ),
@@ -219,7 +255,7 @@ export default {
 			}
 
 			// handle colours
-			if( dehydratedVehicle.foregroundColour && dehydratedVehicle.backgroundColour )
+			if ( dehydratedVehicle.foregroundColour && dehydratedVehicle.backgroundColour )
 			{
 				dehydratedVehicle.colours = {
 					foreground: '#' + dehydratedVehicle.foregroundColour,
@@ -235,7 +271,7 @@ export default {
 
 		} )
 
-		if( hydratedTeam.sponsor )
+		if ( hydratedTeam.sponsor )
 		{
 			hydratedTeam.sponsor = getSponsor( hydratedTeam.sponsor )
 		}
@@ -254,12 +290,12 @@ export default {
 	{
 		let dehydratedTeam = {}
 
-		if( team.name !== 'New Team' )
+		if ( team.name !== 'New Team' )
 		{
 			dehydratedTeam.name = team.name
 		}
 
-		if( team.sponsor )
+		if ( team.sponsor )
 		{
 			dehydratedTeam.sponsor = team.sponsor.slug
 		}
@@ -269,43 +305,50 @@ export default {
 			dehydratedTeam.allowAllPerks = team.allowAllPerks
 		}
 
-		if( team.maxCost !== 50 )
+		if ( team.maxCost !== 50 )
 		{
 			dehydratedTeam.maxCost = team.maxCost
 		}
 
 		let vehicles = []
-		for( const vehicle of team.vehicles )
+		for ( const vehicle of team.vehicles )
 		{
 			let dehydratedVehicle = {}
 
 			dehydratedVehicle.slug = vehicle.slug
 
-			if( vehicle.label !== vehicle.name )
+			if ( vehicle.label !== vehicle.name )
 			{
 				dehydratedVehicle.label = vehicle.label
 			}
 
-			if( vehicle.colours.foreground !== null && vehicle.colours.background !== null )
+			if ( vehicle.colours.foreground !== null && vehicle.colours.background !== null )
 			{
 				dehydratedVehicle.foregroundColour = _.trimStart( vehicle.colours.foreground, '#' )
 				dehydratedVehicle.backgroundColour = _.trimStart( vehicle.colours.background, '#' )
 			}
 
-			for( const extraType of extras )
+			for ( const extraType of extras )
 			{
 				const addedExtras = _.filter( vehicle[ extraType ], extra => extra.cost !== 0 ) // @todo shoddy way of determining built-in upgrades
 
-				if( addedExtras.length )
+				if ( addedExtras.length )
 				{
 					// just an array of slugs
 					dehydratedVehicle[ extraType ] = _.map( addedExtras, ( extra ) =>
 					{
 						let slug = extra.slug
 
-						if( extraType === 'weapons' && extra.facing !== undefined && extra.facing != 'front' )
+						// weapon facing
+						if ( extraType === 'weapons' && extra.facing !== undefined && extra.facing != 'front' )
 						{
 							slug += '!' + extra.facing
+						}
+
+						// war rig location
+						if ( extraType === 'weapons' && extra.location !== undefined && extra.location != 'tractor' )
+						{
+							slug += '!' + extra.location
 						}
 
 						return slug
@@ -316,7 +359,7 @@ export default {
 			vehicles.push( dehydratedVehicle )
 		}
 
-		if( vehicles.length )
+		if ( vehicles.length )
 		{
 			dehydratedTeam.vehicles = vehicles
 		}
@@ -332,22 +375,22 @@ export default {
 		// team attributes
 		_.forIn( team, ( value, key ) =>
 		{
-			if( key !== 'vehicles' )
+			if ( key !== 'vehicles' )
 			{
 				serializedTeam.push( getShortKey( key ) + '=' + encodeURI( value ) )
 			}
 		} )
 
 		// vehicles
-		if( team.vehicles !== undefined )
+		if ( team.vehicles !== undefined )
 		{
-			for( const vehicle of team.vehicles )
+			for ( const vehicle of team.vehicles )
 			{
 				let serializedVehicle = []
 
 				_.forIn( vehicle, ( value, key ) =>
 				{
-					if( !Array.isArray( value ) )
+					if ( !Array.isArray( value ) )
 					{
 						serializedVehicle.push( getShortKey( key ) + ':' + encodeURI( value ) )
 					}
@@ -368,22 +411,22 @@ export default {
 		let deserializedTeam = {}
 
 		const parts = uri.split( '&' )
-		for( const part of parts )
+		for ( const part of parts )
 		{
 			const [ key, value ] = part.split( '=' )
 
 			// vehicles
-			if( key === 'v' )
+			if ( key === 'v' )
 			{
 				let vehicleParts        = value.split( ',' ),
 				    deserializedVehicle = {}
 
-				for( const vehiclePart of vehicleParts )
+				for ( const vehiclePart of vehicleParts )
 				{
 					const [ vehicleKey, vehicleValue ] = vehiclePart.split( ':' )
 
 					// extra?
-					if( extraShortKeys.includes( vehicleKey ) )
+					if ( extraShortKeys.includes( vehicleKey ) )
 					{
 						deserializedVehicle[ getFullKey( vehicleKey ) ] = vehicleValue.split( '-' )
 					}
@@ -393,7 +436,7 @@ export default {
 					}
 				}
 
-				if( deserializedTeam.vehicles === undefined )
+				if ( deserializedTeam.vehicles === undefined )
 				{
 					deserializedTeam.vehicles = []
 				}
@@ -411,7 +454,7 @@ export default {
 		{
 			return this.hydrate( deserializedTeam )
 		}
-		catch( err )
+		catch ( err )
 		{
 			console.error( err )
 			return null
@@ -421,17 +464,17 @@ export default {
 	{
 		return vehicle.cost +
 			_.sumBy( vehicle.weapons, weapon => this.getExtraCost( 'weapons', weapon, sponsorSlug ) ) +
-			_.sumBy( vehicle.upgrades, upgrade => this.getExtraCost('upgrades', upgrade, sponsorSlug ) ) +
+			_.sumBy( vehicle.upgrades, upgrade => this.getExtraCost( 'upgrades', upgrade, sponsorSlug ) ) +
 			_.sumBy( vehicle.perks, perk => this.getExtraCost( 'perks', perk, sponsorSlug ) )
 	},
 	getExtraCost( extraType, extra, sponsorSlug = null )
 	{
-		if( extraType === 'weapons' && extra.facing === 'turret' )
+		if ( extraType === 'weapons' && extra.facing === 'turret' )
 		{
 			return extra.cost * 3
 		}
 
-		if( sponsorSlug === 'idris' && extraType === 'upgrades' && extra.slug === 'nitro' )
+		if ( sponsorSlug === 'idris' && extraType === 'upgrades' && extra.slug === 'nitro' )
 		{
 			return Math.ceil( extra.cost / 2 )
 		}

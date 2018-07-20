@@ -75,7 +75,7 @@
 								data-toggle="tooltip"
 								data-placement="auto"
 								title="Hull">
-							<img src="/images/icons/shield.svg" class="btn-svg shield-svg"> {{ modifiedVehicleData.hull}}
+							<img src="/images/icons/shield.svg" class="btn-svg shield-svg"> {{ modifiedVehicleData.hull }}
 						</button>
 					</div>
 					<div class="col">
@@ -83,7 +83,7 @@
 						        class="btn btn-sm btn-block btn-primary"
 						        data-toggle="tooltip"
 						        data-placement="auto"
-						        title="Crew"><i class="fas fa-users btn-icon"></i> {{ modifiedVehicleData.crew}}
+						        title="Crew"><i class="fas fa-users btn-icon"></i> {{ modifiedVehicleData.crew }}
 						</button>
 					</div>
 					<div class="col">
@@ -92,7 +92,7 @@
 						        data-toggle="tooltip"
 						        data-placement="auto"
 						        title="Handling">
-							<img src="/images/icons/dice.svg" class="btn-svg dice-svg"> {{ modifiedVehicleData.handling}}
+							<i class="fas fa-dice btn-icon"></i> {{ modifiedVehicleData.handling }}
 						</button>
 					</div>
 					<div class="col">
@@ -101,7 +101,7 @@
 						        data-toggle="tooltip"
 						        data-placement="auto"
 						        title="Max Gear">
-							<img src="/images/icons/gears.svg" class="btn-svg gears-svg"> {{ modifiedVehicleData.maxGear}}
+							<img src="/images/icons/gears.svg" class="btn-svg gears-svg"> {{ modifiedVehicleData.maxGear }}
 						</button>
 					</div>
 				</div>
@@ -246,6 +246,9 @@
 													<facing-button v-if="upgradeHasFacing( 'weapons', weapon )"
 													               v-bind:extra="weapon"
 													               v-on:changed="onFacingChanged( 'weapons', index, $event )"></facing-button>
+													<war-rig-location-button v-if="upgradeHasWarRigLocation( 'weapons', weapon )"
+													                         v-bind:extra="weapon"
+													                         v-on:changed="onWarRigLocationChanged( 'weapons', index, $event )"></war-rig-location-button>
 												</th>
 												<td>{{ weapon.attack || '–'}}</td>
 												<td>{{ weapon.range}}</td>
@@ -399,6 +402,7 @@
 
 <script>
 	import FacingButton from './FacingButton.vue'
+	import WarRigLocationButton from './WarRigLocationButton.vue'
 
 	import vehicleDataBuilder from '../modules/vehicleDataBuilder'
 	import vehicleModules from '../modules/vehicleModules'
@@ -421,6 +425,7 @@
 		},
 		components: {
 			'facing-button': FacingButton,
+			'war-rig-location-button': WarRigLocationButton
 		},
 		props: [
 			'vehicleData',
@@ -651,6 +656,10 @@
 
 				return false
 			},
+			upgradeHasWarRigLocation( extraType, upgrade )
+			{
+				return this.vehicleData.slug === 'warrig' && extraType === 'weapons' && upgrade.slug !== 'handgun'
+			},
 			addPerk( perk, removable )
 			{
 				// can only buy each perk once
@@ -717,6 +726,14 @@
 			onFacingChanged( extraType, index, facing )
 			{
 				this.vehicleData[ extraType ][ index ].facing = facing
+			},
+			onWarRigLocationChanged( extraType, index, location )
+			{
+				console.log( 'onWarRigLocationChanged', extraType, index, location )
+
+				console.log( 'pre', this.vehicleData[ extraType ][ index ].location )
+				this.vehicleData[ extraType ][ index ].location = location
+				console.log( 'post', this.vehicleData[ extraType ][ index ].location )
 			},
 			// disable Bootstrap event by cancelling propagation
 			onAccordionClick( event )

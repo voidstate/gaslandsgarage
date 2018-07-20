@@ -101,7 +101,7 @@
 				<h6>Icons</h6>
 				<ul>
 					<li>
-						<a href="https://thenounproject.com" target="_blank">The Noun Project</a> Creative Commons SVGs by Arthur Shlain, Kimmi Studio & Nikita Kozin
+						<a href="https://thenounproject.com" target="_blank">The Noun Project</a> Creative Commons SVGs by Arthur Shlain, Kimmi Studio, Nikita Kozin & Vicons Design
 					</li>
 				</ul>
 				<h6>Images</h6>

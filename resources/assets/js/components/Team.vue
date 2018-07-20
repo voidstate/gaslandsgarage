@@ -18,9 +18,9 @@
 		<draggable v-model="vehicles"
 		           v-on:start="onVehicleDragStart"
 		           v-on:end="onVehicleDragEnd"
-		           v-bind:options="{handle:'.vehicle-card-header'}"
+		           v-bind:options="{ handle:'.vehicle-card-header' }"
 		           class="row">
-			<vehicle v-for="(vehicleData, index) in vehicles"
+			<vehicle v-for="( vehicleData, index ) in vehicles"
 			         v-bind:vehicleData="vehicleData"
 			         v-bind:sponsor="sponsor"
 			         v-bind:allowAllPerks="allowAllPerks"

@@ -775,7 +775,15 @@ body.landscape-bg {
         }
       }
     }
-
+    .location-button {
+      padding: .1rem .2rem;
+      line-height: 1.1;
+      margin-left: 2px;
+      img {
+        height: 13px;
+        width: 25px;
+      }
+    }
   }
 
 }
