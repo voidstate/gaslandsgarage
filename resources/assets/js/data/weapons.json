@@ -348,5 +348,312 @@
     "sponsors": [
       "mishkin"
     ]
+  },
+  {
+    "name": "BFG",
+    "slug": "bfg",
+    "type": "shooting",
+    "attack": "10D6",
+    "range": "double",
+    "ammo": 1,
+    "slots": 2,
+    "specials": [
+      {
+        "short": "Ridonkulous Firepower (see TX2, page 2)"
+      }
+    ],
+    "cost": 1,
+    "sponsors": []
+  },
+  {
+    "name": "Combat Laser",
+    "slug": "combatlaser",
+    "type": "shooting",
+    "attack": "3D6",
+    "range": "double (burst)",
+    "ammo": null,
+    "slots": 1,
+    "specials": [
+      {
+        "short": "Laser (see TX2, page 2)"
+      }
+    ],
+    "cost": 5,
+    "sponsors": []
+  },
+  {
+    "name": "Death Ray",
+    "slug": "deathray",
+    "type": "shooting",
+    "attack": "3D6",
+    "range": "double",
+    "ammo": 1,
+    "slots": 1,
+    "specials": [
+      {
+        "short": "Atomize (see TX2, page 2)"
+      }
+    ],
+    "cost": 3,
+    "sponsors": []
+  },
+  {
+    "name": "Grav Gun",
+    "slug": "gravgun",
+    "type": "shooting",
+    "attack": "3D6*",
+    "range": "double",
+    "ammo": 1,
+    "slots": 1,
+    "specials": [
+      "Electrical",
+      {
+        "short": "Gravity Manipulation (see TX2, page 2)"
+      }
+    ],
+    "cost": 3,
+    "sponsors": ["mishkin"]
+  },
+  {
+    "name": "Grabber Arm",
+    "slug": "grabberarm",
+    "type": "shooting",
+    "attack": "3D6",
+    "range": "short",
+    "ammo": null,
+    "slots": 1,
+    "specials": [
+      {
+        "short": "Toss (see TX2, page 2)"
+      }
+    ],
+    "cost": 6,
+    "sponsors": []
+  },
+  {
+    "name": "Harpoon",
+    "slug": "harpoon",
+    "type": "shooting",
+    "attack": "5D6*",
+    "range": "double",
+    "ammo": null,
+    "slots": 1,
+    "specials": [
+      {
+        "short": "*Harpoon (see TX2, page 3)"
+      }
+    ],
+    "cost": 2,
+    "sponsors": []
+  },
+  {
+    "name": "Homing Missle",
+    "slug": "homingmissle",
+    "type": "shooting",
+    "attack": "6D6",
+    "range": "*",
+    "ammo": 3,
+    "slots": 2,
+    "specials": [
+      "Blast",
+      "Highly Explosive",
+      {
+        "short": "*Heat-seeking (see TX2, page 3)"
+      }
+    ],
+    "cost": 8,
+    "sponsors": []
+  },
+  {
+    "name": "Hypno Ray",
+    "slug": "hypnoray",
+    "type": "shooting",
+    "attack": "3D6",
+    "range": "double",
+    "ammo": 1,
+    "slots": 1,
+    "specials": [
+      "Electrical",
+      {
+        "short": "Mind Control (see TX2, page 3)"
+      }
+    ],
+    "cost": 2,
+    "sponsors": ["mishkin"]
+  },
+  {
+    "name": "Wrecking Ball",
+    "slug": "wreckingball",
+    "type": "shooting",
+    "attack": "*",
+    "range": "*",
+    "ammo": null,
+    "slots": 1,
+    "specials": [
+      {
+        "short": "*Steel Ball (see TX2, page 3)"
+      }
+    ],
+    "cost": 4,
+    "sponsors": []
+  },
+  {
+    "name": "Wreck Lobber",
+    "slug": "wrecklobber",
+    "type": "shooting",
+    "attack": "-",
+    "range": "double/dropped",
+    "ammo": 3,
+    "slots": 4,
+    "specials": [
+      {
+        "short": "*Trebuchet (see TX2, page 3)"
+      },
+      {
+        "short": "*Low-loader (see TX2, page 3)"
+      },
+      {
+        "short": "*Dumper (see TX2, page 3)"
+      }
+    ],
+    "cost": 4,
+    "sponsors": []
+  },
+  {
+    "name": "Blunderbuss",
+    "slug": "blunderbuss",
+    "type": "shooting",
+    "attack": "*D6",
+    "range": "double",
+    "ammo": null,
+    "slots": 1,
+    "specials": [
+      {
+        "short": "*Scrapshot (see TX2, page 3)"
+      }
+    ],
+    "cost": 2,
+    "sponsors": []
+  },
+  {
+    "name": "RC Car Bombs",
+    "slug": "rccarbombs",
+    "type": "dropped",
+    "attack": "-",
+    "range": "short",
+    "ammo": 3,
+    "slots": null,
+    "specials": [
+      {
+        "short": "*Remote-Controlled Car (see TX2, page 4)"
+      }
+    ],
+    "cost": 6,
+    "sponsors": []
+  },
+  {
+    "name": "Sentry Gun",
+    "slug": "sentrygun",
+    "type": "dropped",
+    "attack": "2D6",
+    "range": "*",
+    "ammo": 2,
+    "slots": null,
+    "specials": [
+      {
+        "short": "*Sentry Gun (see TX2, page 4)"
+      }
+    ],
+    "cost": 2,
+    "sponsors": []
+  },
+  {
+    "name": "Submachine Gun",
+    "slug": "submachinegun",
+    "type": "shooting",
+    "attack": "3D6",
+    "range": "medium",
+    "ammo": null,
+    "slots": null,
+    "specials": [
+      "Crew Fired",
+      {
+        "short": "Specialist (see TX2, page 5)"
+      }
+    ],
+    "cost": 6,
+    "sponsors": []
+  },
+  {
+    "name": "Shotgun",
+    "slug": "shotgun",
+    "type": "shooting",
+    "attack": "2D6",
+    "range": "small burst",
+    "ammo": null,
+    "slots": null,
+    "specials": [
+      "Crew Fired",
+      {
+        "short": "Specialist (see TX2, page 5)"
+      }
+    ],
+    "cost": 3,
+    "sponsors": []
+  },
+  {
+    "name": "Rifle",
+    "slug": "rifle",
+    "type": "shooting",
+    "attack": "1D6",
+    "range": "double",
+    "ammo": null,
+    "slots": null,
+    "specials": [
+      "Crew Fired",
+      {
+        "short": "Specialist (see TX2, page 5)"
+      }
+    ],
+    "cost": 2,
+    "sponsors": []
+  },
+  {
+    "name": "Steel Nets",
+    "slug": "steelnets",
+    "type": "shooting",
+    "attack": "1D6",
+    "range": "medium",
+    "ammo": null,
+    "slots": null,
+    "specials": [
+      "Crew Fired",
+      {
+        "short": "Specialist (see TX2, page 5)"
+      },
+      {
+        "short": "Entangle (see TX2, page 5)"
+      }
+    ],
+    "cost": 1,
+    "sponsors": []
+  },
+  {
+    "name": "Gas Grenades",
+    "slug": "gasgrenades",
+    "type": "shooting",
+    "attack": "1D6*",
+    "range": "medium",
+    "ammo": 5,
+    "slots": null,
+    "specials": [
+      "Crew Fired",
+      "Blitz",
+      {
+        "short": "*Choking Gas (see TX2, page 5)"
+      }
+    ],
+    "cost": 1,
+    "sponsors": []
   }
 ]

@@ -15,6 +15,19 @@ const modules = {
 			}
 
 			return true
+		},
+		specialist( vehicle )
+		{
+			if (
+				_.findIndex(
+					vehicle.weapons,
+					function(weapon) {
+						return _.indexOf(weapon.specials, 'Specialist') !== -1
+					}
+				) !== -1
+			) {
+				return false
+			}
 		}
 	},
 	upgrades: {
