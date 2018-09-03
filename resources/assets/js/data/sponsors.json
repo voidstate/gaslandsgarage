@@ -167,5 +167,35 @@
         }
       }
     ]
+  },
+  {
+    "name": "Scarlett Annie",
+    "slug": "scarlett",
+    "perks": [
+      {
+        "name": "Crew Quarters",
+        "description": {
+          "short": "Half-cost crew. See TX2, page 6."
+        }
+      },
+      {
+        "name": "Raiders",
+        "description": {
+          "short": "After attack, trade crew for hull. See TX2, page 6."
+        }
+      },
+      {
+        "name": "Raise the Sails",
+        "description": {
+          "short": "After skid, trade crew for shifts. See TX2, page 6."
+        }
+      },
+      {
+        "name": "Press Gang or Keelhaul",
+        "description": {
+          "short": "Get crew or votes from colliding with a wreck. See TX2, page 6."
+        }
+      }
+    ]
   }
 ]

@@ -490,6 +490,7 @@
 				{
 					return this.extraHasSponsor( upgrade ) &&
 						(upgrade.weights.length === 0 || upgrade.weights.includes( this.vehicleData.weight )) &&
+						(upgrade.vehicles.length === 0 || upgrade.vehicles.includes( this.vehicleData.slug )) &&
 						vehicleOptionValidator.validateExtra( this.modifiedVehicleData, 'upgrades', upgrade )
 				} )
 			},

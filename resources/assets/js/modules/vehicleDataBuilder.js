@@ -479,6 +479,11 @@ export default {
 			return Math.ceil( extra.cost / 2 )
 		}
 
+		if ( sponsorSlug === 'scarlett' && extraType === 'upgrades' && extra.slug === 'crew' )
+		{
+			return Math.ceil( extra.cost / 2 )
+		}
+
 		return extra.cost
 	}
 }
